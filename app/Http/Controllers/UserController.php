@@ -159,4 +159,12 @@ class UserController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
+
+    public function login(){
+        return view('Auth.login');
+    }
+    public function register(){
+        return view('Auth.register');
+    }
+
 }
