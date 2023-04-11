@@ -24,6 +24,7 @@
                 <div class="card-body p-4 p-md-5">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
                   <form  action="/register" method="post">
+                    @csrf
       
                     <div class="row">
                       <div class="col-md-6 mb-4">
@@ -100,16 +101,16 @@
                         <div class="col-md-6 mb-4 pb-2">
         
                           <div class="form-outline">
-                            <input type="email" name="password" class="form-control form-control-lg" />
-                            <label class="form-label" for="emailAddress">Password</label>
+                            <input type="password" name="password" class="form-control form-control-lg" />
+                            <label class="form-label"for="password" >Password</label>
                           </div>
         
                         </div>
                         <div class="col-md-6 mb-4 pb-2">
         
                           <div class="form-outline">
-                            <input type="tel" name="confirm_password" class="form-control form-control-lg" />
-                            <label class="form-label" for="phoneNumber">Confirm Password</label>
+                            <input type="passowOrd" name="confirm_password" class="form-control form-control-lg" />
+                            <label class="form-label" for="password" >Confirm Password</label>
                           </div>
         
                         </div>
