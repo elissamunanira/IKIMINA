@@ -12,42 +12,134 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
+
+        
 </head>
 <body>
-    <form>
-        <div class="card-body">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <div class="input-group">
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="exampleInputFile">
-                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-              </div>
-              <div class="input-group-append">
-                <span class="input-group-text">Upload</span>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+                  <form>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input type="text" id="firstName" class="form-control form-control-lg" />
+                          <label class="form-label" for="firstName">First Name</label>
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input type="text" id="lastName" class="form-control form-control-lg" />
+                          <label class="form-label" for="lastName">Last Name</label>
+                        </div>
+      
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4 d-flex align-items-center">
+      
+                        <div class="form-outline datepicker w-100">
+                          <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                          <label for="birthdayDate" class="form-label">Birthday</label>
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4">
+      
+                        <h6 class="mb-2 pb-1">Gender: </h6>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                            value="option1" checked />
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                            value="option2" />
+                          <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                            value="option3" />
+                          <label class="form-check-label" for="otherGender">Other</label>
+                        </div>
+      
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                          <label class="form-label" for="emailAddress">Email</label>
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                          <label class="form-label" for="phoneNumber">Phone Number</label>
+                        </div>
+      
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4 pb-2">
+        
+                          <div class="form-outline">
+                            <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                            <label class="form-label" for="emailAddress">Password</label>
+                          </div>
+        
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2">
+        
+                          <div class="form-outline">
+                            <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                            <label class="form-label" for="phoneNumber">Confirm Password</label>
+                          </div>
+        
+                        </div>
+                      </div>
+      
+                    <div class="row">
+                      <div class="col-12">
+      
+                        <select class="select form-control-lg">
+                          <option value="1" disabled>Choose option</option>
+                          <option value="2">Subject 1</option>
+                          <option value="3">Subject 2</option>
+                          <option value="4">Subject 3</option>
+                        </select>
+                        <label class="form-label select-label">Choose option</label>
+      
+                      </div>
+                    </div>
+      
+                    <div class="mt-4 pt-2">
+                      <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                    </div>
+      
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
         </div>
-        <!-- /.card-body -->
-
-        <div class="card-footer">
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </form>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+      </section>
+      
 </body>
 </html>
