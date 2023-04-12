@@ -20,7 +20,7 @@
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <a href="/login"><button class="btn btn-primary me-md-2" type="button">login</button></a>
-            <a href="/register"><button class="btn btn-primary" type="button">Register</button></a>
+            <a href="/regis"><button class="btn btn-primary" type="button">Register</button></a>
           </div>
  
        
