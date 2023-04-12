@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('login',[UserController::class, 'login']);
-Route::get('register',[UserController::class, 'register']);
-Route::post('register',[UserController::class, 'store']);
+Route::get('login',[UserController::class, 'loginForm']);
+Route::get('register',[UserController::class, 'registerForm']);
+Route::post('/regis',[UserController::class, 'register']);

@@ -164,11 +164,124 @@ class UserController extends Controller
         ])->onlyInput('email');
     }
 
-    public function login(){
+
+
+    public function loginForm(){
         return view('Auth.login');
     }
-    public function register(){
+    public function registerForm(){
         return view('Auth.register');
+    }
+
+
+    public function register(Request $request){
+
+
+        // validating  body request
+
+
+        $formFields = $request->validate([
+
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'gender' => 'required',
+            'telephone' => 'required',
+            'email'     => 'required|unique:users,email',
+            'password'  => 'required|confirmed',
+
+
+        ]);
+
+
+
+        // this create user
+        $formFields['password']=bcrypt($formFields['password']);
+
+        $user = User::create($formFields);
+
+
+        // $user->assignRole('Admin');
+        // user taking key token
+        // $token = $user->createToken('myapptoken')->plainTextToken;
+
+        // user information in response
+
+        // $response = [
+        //     'user'=>$user,
+        //     'token'=>$token
+        // ];
+
+        // $user->notify(new Vermicomposting($user));
+         return redirect('/loginForm');
+
+
+        }
+
+
+
+        public function login(Request $request)
+        {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+        if (Auth::attempt($credentials)){
+
+            $request->session()->regenerate();
+
+
+                return redirect()->intended('/dashboard');
+
+        }
+
+
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
+
+
+        }
+
+
+        // public function login(Request $request)
+        // {
+        //     $credentials = $request->validate([
+        //         'email' => ['required', 'email'],
+        //         'password' => ['required'],
+        //     ]);
+        //     if (Auth::attempt($credentials)){
+        //         if(auth()->user()->hasRole('Admin')){
+        //         $request->session()->regenerate();
+        //         return redirect()->intended('/dashboard');
+        //     } else {
+
+        //             return redirect()->intended('/dashboard');
+
+        //     }
+
+        // }
+            // else if(Auth::attempt($credentials))
+            //   {
+            //    return redirect()->intended('/bins');
+            //     }
+    //       else{
+    //         return back()->withErrors([
+    //             'email' => 'The provided credentials do not match our records.',
+    //         ])->onlyInput('email');
+
+    //     }
+    // }
+
+    public function logout(Request $request){
+        // auth()->logout();
+
+    // Auth::logout();
+        session_start();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        session_destroy();
+
+    return redirect('/');
     }
 
 }
