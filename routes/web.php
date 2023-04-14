@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DAshboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/dashboard',[DashboardController::class, 'index']);
 Route::get('login',[UserController::class, 'loginForm']);
 Route::get('regis',[UserController::class, 'registerForm']);
 Route::post('/users',[UserController::class, 'register']);

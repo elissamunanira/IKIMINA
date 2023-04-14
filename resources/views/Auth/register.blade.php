@@ -23,24 +23,50 @@
               <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                 <div class="card-body p-4 p-md-5">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-                  <form  action="/users" method="post">
+
+
+
+                  @if(Session::get('Success'))
+                  <div class="alert alert-success">
+                    {{Session::get('Success')}}
+                    @php 
+                    Session::forget('Success')
+                    @endphp
+                  </div>
+                  @endif
+
+
+
+                  <form  action="{{url('/users')}}" method="post">
                     @csrf
       
                     <div class="row">
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" first="firstName" class="form-control form-control-lg" />
-                          <label class="form-label" for="firstName">First Name</label>
+                          <input type="text" name="firstname" class="form-control form-control-lg" />
+                          <label class="form-label" for="firstname">First Name</label>
                         </div>
+
+                        @if($errors->has('firstname'))
+                        <span class="text-danger">
+                          {{$errors->first('firstname')}}
+                        </span>
+                        @endif
       
                       </div>
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" name="lastName" class="form-control form-control-lg" />
+                          <input type="text" name="lastname" class="form-control form-control-lg" />
                           <label class="form-label" for="lastName">Last Name</label>
                         </div>
+
+                        @if($errors->has('lastname'))
+                        <span class="text-danger">
+                          {{$errors->first('lastname')}}
+                        </span>
+                        @endif
       
                       </div>
                     </div>
@@ -60,21 +86,46 @@
       
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="gender" id="femaleGender"
-                            value="option1" checked />
+                            value="FEMALE" />
                           <label class="form-check-label" for="femaleGender">Female</label>
+
+                          {{-- @if($errors->has('gender'))
+                        <span class="text-danger">
+                          {{$errors->first('gender')}}
+                        </span>
+                        @endif --}}
+
+
                         </div>
       
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="gender" id="maleGender"
-                            value="option2" />
+                            value="MALE" />
                           <label class="form-check-label" for="maleGender">Male</label>
+
+                          {{-- @if($errors->has('gender'))
+                        <span class="text-danger">
+                          {{$errors->first('gender')}}
+                        </span>
+                        @endif --}}
+
+
                         </div>
       
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="gender" id="otherGender"
-                            value="option3" />
+                            value="OTHER" />
                           <label class="form-check-label" for="otherGender">Other</label>
                         </div>
+
+
+                        @if($errors->has('gender'))
+                        <span class="text-danger">
+                          {{$errors->first('gender')}}
+                        </span>
+                        @endif
+
+
       
                       </div>
                     </div>
@@ -86,6 +137,12 @@
                           <input type="email" name="email" class="form-control form-control-lg" />
                           <label class="form-label" for="emailAddress">Email</label>
                         </div>
+
+                        @if($errors->has('email'))
+                        <span class="text-danger">
+                          {{$errors->first('email')}}
+                        </span>
+                        @endif
       
                       </div>
                       <div class="col-md-6 mb-4 pb-2">
@@ -94,6 +151,12 @@
                           <input type="tel" name="telephone" class="form-control form-control-lg" />
                           <label class="form-label" for="phoneNumber">Phone Number</label>
                         </div>
+
+                        @if($errors->has('telephone'))
+                        <span class="text-danger">
+                          {{$errors->first('telephone')}}
+                        </span>
+                        @endif
       
                       </div>
                     </div>
@@ -104,19 +167,25 @@
                             <input type="password" name="password" class="form-control form-control-lg" />
                             <label class="form-label"for="password" >Password</label>
                           </div>
+
+                          @if($errors->has('password'))
+                          <span class="text-danger">
+                            {{$errors->first('password')}}
+                          </span>
+                          @endif
         
                         </div>
                         <div class="col-md-6 mb-4 pb-2">
         
                           <div class="form-outline">
-                            <input type="passowOrd" name="confirm_password" class="form-control form-control-lg" />
+                            <input type="password" name="password_confirmation" class="form-control form-control-lg" />
                             <label class="form-label" for="password" >Confirm Password</label>
                           </div>
         
                         </div>
                       </div>
       
-                    <div class="row">
+                    {{-- <div class="row">
                       <div class="col-12">
       
                         <select class="select form-control-lg">
@@ -129,7 +198,7 @@
       
                       </div>
                     </div>
-      
+       --}}
                     <div class="mt-4 pt-2">
                       <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
                     </div>
