@@ -47,11 +47,11 @@ Route::get('regis',[UserController::class, 'registerForm']);
 
 Route::post('log',[UserController::class, 'login']);
 Route::post('/users',[UserController::class, 'register']);
-Route::post('/logout',[UserController::class, 'logout']);
 
 
 
 Route::group(['middleware' => ['auth']], function() {
+    Route::get('/logout',[UserController::class, 'logout']);
     Route::get('dash',[DashboardController::class, 'index']);
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
