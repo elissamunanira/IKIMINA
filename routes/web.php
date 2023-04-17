@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 
 Route::get('/table-basic', function () {
-    return view('/dashboard/table-basic');
+    return view('dashboard.table-basic');
 });
 
 
@@ -48,10 +48,9 @@ Route::get('regis',[UserController::class, 'registerForm']);
 Route::post('log',[UserController::class, 'login']);
 Route::post('/users',[UserController::class, 'register']);
 
-
+Route::get('/logout',[UserController::class, 'logout']);
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/logout',[UserController::class, 'logout']);
     Route::get('dash',[DashboardController::class, 'index']);
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
