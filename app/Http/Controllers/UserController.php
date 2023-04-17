@@ -230,7 +230,7 @@ class UserController extends Controller
             $request->session()->regenerate();
 
 
-                return redirect()->intended('/dashboard');
+                return redirect()->intended('/dash');
 
         }
 
