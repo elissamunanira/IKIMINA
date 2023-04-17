@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RoleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,6 +48,7 @@ Route::get('regis',[UserController::class, 'registerForm']);
 
 Route::post('log',[UserController::class, 'login']);
 Route::post('/users',[UserController::class, 'register']);
+Route::post('/logout',[UserController::class, 'logout']);
 
 
 
