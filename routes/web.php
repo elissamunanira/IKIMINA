@@ -42,7 +42,6 @@ Route::get('/table-jsgrid', function () {
 
 
 
-Route::get('dash',[DashboardController::class, 'index']);
 Route::get('login',[UserController::class, 'loginForm']);
 Route::get('regis',[UserController::class, 'registerForm']);
 
@@ -53,6 +52,7 @@ Route::post('/logout',[UserController::class, 'logout']);
 
 
 Route::group(['middleware' => ['auth']], function() {
+    Route::get('dash',[DashboardController::class, 'index']);
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
