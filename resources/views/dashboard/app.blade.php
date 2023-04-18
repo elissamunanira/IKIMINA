@@ -313,7 +313,7 @@
                         </div>
                         <div class="dropdown dib">
                             <div class="header-icon" data-toggle="dropdown">
-                                <span class="user-avatar">John
+                                <span class="user-avatar">{{ Auth::user()->firstname }}
                                     <i class="ti-angle-down f-s-10"></i>
                                 </span>
                                 <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
@@ -324,7 +324,7 @@
                                     <div class="dropdown-content-body">
                                         <ul>
                                             <li>
-                                                <a href="#">
+                                                <a href="/app-profile">
                                                     <i class="ti-user"></i>
                                                     <span>Profile</span>
                                                 </a>
@@ -350,7 +350,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="/logout">
                                                     <i class="ti-power-off"></i>
                                                     <span>Logout</span>
                                                 </a>
