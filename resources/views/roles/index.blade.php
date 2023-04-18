@@ -51,7 +51,7 @@
                     <div class="col-lg-8 p-r-0 title-margin-right">
                         <div class="page-header">
                             <div class="page-title">
-                                <h1>Hello, <span>Welcome Role Management Field</span></h1>
+                                <h1>Hello, <span>Welcome Here</span></h1>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-title">
-                                    <h4>Roles </h4>
+                                    <h4>Bootstrap Data Table </h4>
                                     
                                 </div>
                                 <div class="bootstrap-data-table-panel">
@@ -82,30 +82,37 @@
                                         <table id="row-select" class="display table table-borderd table-hover">
                                             <thead>
                                                 <tr>
+                                                <th>No</th>
+                                                <th>Name</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+                                            @foreach ($roles as $key => $role)
+                                            <tr>
+                                                <td>{{ ++$i }}</td>
+                                                <td>{{ $role->name }}</td>
+                                                <td>
+                                                    <a class="btn btn-info" href="{{ route('roles.show',$role->id) }}">Show</a>
+                                                    @can('role-edit')
+                                                        <a class="btn btn-primary" href="{{ route('roles.edit',$role->id) }}">Edit</a>
+                                                    @endcan
+                                                    @can('role-delete')
+                                                        {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
+                                                            {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                                                        {!! Form::close() !!}
+                                                    @endcan
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                            <tbody>
+                                                
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
                                                     <th>No</th>
                                                     <th>Name</th>
-                                                    <th width="280px">Action</th>
+                                                    <th>Action</th>
                                                 </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                @foreach ($roles as $key => $role)
-                                                <tr>
-                                                    <td>{{ ++$i }}</td>
-                                                    <td>{{ $role->name }}</td>
-                                                    <td>
-                                                        <a class="btn btn-info" href="{{ route('roles.show',$role->id) }}">Show</a>
-                                                        @can('role-edit')
-                                                            <a class="btn btn-primary" href="{{ route('roles.edit',$role->id) }}">Edit</a>
-                                                        @endcan
-                                                        @can('role-delete')
-                                                            {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
-                                                                {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                                                            {!! Form::close() !!}
-                                                        @endcan
-                                                    </td>
-                                                </tr>
-                                                @endforeach
                                             </tfoot>
                                         </table>
                                     </div>
