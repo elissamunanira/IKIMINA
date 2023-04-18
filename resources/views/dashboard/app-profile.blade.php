@@ -40,7 +40,7 @@
                     <div class="row">
                       <div class="col-lg-4">
                         <div class="user-photo m-b-30">
-                          <img class="img-fluid" src="images/user-profile.jpg" alt="" />
+                          <img class="img-fluid" src="/dashboard/images/user-profile.jpg" alt="" />
                         </div>
                         <div class="user-work">
                           <h4>work</h4>
@@ -233,7 +233,7 @@
                   <div class="media">
                     <div class="media-left">
                       <a href="#">
-                        <img class="media-object" src="images/avatar/1.jpg" alt="...">
+                        <img class="media-object" src="/dashboard/images/avatar/1.jpg" alt="...">
                       </a>
                     </div>
                     <div class="media-body">
@@ -259,7 +259,7 @@
                   <div class="media">
                     <div class="media-left">
                       <a href="#">
-                        <img class="media-object" src="images/avatar/2.jpg" alt="...">
+                        <img class="media-object" src="/dashboard/images/avatar/2.jpg" alt="...">
                       </a>
                     </div>
                     <div class="media-body">
@@ -285,7 +285,7 @@
                   <div class="media no-border">
                     <div class="media-left">
                       <a href="#">
-                        <img class="media-object" src="images/avatar/3.jpg" alt="...">
+                        <img class="media-object" src="/dashboard/images/avatar/3.jpg" alt="...">
                       </a>
                     </div>
                     <div class="media-body">

@@ -50,7 +50,7 @@ Route::get('/form-validation', function () {
 
 
 Route::get('/app-profile', function () {
-    return view('dashboard.profile');
+    return view('dashboard.app-profile');
 });
 
 
