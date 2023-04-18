@@ -54,6 +54,11 @@ Route::get('/app-profile', function () {
 });
 
 
+Route::get('/calendar', function () {
+    return view('dashboard.app-calendar');
+});
+
+
 
 
 
