@@ -1,6 +1,6 @@
-{{-- @extends('dashboard.app')
+@extends('dashboard.app')
 @section('content')
-<div class="row">
+{{-- <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2> Show Role</h2>
@@ -27,8 +27,8 @@
             @endif
         </div>
     </div>
-</div>
- --}}
+</div> --}}
+
 
 
 <div class="content-wrap">
