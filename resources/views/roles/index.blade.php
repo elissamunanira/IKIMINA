@@ -74,7 +74,7 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-title">
-                                    <h4>Bootstrap Data Table </h4>
+                                    <h4>Roles </h4>
                                     
                                 </div>
                                 <div class="bootstrap-data-table-panel">
@@ -87,7 +87,10 @@
                                                 <th>Action</th>
                                             </tr>
                                             </thead>
-                                            @foreach ($roles as $key => $role)
+                                                @foreach ($roles as $key => $role)
+                                            
+                                                <tbody>
+    
                                             <tr>
                                                 <td>{{ ++$i }}</td>
                                                 <td>{{ $role->name }}</td>
@@ -103,10 +106,9 @@
                                                     @endcan
                                                 </td>
                                             </tr>
+                                        </tbody>
                                             @endforeach
-                                            <tbody>
                                                 
-                                            </tbody>
                                             <tfoot>
                                                 <tr>
                                                     <th>No</th>
