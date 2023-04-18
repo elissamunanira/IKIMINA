@@ -26,18 +26,29 @@ Route::get('/table-basic', function () {
 
 
 Route::get('/table-export', function () {
-    return view('/dashboard/table-export');
+    return view('dashboard.table-export');
 });
 
 
 Route::get('/table-row-select', function () {
-    return view('/dashboard/table-row-select');
+    return view('dashboard.table-row-select');
 });
 
 
 Route::get('/table-jsgrid', function () {
-    return view('/dashboard/table-jsgrid');
+    return view('dashboard.table-jsgrid');
 });
+
+Route::get('/form-basic', function () {
+    return view('dashboard.form-basic');
+});
+
+
+Route::get('/form-validation', function () {
+    return view('dashboard.form-validation');
+});
+
+
 
 
 

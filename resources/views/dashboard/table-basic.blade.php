@@ -1,5 +1,8 @@
 @extends('dashboard.app')
-@section('contaent')
+@section('content')	
+
+
+
     <div class="content-wrap">
         <div class="main">
             <div class="container-fluid">
@@ -219,6 +222,38 @@
                     </div>
                     <!-- /# row -->
 
-                    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer">
+                                <p>2018 © Admin Board. - <a href="#">example.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 
-                  @endsection
+
+
+
+
+
+    
+    <!-- jquery vendor -->
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="js/lib/menubar/sidebar.js"></script>
+    <script src="js/lib/preloader/pace.min.js"></script>
+    <!-- sidebar -->
+    
+    <!-- bootstrap -->
+    <script src="js/lib/bootstrap.min.js"></script><script src="js/scripts.js"></script>
+    <!-- scripit init-->
+
+
+
+
+
+@endsection

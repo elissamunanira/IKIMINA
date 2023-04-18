@@ -31,6 +31,13 @@
     <link href="/dashboard/css/lib/bootstrap.min.css" rel="stylesheet">
     <link href="/dashboard/css/lib/helper.css" rel="stylesheet">
     <link href="/dashboard/css/style.css" rel="stylesheet">
+
+
+    {{-- bootstrap css --}}
+
+    <link rel="stylesheet" href="/https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
 </head>
 
 <body>
@@ -42,27 +49,26 @@
                     <div class="logo"><a href="/">
                             <!-- <img src="images/logo.png" alt="" /> --><span>{{ config('app.name', 'IKIBINA') }}</span></a></div>
                     <li class="label">Main</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard 
-                        {{-- <span
+                    <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard <span
                                 class="badge badge-primary">2</span> <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="index.html">Dashboard 1</a></li>
-                            <li><a href="index.html">Dashboard 2</a></li>
-                        </ul> --}}
+                            <li><a href="/dash">Dashboard</a></li>
+                            <li><a href="/dash">Dashboard</a></li>
+                        </ul>
                     </li>
 
                     <li class="label">Apps</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Charts <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="chart-flot">Flot</a></li>
-                            <li><a href="chart-morris">Morris</a></li>
-                            <li><a href="chartjs">Chartjs</a></li>
-                            <li><a href="chartist">Chartist</a></li>
-                            <li><a href="chart-peity">Peity</a></li>
-                            <li><a href="chart-sparkline">Sparkle</a></li>
-                            <li><a href="chart-knob">Knob</a></li>
+                            <li><a href="/chart-flot">Flot</a></li>
+                            <li><a href="/chart-morris">Morris</a></li>
+                            <li><a href="/chartjs">Chartjs</a></li>
+                            <li><a href="/chartist">Chartist</a></li>
+                            <li><a href="/chart-peity">Peity</a></li>
+                            <li><a href="/chart-sparkline">Sparkle</a></li>
+                            <li><a href="/chart-knob">Knob</a></li>
                         </ul>
                     </li>
                     <li><a href="app-event-calender.html"><i class="ti-calendar"></i> Calender </a></li>
@@ -129,7 +135,7 @@
                         </ul>
                     </li>
                     <li class="label">Form</li>
-                    <li><a href="form-basic.html"><i class="ti-view-list-alt"></i> Basic Form </a></li>
+                    <li><a href="/form-basic"><i class="ti-view-list-alt"></i> Basic Form </a></li>
                     <li class="label">Extra</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-files"></i> Invoice <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
@@ -190,7 +196,7 @@
                                             <li>
                                                 <a href="#">
                                                     <img class="pull-left m-r-10 avatar-img"
-                                                        src="/dashboard/images/avatar/3.jpg" alt="" />
+                                                        src="images/avatar/3.jpg" alt="" />
                                                     <div class="notification-content">
                                                         <small class="notification-timestamp pull-right">02:34
                                                             PM</small>
@@ -202,7 +208,7 @@
                                             <li>
                                                 <a href="#">
                                                     <img class="pull-left m-r-10 avatar-img"
-                                                        src="/dashboard/images/avatar/3.jpg" alt="" />
+                                                        src="images/avatar/3.jpg" alt="" />
                                                     <div class="notification-content">
                                                         <small class="notification-timestamp pull-right">02:34
                                                             PM</small>
@@ -215,7 +221,7 @@
                                             <li>
                                                 <a href="#">
                                                     <img class="pull-left m-r-10 avatar-img"
-                                                        src="/dashboard/images/avatar/3.jpg" alt="" />
+                                                        src="images/avatar/3.jpg" alt="" />
                                                     <div class="notification-content">
                                                         <small class="notification-timestamp pull-right">02:34
                                                             PM</small>
@@ -248,7 +254,7 @@
                                             <li class="notification-unread">
                                                 <a href="#">
                                                     <img class="pull-left m-r-10 avatar-img"
-                                                        src="/dashboard/images/avatar/1.jpg" alt="" />
+                                                        src="images/avatar/1.jpg" alt="" />
                                                     <div class="notification-content">
                                                         <small class="notification-timestamp pull-right">02:34
                                                             PM</small>
@@ -261,7 +267,7 @@
                                             <li class="notification-unread">
                                                 <a href="#">
                                                     <img class="pull-left m-r-10 avatar-img"
-                                                        src="/dashboard/images/avatar/2.jpg" alt="" />
+                                                        src="images/avatar/2.jpg" alt="" />
                                                     <div class="notification-content">
                                                         <small class="notification-timestamp pull-right">02:34
                                                             PM</small>
@@ -274,7 +280,7 @@
                                             <li>
                                                 <a href="#">
                                                     <img class="pull-left m-r-10 avatar-img"
-                                                        src="/dashboard/images/avatar/3.jpg" alt="" />
+                                                        src="images/avatar/3.jpg" alt="" />
                                                     <div class="notification-content">
                                                         <small class="notification-timestamp pull-right">02:34
                                                             PM</small>
@@ -287,7 +293,7 @@
                                             <li>
                                                 <a href="#">
                                                     <img class="pull-left m-r-10 avatar-img"
-                                                        src="/dashboard/images/avatar/2.jpg" alt="" />
+                                                        src="images/avatar/2.jpg" alt="" />
                                                     <div class="notification-content">
                                                         <small class="notification-timestamp pull-right">02:34
                                                             PM</small>
@@ -360,15 +366,13 @@
         </div>
     </div>
 
-
     @yield('content')
-
 
     
     <div class="row">
         <div class="col-lg-12">
             <div class="footer">
-                <p>copyrights © <a href="#">IKIBINA</a></p>
+                <p>2018 © Admin Board. - <a href="#">example.com</a></p>
             </div>
         </div>
     </div>
