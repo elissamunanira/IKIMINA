@@ -103,94 +103,92 @@
                                         @endif
 
 
-                                    <form class="form-valide" action="/users" method="post">
+                                    {{-- <form class="form-valide" action="/users" method="post"> --}}
+                                        {!! Form::open(array('route' => 'users.store','method'=>'POST')) !!}
                                        @csrf
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-username">First Name <span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
-                                                <input type="text" class="form-control" id="val-username" name="firstname" placeholder="Enter a firstname..">
+                                                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter a firstname..">
+
+                                                @if($errors->has('firstname'))
+                                                <span class="text-danger">
+                                                {{$errors->first('firstname')}}
+                                                </span>
+                                                @endif
                                             </div>
                                         </div>
-
-                                        @if($errors->has('firstname'))
-                                        <span class="text-danger">
-                                        {{$errors->first('firstname')}}
-                                        </span>
-                                        @endif
-      
-
-
+       
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-username">Last Name <span class="text-danger">*</span></label>
+                                            <label class="col-lg-4 col-form-label" for="lastname">Last Name <span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
-                                                <input type="text" class="form-control" id="val-username" name="lastname" placeholder="Enter a Lastname..">
+                                                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter a Lastname..">
+ 
+                                                @if($errors->has('lastname'))
+                                                <span class="text-danger">
+                                                {{$errors->first('lastname')}}
+                                                </span>
+                                                @endif
                                             </div>
                                         </div>
-
-
-                                        @if($errors->has('lastname'))
-                                        <span class="text-danger">
-                                        {{$errors->first('lastname')}}
-                                        </span>
-                                        @endif
 
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-select2">Gender <span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
-                                                <select class="js-select2 form-control" id="val-select2" name="val-select2" style="width: 100%;" data-placeholder="Choose one..">
+                                                <select class="js-select2 form-control" id="name" name="gender" style="width: 100%;" data-placeholder="Choose one..">
                                                     <option>-- please select your gender --</option>
-                                                    <option value="MALE">MALE</option>
-                                                    <option value="FEMALE">FEMALE</option>
-                                                    <option value="OTHER">OTHER</option>
+                                                    <option name="gender" value="MALE">MALE</option>
+                                                    <option name="gender" value="FEMALE">FEMALE</option>
+                                                    <option name="gender" value="OTHER">OTHER</option>
                                                 </select>
+
+                                                @if($errors->has('gender'))
+                                                <span class="text-danger">
+                                                  {{$errors->first('gender')}}
+                                                </span>
+                                                @endif
                                             </div>
                                         </div>
 
-                                        @if($errors->has('gender'))
-                                        <span class="text-danger">
-                                          {{$errors->first('gender')}}
-                                        </span>
-                                        @endif
-
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-phoneus">Phone<span class="text-danger">*</span></label>
+                                            <label class="col-lg-4 col-form-label" for="telephone">Phone<span class="text-danger">*</span></label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-phoneus" name="telephone" placeholder="+250-788-565-520">
+                                                <input type="text" class="form-control" id="telephone" name="telephone" placeholder="+250-788-565-520">
+
+                                                @if($errors->has('telephone'))
+                                                <span class="text-danger">
+                                                {{$errors->first('telephone')}}
+                                                </span>
+                                                @endif
                                             </div>
+    
                                         </div>
-
-                                        @if($errors->has('telephone'))
-                                        <span class="text-danger">
-                                        {{$errors->first('telephone')}}
-                                        </span>
-                                        @endif
-
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-email">Email <span class="text-danger">*</span></label>
+                                            <label class="col-lg-4 col-form-label" for="email">Email <span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
-                                                <input type="text" class="form-control" id="val-email" name="email" placeholder="Your valid email..">
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Your valid email..">
+                                                @if($errors->has('email'))
+                                                <span class="text-danger">
+                                                  {{$errors->first('email')}}
+                                                </span>
+                                                @endif
                                             </div>
-                                        </div>
 
-                                        @if($errors->has('email'))
-                                        <span class="text-danger">
-                                          {{$errors->first('email')}}
-                                        </span>
-                                        @endif
+                                        </div>
                                         
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-password">Password <span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
                                                 <input type="password" class="form-control" id="val-password" name="password" placeholder="Choose a safe one..">
+
+                                                @if($errors->has('password'))
+                                                <span class="text-danger">
+                                                    {{$errors->first('password')}}
+                                                </span>
+                                                @endif
                                             </div>
+    
                                         </div>
-
-
-                                        @if($errors->has('password'))
-                                        <span class="text-danger">
-                                            {{$errors->first('password')}}
-                                        </span>
-                                        @endif
 
 
                                         <div class="form-group row">
@@ -199,7 +197,7 @@
                                                 <input type="password" class="form-control" id="val-confirm-password" name="confirm-password" placeholder="..and confirm it!">
                                             </div>
                                         </div>
-                                        <div class="form-group row">
+                                        {{-- <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-select2">Role <span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
                                                 <select class="js-select2 form-control" id="val-select2" name="roles" style="width: 100%;" data-placeholder="Choose one..">
@@ -209,7 +207,7 @@
                                                         @endforeach
                                                     </select>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group row">
                                             <div class="col-lg-8 ml-auto">
                                                 <button type="submit" class="btn btn-primary">Submit</button>

@@ -37,7 +37,7 @@
 
 
 
-                  <form  action="{{url('/users')}}" method="post">
+                  <form  action="{{url('/register')}}" method="post">
                     @csrf
       
                     <div class="row">
@@ -178,7 +178,7 @@
                         <div class="col-md-6 mb-4 pb-2">
         
                           <div class="form-outline">
-                            <input type="password" name="confirm-password" class="form-control form-control-lg" />
+                            <input type="password" name="password_confirmation" class="form-control form-control-lg" />
                             <label class="form-label" for="password" >Confirm Password</label>
                           </div>
         

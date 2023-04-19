@@ -205,7 +205,7 @@ class UserController extends Controller
 
         ]);
 
-
+// dd($formFields);
 
         // this create user
         $formFields['password']=bcrypt($formFields['password']);

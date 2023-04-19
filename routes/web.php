@@ -67,7 +67,7 @@ Route::get('login',[UserController::class, 'loginForm']);
 Route::get('regis',[UserController::class, 'registerForm']);
 
 Route::post('log',[UserController::class, 'login']);
-Route::post('/users',[UserController::class, 'register']);
+Route::post('/register',[UserController::class, 'register']);
 
 Route::get('/logout',[UserController::class, 'logout']);
 

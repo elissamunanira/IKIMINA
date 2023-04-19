@@ -152,8 +152,7 @@
                             <li><a href="page-reset-password.html">Forgot password</a></li>
                         </ul>
                     </li>
-                    <li><a href="../documentation/index.html"><i class="ti-file"></i> Documentation</a></li>
-                    <li><a><i class="ti-close"></i> Logout</a></li>
+                   <li><a href="/logout"><i class="ti-close"></i> Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -337,7 +336,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="/">
                                                     <i class="ti-settings"></i>
                                                     <span>Setting</span>
                                                 </a>
