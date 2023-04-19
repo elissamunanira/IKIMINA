@@ -63,13 +63,17 @@ Route::get('/calendar', function () {
 
 
 
-Route::get('login',[UserController::class, 'loginForm']);
+Route::get('login',[UserController::class, 'loginForm'])->name('login');
 Route::get('regis',[UserController::class, 'registerForm']);
 
 Route::post('log',[UserController::class, 'login']);
 Route::post('/register',[UserController::class, 'register']);
 
 Route::get('/logout',[UserController::class, 'logout']);
+
+
+
+// Autheticanted Routes
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('dash',[DashboardController::class, 'index']);

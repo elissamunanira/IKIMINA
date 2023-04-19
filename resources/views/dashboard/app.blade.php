@@ -58,12 +58,6 @@
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="/chart-flot">Flot</a></li>
-                            <li><a href="/chart-morris">Morris</a></li>
-                            <li><a href="/chartjs">Chartjs</a></li>
-                            <li><a href="/chartist">Chartist</a></li>
-                            <li><a href="/chart-peity">Peity</a></li>
-                            <li><a href="/chart-sparkline">Sparkle</a></li>
-                            <li><a href="/chart-knob">Knob</a></li>
                         </ul>
                     </li>
                     <li><a href="/calender"><i class="ti-calendar"></i> Calender </a></li>
