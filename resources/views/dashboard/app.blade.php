@@ -49,13 +49,8 @@
                     <div class="logo"><a href="/">
                             <!-- <img src="images/logo.png" alt="" /> --><span>{{ config('app.name', 'IKIBINA') }}</span></a></div>
                     <li class="label">Main</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard <span
-                                class="badge badge-primary">2</span> <span
-                                class="sidebar-collapse-icon ti-angle-down"></span></a>
-                        <ul>
-                            <li><a href="/dash">Dashboard</a></li>
-                            <li><a href="/dash">Dashboard</a></li>
-                        </ul>
+                    <li><a href="/dash" class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard </a>
+                       
                     </li>
 
                     <li class="label">Apps</li>
@@ -71,7 +66,7 @@
                             <li><a href="/chart-knob">Knob</a></li>
                         </ul>
                     </li>
-                    <li><a href="app-event-calender.html"><i class="ti-calendar"></i> Calender </a></li>
+                    <li><a href="/calender"><i class="ti-calendar"></i> Calender </a></li>
                     <li><a href="app-email.html"><i class="ti-email"></i> Email</a></li>
                     <li><a href="/app-profile"><i class="ti-user"></i> Profile</a></li>
                     <li><a href="app-widget-card.html"><i class="ti-layout-grid2-alt"></i> Widget</a></li>

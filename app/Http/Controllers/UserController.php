@@ -11,6 +11,8 @@ use Hash;
 use Illuminate\Support\Arr;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use Notification;
+use App\Notifications\RegisterNotification;
     
 class UserController extends Controller
 {
@@ -224,8 +226,8 @@ class UserController extends Controller
         //     'token'=>$token
         // ];
 
-        // $user->notify(new Vermicomposting($user));
-         return redirect('/loginForm');
+         $user->notify(new RegisterNotification($user));
+         return redirect('/login');
 
 
         }
