@@ -52,10 +52,11 @@
                     <li><a href="/dash" class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard </a>
                        
                     </li>
-
-                    <li class="label">Apps</li>
+                    
                     <li><a href="/users"><i class="ti-users"></i> Users </a></li>
                     <li><a href="/roles"><i class="ti-users"></i> Roles </a></li>
+
+                    <li class="label">Apps</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Charts <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
