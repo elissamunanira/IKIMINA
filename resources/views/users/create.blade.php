@@ -216,22 +216,20 @@
                                                     {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
                                                 </div>
                                             </div>
-                                        </div> 
-
-
-                                        
-
-
+                                        </div>  
                                         <div class="form-group row">
                                             <div class="col-lg-8 ml-auto">
                                                 <button type="submit" class="btn btn-primary">Submit</button>
                                             </div>
                                         </div>
-                                    </form>
+                                    
+                                    {!! Form::close() !!}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+            </section>
 
 @endsection
