@@ -197,6 +197,12 @@
                                                 <input type="password" class="form-control" id="val-confirm-password" name="confirm-password" placeholder="..and confirm it!">
                                             </div>
                                         </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <strong>Role:</strong>
+                                                {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
+                                            </div>
+                                        </div>
                                         {{-- <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-select2">Role <span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
