@@ -212,10 +212,9 @@
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-confirm-password">Status<span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
-                                                <select name="status" id="status">
-                                                    <option value="0" {{ $input->status == 0 ? 'selected' : '' }}>Inactive</option>
-                                                    <option value="1" {{ $input->status == 1 ? 'selected' : '' }}>Active</option>
-                                                </select>
+                                                 <div class="form-group"> 
+                                                    {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
+                                                </div>
                                             </div>
                                         </div> 
 
