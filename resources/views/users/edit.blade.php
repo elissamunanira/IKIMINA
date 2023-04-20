@@ -120,8 +120,8 @@
 
                                                 <select class="js-select2 form-control" id="gender" name="gender" style="width: 100%;" data-placeholder="Choose one..">
                                                     <option disable selected>{{$user->gender}}
-                                                        <option value="MALE">IOT</option>
-                                                        <option value="FEMALE">WEB</option>
+                                                        <option value="MALE">MALE</option>
+                                                        <option value="FEMALE">FEMALE</option>
                                                         <option value="OTHER">OTHER</option> 
                                                 </select> 
                                             </div>
