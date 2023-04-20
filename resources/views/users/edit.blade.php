@@ -118,9 +118,11 @@
                                                 {!! Form::text('gender', null, array('placeholder' => 'Gender','class' => 'form-control')) !!}
 
 
-                                                <select class="js-select2 form-control" id="status" name="status" style="width: 100%;" data-placeholder="Choose one..">
-                                                    <option value="0" {{ $user->status == 0 ? 'selected' : '' }}>Inactive</option>
-                                                    <option value="1" {{ $user->status == 1 ? 'selected' : '' }}>Active</option>
+                                                <select class="js-select2 form-control" id="gender" name="gender" style="width: 100%;" data-placeholder="Choose one..">
+                                                    <option disable selected>{{$user->gender}}
+                                                        <option value="MALE">IOT</option>
+                                                        <option value="FEMALE">WEB</option>
+                                                        <option value="OTHER">OTHER</option> 
                                                 </select> 
                                             </div>
                                         </div>
