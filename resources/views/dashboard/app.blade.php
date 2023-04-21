@@ -49,7 +49,7 @@
                     <div class="logo"><a href="/">
                             <!-- <img src="images/logo.png" alt="" /> --><span>{{ config('app.name', 'IKIBINA') }}</span></a></div>
                     <li class="label">Main</li>
-                    <li><a href="/dash" class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard </a>
+                    <li><a href="/dash"><i class="ti-home"></i> Dashboard </a>
                        
                     </li>
                     

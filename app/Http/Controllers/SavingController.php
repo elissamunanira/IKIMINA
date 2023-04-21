@@ -4,9 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Saving;
 
 class SavingController extends Controller
 {
+
+
+
+    public function index(){
+        $savings = Saving::all();
+        return view('saving.index',compact('savings'));
+    }
+
+    
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -15,7 +25,7 @@ class SavingController extends Controller
             'month' => 'required|date',
         ]);
 
-        $savings = new Savings;
+        $savings = new Saving;
         $savings->user_id = $validatedData['user_id'];
         $savings->amount = $validatedData['amount'];
         $savings->month = $validatedData['month'];
@@ -26,5 +36,11 @@ class SavingController extends Controller
 
     public function create(){
         return view('saving.create');
+    }
+
+    public function showSavings(User $user)
+    {
+        $savings = Saving::where('user_id', $user->id)->get();
+        return view('saving.index', compact('user', 'savings'));
     }
 }

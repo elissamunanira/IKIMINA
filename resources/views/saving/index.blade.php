@@ -8,7 +8,7 @@
                 <div class="col-lg-8 p-r-0 title-margin-right">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Hello, <span>Welcome to Role Management Field</span></h1>
+                            <h1>Hello, <span>Welcome to Saving Management Field</span></h1>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
             <section id="main-content">
                 <div class="row">
                     <div class="container">
-                        <h1>Savings records for {{ $user->name }}</h1>
+                        <h2>Savings records for {{ $user->firstname }} {{ $user->Laststname }}</h2>
                         <table class="table">
                             <thead>
                                 <tr>

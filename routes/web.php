@@ -69,8 +69,9 @@ Route::post('/register',[UserController::class, 'register']);
 
 Route::get('/logout',[UserController::class, 'logout']);
 
+Route::get('/savings/{id}' , [SavingController::class, 'showSavings']);
 Route::get('/saving/create' , [SavingController::class, 'create']);
-Route::get('/savings' , [SavingController::class, 'store'])->name('savings.store');
+Route::post('/savings' , [SavingController::class, 'store'])->name('savings.store');
 
 
 // Autheticanted Routes
@@ -80,5 +81,4 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
 
-    Route::resource('users', SavingController::class);
 });
