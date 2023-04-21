@@ -69,6 +69,8 @@ Route::post('/register',[UserController::class, 'register']);
 
 Route::get('/logout',[UserController::class, 'logout']);
 
+Route::get('/saving/create' , [SavingController::class, 'create']);
+Route::get('/savings' , [SavingController::class, 'store'])->name('savings.store');
 
 
 // Autheticanted Routes
