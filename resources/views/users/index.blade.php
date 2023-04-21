@@ -87,7 +87,7 @@
                 <div class="row">
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-left">
-                            <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
+                            <a class="btn btn-primary" href="{{ route('users.create') }}"> Create New User</a>
                         </div>
                     </div>
                 </div>
@@ -124,11 +124,17 @@
                                                             @endforeach
                                                         @endif
                                                     </td>
-                                                    <td>{{ $user->status }}</td>
+                                                    {{-- <td>{{ $user->status }}</td> --}}
+                                                    <td>
+                                                        @if($user->status ==1)
+                                                        <span class="badge rounded-pill bg-primary">active</span>
+                                                        @else
+                                                        <span class="badge rounded-pill bg-warning">pending</span>
+                                                        
+                                                        @endif
+                                                    </td>
 
                                                     {{-- <td class="py-2">
-
-
 
                                                         @if($user->status == 1)
                                                         <a href="{{route('users.update.status',['user_id'=>$user->id,'status_code'=> 0])}}" class="btn btn-success m-2">
@@ -142,7 +148,6 @@
                                                        </a>
     
                                                        @endif
-    
     
                                                     </td> --}}
 
@@ -170,7 +175,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="footer">
-                                <p>2018 © Admin Board. - <a href="#">example.com</a></p>
+                                <p>2023 © Admin Board. - <a href="#">Ikibina</a></p>
                             </div>
                         </div>
                     </div>
