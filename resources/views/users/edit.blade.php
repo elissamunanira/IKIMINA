@@ -114,10 +114,7 @@
 
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-select2">Gender  </label>
-                                            <div class="col-lg-8">
-                                                {!! Form::text('gender', null, array('placeholder' => 'Gender','class' => 'form-control')) !!}
-
-
+                                            <div class="col-lg-8"> 
                                                 <select class="js-select2 form-control" id="gender" name="gender" style="width: 100%;" data-placeholder="Choose one..">
                                                     <option disable selected>{{$user->gender}}
                                                         <option value="MALE">MALE</option>

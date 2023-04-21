@@ -89,15 +89,30 @@
                                                 <td>{{ ++$i }}</td>
                                                 <td>{{ $role->name }}</td>
                                                 <td>
-                                                    <a class="btn btn-info" href="{{ route('roles.show',$role->id) }}">Show</a>
-                                                    @can('role-edit')
-                                                        <a class="btn btn-primary" href="{{ route('roles.edit',$role->id) }}">Edit</a>
-                                                    @endcan
-                                                    @can('role-delete')
-                                                        {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
-                                                            {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                                                        {!! Form::close() !!}
-                                                    @endcan
+                                                    
+                                                    <div class="dropdown text-sans-serif"><button class="tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            @can('role-list')
+                                                            <div class="py-2"><a class="dropdown-item" href="{{ route('roles.show',$role->id) }}">View</a>
+                                                                @endcan
+
+
+                                                                <div class="dropdown-divider"></div>
+
+                                                                @can('role-edit')
+                                                                <a class="dropdown-item" href="{{ route('roles.edit',$role->id) }}">Edit</a>
+                                                                @endcan
+
+                                                                <div class="dropdown-divider"></div>
+                                                                @can('role-delete')
+                                                                {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
+                                                                    {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                                                                {!! Form::close() !!}
+                                                            
+                                                                @endcan
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -111,40 +126,9 @@
                     <!-- /# column -->
                 </div>
                 <!-- /# row -->
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer">
-                            <p>2018 © Admin Board. - <a href="#">example.com</a></p>
-                        </div>
-                    </div>
-                </div>
             </section>
         </div>
     </div>
 </div>
-
-<!-- jquery vendor -->
-<script src="/dashboard/lib/jquery.min.js"></script>
-<script src="/dashboard/lib/jquery.nanoscroller.min.js"></script>
-<!-- nano scroller -->
-<script src="/dashboard/lib/menubar/sidebar.js"></script>
-<script src="/dashboard/lib/preloader/pace.min.js"></script>
-<!-- sidebar -->
-
-<!-- bootstrap -->
-
-<script src="js/lib/bootstrap.min.js"></script><script src="js/scripts.js"></script>
-<!-- scripit init-->
-<script src="/dashboard/js/lib/data-table/datatables.min.js"></script>
-<script src="/dashboard/js/lib/data-table/dataTables.buttons.min.js"></script>
-<script src="/dashboard/js/lib/data-table/buttons.flash.min.js"></script>
-<script src="/dashboard/js/lib/data-table/jszip.min.js"></script>
-<script src="/dashboard/js/lib/data-table/pdfmake.min.js"></script>
-<script src="/dashboard/js/lib/data-table/vfs_fonts.js"></script>
-<script src="/dashboard/js/lib/data-table/buttons.html5.min.js"></script>
-<script src="/dashboard/js/lib/data-table/buttons.print.min.js"></script>
-<script src="/dashboard/js/lib/data-table/datatables-init.js"></script>
-
 @endsection
 

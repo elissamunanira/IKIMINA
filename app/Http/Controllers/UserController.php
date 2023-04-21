@@ -180,6 +180,24 @@ class UserController extends Controller
     }
 
 
+    public function updateStatus($user_id,$status_code){
+        try{
+            $update_user = User::whereId($user_id)->update(['status'=>$status_code]);
+    
+            if($update_user){
+                return redirect('/vermusers')->with('success','User Updated success full');
+            }
+    
+            return redirect('/vermusers')->with('error','failed to  Updated the status');
+    
+        }
+         catch(\Throwable $th){
+             throw $th;
+         }
+    
+    }
+
+
 
     public function loginForm(){
         return view('Auth.login');
@@ -297,6 +315,14 @@ class UserController extends Controller
         session_destroy();
 
     return redirect('/');
+    }
+
+
+
+    public function showSavings(User $user)
+    {
+        $savings = Savings::where('user_id', $user->id)->get();
+        return view('users.savings', compact('user', 'savings'));
     }
 
 }

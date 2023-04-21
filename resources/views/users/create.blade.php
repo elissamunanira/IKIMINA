@@ -209,14 +209,15 @@
                                         
                                         
 
-                                        <div class="form-group row">
+                                        {{-- <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-confirm-password">Status<span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
                                                  <div class="form-group"> 
                                                     {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>   --}}
+                                        
                                         <div class="form-group row">
                                             <div class="col-lg-8 ml-auto">
                                                 <button type="submit" class="btn btn-primary">Submit</button>
