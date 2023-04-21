@@ -62,11 +62,11 @@
                             <div class="card-body p-b-0">
                                 <center><h4 class="card-title"><u>My Loans</u></h4></center>
                             <!-- Nav tabs -->
-                            <ul class="nav nav-tabs customtab" role="tablist">
+                            {{-- <ul class="nav nav-tabs customtab" role="tablist">
                                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home2" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Home</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile2" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Profile</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#messages2" role="tab"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Messages</span></a> </li>
-                            </ul>
+                            </ul> --}}
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div class="tab-pane active" id="home2" role="tabpanel">
