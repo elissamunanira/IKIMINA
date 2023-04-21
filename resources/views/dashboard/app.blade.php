@@ -63,6 +63,7 @@
                             <li><a href="/chart-flot">Flot</a></li>
                         </ul>
                     </li>
+                    <li><a href="{{ route('my-savings') }}">My Savings</a></li>
                     <li><a href="/calender"><i class="ti-calendar"></i> Calender </a></li>
                     <li><a href="app-email.html"><i class="ti-email"></i> Email</a></li>
                     <li><a href="/app-profile"><i class="ti-user"></i> Profile</a></li>

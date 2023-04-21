@@ -43,4 +43,10 @@ class SavingController extends Controller
         $savings = Saving::where('user_id', $user->id)->get();
         return view('saving.index', compact('user', 'savings'));
     }
+    public function mySavings()
+    {
+        $user = auth()->user();
+        $savings = $user->savings;
+        return view('saving.my-savings', compact('savings'));
+    }
 }
