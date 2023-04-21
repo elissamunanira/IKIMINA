@@ -124,9 +124,9 @@
                                                             @endforeach
                                                         @endif
                                                     </td>
-                                                    {{-- <td>{{ $user->status }}</td> --}}
+                                                    <td>{{ $user->status }}</td>
 
-                                                    <td class="py-2">
+                                                    {{-- <td class="py-2">
 
 
 
@@ -144,7 +144,7 @@
                                                        @endif
     
     
-                                                    </td>
+                                                    </td> --}}
 
 
                                                     <td>

@@ -23,4 +23,8 @@ class SavingController extends Controller
 
         return redirect()->back()->with('success', 'Savings record added successfully.');
     }
+
+    public function create(){
+        return view('saving.create');
+    }
 }

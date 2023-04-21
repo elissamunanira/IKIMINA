@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\RoleController;
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,5 +77,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('dash',[DashboardController::class, 'index']);
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
-    Route::resource('products', ProductController::class);
+
+    Route::resource('users', SavingController::class);
 });
