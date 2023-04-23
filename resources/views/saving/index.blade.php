@@ -18,7 +18,7 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/dash">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Roles</li>
+                                <li class="breadcrumb-item active">Savings</li>
                             </ol>
                         </div>
                     </div>
@@ -29,7 +29,9 @@
             <section id="main-content">
                 <div class="row">
                     <div class="container">
-                        <h2>Savings records for {{ $user->firstname }} {{ $user->Laststname }}</h2>
+                        @foreach($users as $user)
+                        <h2>Savings records for {{ $user->firstname }} {{ $user->lastname }}</h2>
+                        @endforeach
                         <table class="table">
                             <thead>
                                 <tr>

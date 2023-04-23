@@ -13,8 +13,9 @@ class SavingController extends Controller
 
     public function index(){
  
+        $users = User::all();
         $savings = Saving::all();
-        return view('saving.index',compact('savings'));
+        return view('saving.index',compact('users','savings'));
     }
 
     

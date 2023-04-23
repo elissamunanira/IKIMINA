@@ -38,12 +38,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($savings as $saving)
-                                    <tr>
-                                        <td>{{ $saving->month }}</td>
-                                        <td>{{ $saving->amount }}</td>
-                                    </tr>
-                                @endforeach
+                                <tr>
+                                    @foreach ($users as $user)
+                                    <td>{{ $user->firstname }} {{ $user->lastname }}</td>
+                                    @endforeach
+                                    @foreach ($savings as $saving)
+                                    <td>{{ $saving->amount }}</td>
+                                    @endforeach
+                                </tr>
                             </tbody>
                         </table>
                     </div>
