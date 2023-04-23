@@ -12,6 +12,7 @@ class SavingController extends Controller
 
 
     public function index(){
+ 
         $savings = Saving::all();
         return view('saving.index',compact('savings'));
     }
@@ -35,7 +36,8 @@ class SavingController extends Controller
     }
 
     public function create(){
-        return view('saving.create');
+        $users = User::all();
+        return view('saving.create',compact('users'));
     }
 
     public function showSavings(User $user)

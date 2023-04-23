@@ -9,7 +9,7 @@
                 <div class="col-lg-8 p-r-0 title-margin-right">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Hello, <span>Welcome to Role Management Field</span></h1>
+                            <h1>Hello, <span>Welcome to Saving Management Field</span></h1>
                         </div>
                     </div>
                 </div>
@@ -33,8 +33,13 @@
                         <form method="POST" action="{{ route('savings.store') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="user_id">User ID:</label>
-                                <input type="text" name="user_id" class="form-control" required>
+                                <label for="user_id">Member</label>
+                                <select name="firstname" class="form-control">
+                                    <option value="">--- Select Member ---</option>
+                                    @foreach ($users as $user)
+                                        <option value="{{ $user->id }}">{{ $user->firstname }} {{ $user->lastname }} </option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="amount">Amount:</label>
