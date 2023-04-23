@@ -129,7 +129,7 @@
                                                         @if($user->status ==1)
                                                         <span class="badge rounded-pill bg-primary">active</span>
                                                         @else
-                                                        <span class="badge rounded-pill bg-warning">pending</span>
+                                                        <span class="badge rounded-pill bg-success">pending</span>
                                                         
                                                         @endif
                                                     </td>
@@ -153,29 +153,11 @@
 
 
                                                     <td>
-                                                        <div class="dropdown text-sans-serif"><i class="tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></i>
-                                                            <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
-                                                                @can('user-list')
-                                                                <div class="py-2"><a class="dropdown-item" href="{{ route('users.show',$user->id) }}">View</a>
-                                                                    @endcan
-    
-    
-                                                                    <div class="dropdown-divider"></div>
-    
-                                                                    @can('user-edit')
-                                                                    <a class="dropdown-item" href="{{ route('users.edit',$user->id) }}">Edit</a>
-                                                                    @endcan
-    
-                                                                    <div class="dropdown-divider"></div>
-                                                                    @can('user-delete')
-                                                                    {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
-                                                                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                                                                    {!! Form::close() !!}
-                                                                
-                                                                    @endcan
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
+                                                        <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                                                            {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
+                                                                {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                                                            {!! Form::close() !!}
                                                     </td>
                                                 </tr>
                                             @endforeach
