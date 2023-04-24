@@ -15,7 +15,7 @@ class SavingController extends Controller
  
         $users = User::all();
         $savings = Saving::all();
-        return view('saving.index',compact('users','savings'));
+        return view('saving.totalSaving',compact('users','savings'));
     }
 
     

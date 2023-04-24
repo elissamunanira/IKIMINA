@@ -29,23 +29,25 @@
             <section id="main-content">
                 <div class="row">
                     <div class="container">
-                        <h2>Savings records for {{ $user->firstname }} {{ $user->Laststname }}</h2>
+                        <h2>Member's Savings </h2>
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th>Members Name</th>
                                     <th>Total savings</th>
+                                    <th>Total savings</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($users as $user)
+                                @foreach ($savings as $saving)
                                 <tr>
-                                    @foreach ($users as $user)
                                     <td>{{ $user->firstname }} {{ $user->lastname }}</td>
-                                    @endforeach
-                                    @foreach ($savings as $saving)
-                                    <td>{{ $saving->amount }}</td>
-                                    @endforeach
+                                    <td>{{ $saving->month}}</td>
+                                    <td>{{ $saving->amount }} RWF</td>
                                 </tr>
+                                @endforeach
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
