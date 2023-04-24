@@ -15,7 +15,7 @@ class SavingController extends Controller
  
         $users = User::all();
         $savings = Saving::all();
-        return view('saving.index',compact('users','savings'));
+        return view('savings.index',compact('users','savings'));
     }
 
     
@@ -38,19 +38,19 @@ class SavingController extends Controller
 
     public function create(){
         $users = User::all();
-        return view('saving.create',compact('users'));
+        return view('savings.create',compact('users'));
     }
 
     public function showSavings(User $user)
     {
         $savings = Saving::where('user_id', $user->id)->get();
-        return view('saving.index', compact('user', 'savings'));
+        return view('savings.index', compact('user', 'savings'));
     }
     public function mySavings()
     {
         $user = auth()->user();
         $savings = $user->savings;
-        return view('saving.my-savings', compact('savings'));
+        return view('savings.my-savings', compact('savings'));
     }
 
 
