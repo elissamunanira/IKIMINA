@@ -34,19 +34,19 @@
                             <thead>
                                 <tr>
                                     <th>Members Name</th>
-                                    <th>Total savings</th>
+                                    {{-- <th>Total savings</th> --}}
                                     <th>Total savings</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($users as $user)
-                                @foreach ($savings as $saving)
+                                {{-- @foreach ($totalSavings as $saving) --}}
                                 <tr>
                                     <td>{{ $user->firstname }} {{ $user->lastname }}</td>
-                                    <td>{{ $saving->month}}</td>
-                                    <td>{{ $saving->amount }} RWF</td>
+                                    {{-- <td>{{ $saving->month}}</td> --}}
+                                    <td>{{ $totalSavings}} RWF</td>
                                 </tr>
-                                @endforeach
+                                {{-- @endforeach --}}
                                 @endforeach
                             </tbody>
                         </table>

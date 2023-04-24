@@ -12,10 +12,15 @@ class SavingController extends Controller
 
 
     public function index(){
- 
-        $users = User::all();
-        $savings = Saving::all();
+
+
+        $user = User::all();
+        $savings = $user->savings;
         return view('savings.index',compact('users','savings'));
+ 
+        // $users = User::all();
+        // $savings = Saving::all();
+        // return view('savings.index',compact('users','savings'));
     }
 
     
@@ -56,11 +61,21 @@ class SavingController extends Controller
 
     public function totalSavings(){
         
-        $users = User::with('saving')->get();
+        $users = User::with('savings')->get();
 
         foreach ($users as $user) {
-            $totalSavings = $user->saving->sum('amount');
-            return view('savings.totalSaving',compact('users','totalSaving'));
+            $totalSavings = $user->savings->sum('amount');
+            return view('savings.totalSaving',compact('users','totalSavings'));
+        }
+    }
+
+    public function singleTotalSavings(){
+        
+        $users = User::with('savings')->get();
+
+        foreach ($users as $user) {
+            $totalSavings = $user->savings->sum('amount');
+            return view('savings.totalSaving',compact('users','totalSavings'));
         }
     }
 }

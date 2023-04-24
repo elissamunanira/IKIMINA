@@ -29,9 +29,7 @@
             <section id="main-content">
                 <div class="row">
                     <div class="container">
-                        @foreach($users as $user)
                         <h3>Savings records for <strong>{{ $user->firstname }} {{ $user->lastname }}</strong></h3>
-                        @endforeach
                         <table class="table">
                             <thead>
                                 <tr>
