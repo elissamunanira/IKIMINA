@@ -15,7 +15,7 @@ class SavingController extends Controller
  
         $users = User::all();
         $savings = Saving::all();
-        return view('saving.totalSaving',compact('users','savings'));
+        return view('saving.index',compact('users','savings'));
     }
 
     
@@ -54,13 +54,13 @@ class SavingController extends Controller
     }
 
 
-    public function totalSaving(){
-        $users = User::with('savings')->get();
+    public function totalSavings(){
+        
+        $users = User::with('saving')->get();
 
         foreach ($users as $user) {
-            $totalSavings = $user->savings->sum('amount');
-            // do something with $totalSavings, such as store it in an array or display it in a view
-            return view('savings.totalSaving');
+            $totalSavings = $user->saving->sum('amount');
+            return view('savings.totalSaving',compact('users','totalSaving'));
         }
     }
 }

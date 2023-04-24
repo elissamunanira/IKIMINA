@@ -83,6 +83,8 @@ Route::group(['middleware' => ['auth']], function() {
 Route::get('/savings/{id}' , [SavingController::class, 'showSavings']);
 Route::get('/saving/create' , [SavingController::class, 'create']);
 Route::get('/savings' , [SavingController::class, 'index']) ;
+
+Route::get('/totalSavings' , [SavingController::class, 'totalSavings']) ;
 // Route::post('/savings' , [SavingController::class, 'store'])->name('savings.store');
 Route::get('/my-savings', [SavingController::class, 'mySavings'])->name('my-savings');
 
