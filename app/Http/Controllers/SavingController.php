@@ -73,10 +73,8 @@ class SavingController extends Controller
         
         $users = User::with('savings')->get();
 
-        $totalSavings = [];
-        
         foreach ($users as $user) {
-            $totalSavings[$user->id] = $user->savings->sum('amount');
+            $totalSavings = $user->savings->sum('amount');
             return view('savings.totalSaving',compact('users','totalSavings'));
         }
     }
