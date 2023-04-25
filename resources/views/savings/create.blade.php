@@ -34,7 +34,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="user_id">Member</label>
-                                <select name="firstname" class="form-control">
+                                <select name="user_id" class="form-control">
                                     <option value="">--- Select Member ---</option>
                                     @foreach ($users as $user)
                                         <option value="{{ $user->id }}">{{ $user->firstname }} {{ $user->lastname }} </option>
