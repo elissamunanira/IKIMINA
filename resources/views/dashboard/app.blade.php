@@ -54,7 +54,7 @@
                     </li>
                     
                     <li><a href="/users"><i class="ti-user"></i> Users </a></li>
-                    <li><a href="/roles"><i class="ti-role"></i> Roles </a></li>
+                    <li><a href="/roles"><i class="fab fa-critical-role"></i> Roles </a></li>
 
                     <li class="label">Apps</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Charts <span
@@ -356,6 +356,7 @@
                 </div>
             </div>
         </div>
+    @include('inc.messages')
     </div>
 
     @yield('content')
