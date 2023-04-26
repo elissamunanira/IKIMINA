@@ -94,6 +94,7 @@ Route::get('/my-savings', [SavingController::class, 'mySavings'])->name('my-savi
 
     //Loan route
 Route::get('/loan-request', [LoanController::class, 'create'])->name('loans.create');
-Route::post('/loan-request', 'LoanController@store')->name('loan.store');
+Route::post('/loan-request', [LoanController::class, 'store'])->name('loan.store');
+Route::get('/loan-decision/{id}', [LoanController::class, 'store'])->name('loan.show');
 
 });

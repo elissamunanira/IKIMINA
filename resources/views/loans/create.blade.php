@@ -8,11 +8,6 @@
                     <div class="card-header">{{ __('Loan Request') }}</div>
 
                     <div class="card-body">
-                        @if (session('success'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('success') }}
-                            </div>
-                        @endif
 
                         <form method="POST" action="{{ route('loan.store') }}">
                             @csrf
@@ -24,6 +19,34 @@
                                     <input id="amount" type="number" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ old('amount') }}" required autocomplete="amount" autofocus>
 
                                     @error('amount')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="duration" class="col-md-4 col-form-label text-md-right">{{ __('Duration') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="duration" type="number" class="form-control @error('duration') is-invalid @enderror" name="duration" value="{{ old('duration') }}" required autocomplete="duration" autofocus>
+
+                                    @error('duration')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="amount" class="col-md-4 col-form-label text-md-right">{{ __('Interest Rate') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="interest_rate" type="number" class="form-control @error('interest_rate') is-invalid @enderror" name="interest_rate" value="{{ old('interest_rate') }}" required autocomplete="interest_rate" autofocus>
+
+                                    @error('interest_rate')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

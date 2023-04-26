@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Loan;
+use App\Models\User;
 
 class LoanController extends Controller
 {
@@ -31,7 +32,8 @@ class LoanController extends Controller
 
     public function create()
     {
-        return view('loans.create');
+        $users = User::all();
+        return view('loans.create',compact('users'));
     }
 
 
