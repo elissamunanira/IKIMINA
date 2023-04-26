@@ -80,6 +80,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
 
 
+
+    //Savings route
+
 Route::get('/savings/{user}' , [SavingController::class, 'showSavings']);
 Route::get('/saving/create' , [SavingController::class, 'create']);
 Route::get('/savings' , [SavingController::class, 'index']) ;
@@ -87,5 +90,9 @@ Route::get('/savings' , [SavingController::class, 'index']) ;
 Route::get('/totalSavings' , [SavingController::class, 'singleTotalSavings']);
 Route::post('/savings' , [SavingController::class, 'store'])->name('savings.store');
 Route::get('/my-savings', [SavingController::class, 'mySavings'])->name('my-savings');
+
+
+    //Loan route
+Route::get('/loan-request', 'LoanController@create')->name('loan.create');
 
 });
