@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController};
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -93,6 +93,7 @@ Route::get('/my-savings', [SavingController::class, 'mySavings'])->name('my-savi
 
 
     //Loan route
-Route::get('/loan-request', 'LoanController@create')->name('loan.create');
+Route::get('/loan-request', [LoanController::class, 'create'])->name('loans.create');
+Route::post('/loan-request', 'LoanController@store')->name('loan.store');
 
 });

@@ -28,6 +28,13 @@ class LoanController extends Controller
         return redirect()->back()->with('success', 'Loan request submitted successfully.');
     }
 
+
+    public function create()
+    {
+        return view('loans.create');
+    }
+
+
     public function approve(Loan $loan)
     {
         // Update the loan status to "approved"
