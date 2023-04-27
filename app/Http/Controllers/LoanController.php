@@ -10,8 +10,10 @@ class LoanController extends Controller
 {
     public function index()
     {
-        // Display the loan request form
-        return view('loans.request');
+        $users = User::all();
+        $loan = Loan::all();
+        return view('laons.index',compact('users','loan'));
+
     }
 
     public function store(Request $request)
