@@ -56,4 +56,14 @@ class LoanController extends Controller
         // Redirect the user back to the loan requests page with a success message
         return redirect()->route('loans.index')->with('success', 'Loan request rejected successfully.');
     }
+
+
+    public function show($id)
+    {
+        $loan = Loan::findOrFail($id);
+
+        return view('loan.show', compact('loan'));
+    }
+
+
 }
