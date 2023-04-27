@@ -14,11 +14,11 @@
                             <div class="alert alert-success" role="alert">
                                 {{ __('Loan Approved!') }}
                             </div>
-                        @elseif($loan->status == 'paid')
+                        @elseif($loan->status == 'pending')
                             <div class="alert alert-danger" role="alert">
                                 {{ __('Loan paid!') }}
                             </div>
-
+                            @endif
                     </div>
 
                 </div>
