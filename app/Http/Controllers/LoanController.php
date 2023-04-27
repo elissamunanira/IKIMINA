@@ -62,7 +62,7 @@ class LoanController extends Controller
     {
         $loan = Loan::findOrFail($id);
 
-        return view('loan.show', compact('loan'));
+        return view('loans.show', compact('loan'));
     }
 
 
