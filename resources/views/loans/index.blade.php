@@ -8,7 +8,7 @@
                 <div class="col-lg-8 p-r-0 title-margin-right">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Hello, <span>Welcome to Saving Management Field</span></h1>
+                            <h1>Hello, <span>Welcome to loan Management Field</span></h1>
                         </div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/dash">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Savings</li>
+                                <li class="breadcrumb-item active">loans</li>
                             </ol>
                         </div>
                     </div>
@@ -29,19 +29,25 @@
             <section id="main-content">
                 <div class="row">
                     <div class="container">
-                        <h3>Savings records for <strong>{{ $user->firstname }} {{ $user->lastname }}</strong></h3>
+                        <h3>loans records for <strong>{{ $user->firstname }} {{ $user->lastname }}</strong></h3>
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Date</th>
+                                    <th>Date Requested</th>
                                     <th>Amount</th>
+                                    <th>Interest Rate</th>
+                                    <th>Duration</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($savings as $saving)
+                                @foreach ($loans as $loan)
                                     <tr>
-                                        <td>{{ $saving->month }}</td>
-                                        <td>{{ $saving->amount }}</td>
+                                        <td>{{ $loan->created_at }}</td>
+                                        <td>{{ $loan->amount }}</td>
+                                        <td>{{ $loan->interest_rate }}</td>
+                                        <td>{{ $loan->duration }}</td>
+                                        <td>{{ $loan->status }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
