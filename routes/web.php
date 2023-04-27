@@ -96,5 +96,6 @@ Route::get('/my-savings', [SavingController::class, 'mySavings'])->name('my-savi
 Route::get('/loan-request', [LoanController::class, 'create'])->name('loans.create');
 Route::post('/loan-request', [LoanController::class, 'store'])->name('loan.store');
 Route::get('/loan-decision/{id}', [LoanController::class, 'show'])->name('loans.show');
+Route::get('/totalSavings' , [SavingController::class, 'singleTotalSavings']);
 
 });
