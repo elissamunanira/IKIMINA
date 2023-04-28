@@ -47,7 +47,9 @@
                                         <td>{{ $loan->amount }}</td>
                                         <td>{{ $loan->interest_rate }}</td>
                                         <td>{{ $loan->duration }}</td>
-                                        <td>{{ $loan->status }}</td>
+                                        <td>
+                                            @if($loan->status == 'pending')
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
