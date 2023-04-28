@@ -49,6 +49,8 @@
                                         <td>{{ $loan->duration }}</td>
                                         <td>
                                             @if($loan->status == 'pending')
+                                                <span class="badge rounded-pill bg-primary">pending</span>
+                                                @elseif()
                                         </td>
                                     </tr>
                                 @endforeach
