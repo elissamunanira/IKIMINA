@@ -50,7 +50,8 @@
                                         <td>
                                             @if($loan->status == 'pending')
                                                 <span class="badge rounded-pill bg-primary">pending</span>
-                                                @elseif()
+                                            @elseif($loan->status == 'approved')
+                                                <span class="badge rounded-pill bg-primary">pending</span>
                                         </td>
                                     </tr>
                                 @endforeach
