@@ -68,5 +68,14 @@ class LoanController extends Controller
         return view('loans.show', compact('loan'));
     }
 
+    public function update(Request $request, $id)
+    {
+        $loan = Loan::findOrFail($id);
+        $loan->status = $request->input('status');
+        $loan->save();
+
+        return redirect()->route('loan.show', ['id' => $loan->id]);
+    }
+
 
 }
