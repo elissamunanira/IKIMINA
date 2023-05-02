@@ -54,8 +54,8 @@
                     </li>
                     
                     <li><a href="/users"><i class="ti-user"></i> Users </a></li>
-                    <li><a href="/roles"><i class="fab fa-critical-role"></i> Roles </a></li>
-                    <li><a href="/loans"><i class="fab fa-critical-role"></i> Loans </a></li>
+                    <li><a href="/roles"><i class="ti-layout-tab"></i> Roles </a></li>
+                    <li><a href="/loans"><i class="ti-bag"></i> Loans </a></li>
 
                     <li class="label">Apps</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Charts <span
