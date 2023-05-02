@@ -74,7 +74,7 @@ class LoanController extends Controller
         $loan->status = $request->input('status');
         $loan->save();
 
-        return redirect()->route('loan.show', ['id' => $loan->id]);
+        return redirect()->route('loans.show', ['id' => $loan->id]);
     }
 
 
