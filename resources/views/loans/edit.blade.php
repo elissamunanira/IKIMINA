@@ -16,10 +16,11 @@
                                 <label for="status" class="col-md-4 col-form-label text-md-right">{{ __('Loan Status') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="status" class="form-control @error('status') is-invalid @enderror" name="status" required>
+                                    <select id="status" class="form-control @error('status') isapproved-invalid @enderror" name="status" required>
+                                        <option value="pending" @if($loan->status === 'pending') selected @endif>{{ __('Pending') }}</option>
                                         <option value="approved" @if($loan->status === 'approved') selected @endif>{{ __('Approved') }}</option>
                                         <option value="rejected" @if($loan->status === 'rejected') selected @endif>{{ __('Rejected') }}</option>
-                                        <option value="rejected" @if($loan->status === 'paid') selected @endif>{{ __('Paid') }}</option>
+                                        <option value="paid" @if($loan->status === 'paid') selected @endif>{{ __('Paid') }}</option>
                                     </select>
 
                                     @error('status')
