@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('dashboard.app')
 
 @section('content')
     <div class="container">
@@ -19,6 +19,7 @@
                                     <select id="status" class="form-control @error('status') is-invalid @enderror" name="status" required>
                                         <option value="approved" @if($loan->status === 'approved') selected @endif>{{ __('Approved') }}</option>
                                         <option value="rejected" @if($loan->status === 'rejected') selected @endif>{{ __('Rejected') }}</option>
+                                        <option value="rejected" @if($loan->status === 'paid') selected @endif>{{ __('Paid') }}</option>
                                     </select>
 
                                     @error('status')
