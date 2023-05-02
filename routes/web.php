@@ -85,7 +85,7 @@ Route::group(['middleware' => ['auth']], function() {
 
 Route::get('/savings/{user}' , [SavingController::class, 'showSavings']);
 Route::get('/saving/create' , [SavingController::class, 'create']);
-Route::get('/savings' , [SavingController::class, 'index']) ;
+Route::get('/saving' , [SavingController::class, 'index']) ;
 
 Route::get('/totalSavings' , [SavingController::class, 'singleTotalSavings']);
 Route::post('/savings' , [SavingController::class, 'store'])->name('savings.store');
