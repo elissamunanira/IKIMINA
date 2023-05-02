@@ -16,6 +16,10 @@
                             </div>
                         @elseif($loan->status == 'pending')
                             <div class="alert alert-danger" role="alert">
+                                {{ __('pending!') }}
+                            </div>
+                        @elseif($loan->status == 'paid')
+                            <div class="alert alert-danger" role="alert">
                                 {{ __('Loan paid!') }}
                             </div>
                             @endif
