@@ -44,9 +44,9 @@
                                 @foreach ($loans as $loan)
                                     <tr>
                                         <td>{{ $loan->created_at }}</td>
-                                        <td>{{ $loan->amount }}</td>
+                                        <td>{{ $loan->amount }} RWF</td>
                                         <td>{{ $loan->interest_rate }}</td>
-                                        <td>{{ $loan->duration }}</td>
+                                        <td>{{ $loan->duration }} Months</td>
                                         <td>
                                             @if($loan->status == 'pending')
                                                 <span class="badge rounded-pill bg-warning">pending</span>

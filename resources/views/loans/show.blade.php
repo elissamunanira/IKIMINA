@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Loan Decision') }}</div>
 
                     <div class="card-body">
-                        <h5>Loan Requested Amount: {{ $loan->amount }}</h5>
+                        <h5>Loan Requested Amount: {{ $loan->amount }} RWF</h5>
 
                         @if ($loan->status == 'pending')
                             <div class="alert alert-warning" role="alert">
