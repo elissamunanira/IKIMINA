@@ -70,11 +70,11 @@ class LoanController extends Controller
 
 
     public function edit($id){
+
         $loan = Loan::find($id);
-        return view();
+        return view('loans.edit',compact('loan'));
+
     }
-
-
 
     public function update(Request $request, $id)
     {
