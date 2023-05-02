@@ -68,6 +68,14 @@ class LoanController extends Controller
         return view('loans.show', compact('loan'));
     }
 
+
+    public function edit($id){
+        $loan = Loan::find($id);
+        return view();
+    }
+
+
+
     public function update(Request $request, $id)
     {
         $loan = Loan::findOrFail($id);
