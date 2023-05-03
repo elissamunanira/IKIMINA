@@ -44,8 +44,9 @@
                             </thead>
                             <tbody>
                                 @foreach ($loans as $loan)
+                                @foreach ($users as $user)
                                     <tr>
-                                        <td>{{ $loan->user->firstname }}</td>
+                                        <td>{{ $user->firstname }}</td>
                                         <td>{{ $loan->created_at }}</td>
                                         <td>{{ $loan->amount }} RWF</td>
                                         <td>{{ $loan->interest_rate }}</td>
@@ -72,6 +73,7 @@
                                             </div> --}}
                                         </td>
                                     </tr>
+                                @endforeach
                                 @endforeach
                             </tbody>
                         </table>
