@@ -10,10 +10,10 @@ class LoanController extends Controller
 {
     public function index()
     {
-        // $user = User::all();
+        $user = User::all();
         // $loan = $user->loans;
         $loans = Loan::all();
-        return view('loans.index',compact('loans'));
+        return view('loans.index',compact('loans','user'));
 
     }
 
