@@ -12,7 +12,7 @@ class LoanController extends Controller
     {
         $users = User::with('loans')->get();
         foreach ($users as $user){
-            $loans = $user->loans;
+            $loans = $user->loans->sum('amount');
         return view('loans.index',compact('loans','user'));}
 
     }
