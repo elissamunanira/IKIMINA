@@ -4,6 +4,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                        <div class="container">
+                        <div class="container">
+                        <div class="container">
                 <div class="card">
                     <div class="card-header">{{ __('Loan Decision') }}</div>
 
@@ -27,6 +30,9 @@
                                 {{ __('Loan has been paid!') }}
                             </div>
                             @endif
+                            </div>
+                    </div>
+                    </div>
                     </div>
 
                 </div>

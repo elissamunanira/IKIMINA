@@ -8,13 +8,10 @@ use App\Models\User;
 
 class LoanController extends Controller
 {
-    public function index()
+     public function index()
     {
-        $users = User::with('loans')->get();
-        foreach ($users as $user){
-            $loans = $user->loans->sum('amount');
-        return view('loans.index',compact('loans','user'));}
-
+        $loans = Loan::with('user')->get();
+        return view('loans.index', compact('loans'));
     }
 
     public function store(Request $request)
