@@ -72,10 +72,11 @@ class SavingController extends Controller
     public function singleTotalSavings(){
         
         $users = User::with('savings')->get();
+        // $members = Member::with('savings')->get();
 
-        foreach ($users as $user) {
-            $totalSavings = $user->savings->sum('amount');
-            return view('savings.totalSaving',compact('users','totalSavings'));
-        }
+        // foreach ($users as $user) {
+        //     $totalSavings = $user->savings->sum('amount');
+            return view('savings.totalSaving',compact('users'));
+        // }
     }
 }

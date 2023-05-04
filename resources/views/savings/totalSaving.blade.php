@@ -44,7 +44,7 @@
                                 <tr>
                                     <td>{{ $user->firstname }} {{ $user->lastname }}</td>
                                     {{-- <td>{{ $saving->month}}</td> --}}
-                                    <td>{{ $totalSavings}} RWF</td>
+                                    <td>{{ $user->savings->sum('amount')}} RWF</td>
                                 </tr>
                                 {{-- @endforeach --}}
                                 @endforeach
