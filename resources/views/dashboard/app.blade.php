@@ -55,7 +55,12 @@
                     
                     <li><a href="/users"><i class="ti-user"></i> Users </a></li>
                     <li><a href="/roles"><i class="ti-layout-tab"></i> Roles </a></li>
-                    <li><a href="/totalSavings"><i class="ti-briefcase"></i>Savings</a></li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-briefcase"></i> Charts <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                    <li><a href="/totalSavings">Savings</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/loans"><i class="ti-bag"></i> Loans </a></li>
 
                     <li class="label">Apps</li>
