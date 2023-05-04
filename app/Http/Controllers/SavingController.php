@@ -53,9 +53,10 @@ class SavingController extends Controller
     }
     public function mySavings()
     {
+        $i=0;
         $user = auth()->user();
         $savings = $user->savings;
-        return view('savings.my-savings', compact('savings'));
+        return view('savings.my-savings', compact('savings','i'));
     }
 
 
@@ -70,13 +71,9 @@ class SavingController extends Controller
     }
 
     public function singleTotalSavings(){
-        
-        $users = User::with('savings')->get();
-        // $members = Member::with('savings')->get();
 
-        // foreach ($users as $user) {
-        //     $totalSavings = $user->savings->sum('amount');
-            return view('savings.totalSaving',compact('users'));
-        // }
+        $i=0;
+        $users = User::with('savings')->get();
+        return view('savings.totalSaving',compact('users','i'));
     }
 }

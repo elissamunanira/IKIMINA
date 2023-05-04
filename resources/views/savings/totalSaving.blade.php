@@ -18,7 +18,7 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/dash">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Roles</li>
+                                <li class="breadcrumb-item active">Savings</li>
                             </ol>
                         </div>
                     </div>
@@ -33,20 +33,21 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Members Name</th>
                                     {{-- <th>Total savings</th> --}}
                                     <th>Total savings</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user)
-                                {{-- @foreach ($totalSavings as $saving) --}}
+                                @foreach ($users as $user) 
                                 <tr>
-                                    <td>{{ $user->firstname }} {{ $user->lastname }}</td>
-                                    {{-- <td>{{ $saving->month}}</td> --}}
+                                    <td>{{++$i}}</td>
+                                    <td>{{ $user->firstname }} {{ $user->lastname }}</td> 
                                     <td>{{ $user->savings->sum('amount')}} RWF</td>
-                                </tr>
-                                {{-- @endforeach --}}
+                                    <td><a class="btn btn-success" href="{{ url('savings',$user->id) }}">View</a></td>
+                                </tr> 
                                 @endforeach
                             </tbody>
                         </table>

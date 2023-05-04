@@ -41,6 +41,7 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
+                                                <th>#</th>
                                                 <th>Month Paid</th>
                                                 <th>Amount</th>
                                             </tr>
@@ -48,6 +49,7 @@
                                         <tbody>
                                             @foreach ($savings as $saving)
                                                 <tr>
+                                                    <td>{{++$i}}</td>
                                                     <td>{{ $saving->month }}</td>
                                                     <td>{{ $saving->amount }} RWF</td>
                                                 </tr>

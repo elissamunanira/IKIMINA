@@ -47,7 +47,7 @@
                                 {{-- @foreach ($users as $user) --}}
                                     <tr>
                                         
-                                        <td>{{ $loan->user->firstname }}</td>
+                                        <td>{{ $loan->User->firstname }}</td>
                                         <td>{{ $loan->created_at }}</td>
                                         <td>{{ $loan->amount }} RWF</td>
                                         <td>{{ $loan->interest_rate }}</td>
