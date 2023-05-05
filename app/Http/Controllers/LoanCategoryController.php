@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Loan;
+use App\Models\User;
+use App\Models\LoanCategory;
 
-class LoanCategoriesController extends Controller
+class LoanCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -53,7 +56,8 @@ class LoanCategoriesController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $loanCategory = LoanCategory::find($id);
+        return view('loan_categories.edit',compact('loanCategory'));
     }
 
     /**

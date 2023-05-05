@@ -70,7 +70,7 @@
                             <li><a class="sidebar-sub-toggle">Loan Categories<span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                            <li><a href="/loarnCategories/create">+Loan Category</a></li>
+                            <li><a href="/loan-categories/create">+Loan Category</a></li>
                             <li><a href="/loan-categories">All Categories</a></li>
                         </ul>
                             </li>

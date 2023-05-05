@@ -101,11 +101,11 @@ Route::put('/loan/{id}', [LoanController::class, 'update'])->name('loan.update')
 Route::get('/loan/{id}/edit', [LoanController::class, 'edit'])->name('loan.edit');
 
 
-Route::get('/loan-categories', 'LoanCategoryController@index');
-Route::get('/loan-categories/create', 'LoanCategoryController@create');
-Route::post('/loan-categories/store', 'LoanCategoryController@store');
-Route::get('/loan-categories/{id}/edit', 'LoanCategoryController@edit');
-Route::put('/loan-categories/{id}', 'LoanCategoryController@update');
+Route::get('/loan-categories', [LoanCategoryController::class, 'index']);
+Route::get('/loan-categories/create', [LoanCategoryController::class, 'create']);
+Route::post('/loan-categories/store', [LoanCategoryController::class, 'store'])->name('loan_categories.store');
+Route::get('/loan-categories/{id}/edit', [LoanCategoryController::class, 'edit'])->name('loan_categories.edit');
+Route::put('/loan-categories/{id}', [LoanCategoryController::class, 'update']);
 
 
 });
