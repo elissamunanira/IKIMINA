@@ -12,8 +12,8 @@ class LoanController extends Controller
     {
         // $user = User::all();
         $loans = Loan::with('user')->get();
-        $interest = $this->amount * $this->interest_rate * $this->duration / 12;
-        return view('loans.index', compact('loans','interest'));
+        // $interest = $this->amount * $this->interest_rate * $this->duration / 12;
+        return view('loans.index', compact('loans'));
     }
 
     public function store(Request $request)
