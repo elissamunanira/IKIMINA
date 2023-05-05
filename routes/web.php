@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController};
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -99,5 +99,13 @@ Route::get('/loan-decision/{id}', [LoanController::class, 'show'])->name('loans.
 Route::get('/loans' , [LoanController::class, 'index']);
 Route::put('/loan/{id}', [LoanController::class, 'update'])->name('loan.update');
 Route::get('/loan/{id}/edit', [LoanController::class, 'edit'])->name('loan.edit');
+
+
+
+Route::get('/loan-categories/create', 'LoanCategoryController@create');
+Route::post('/loan-categories/store', 'LoanCategoryController@store');
+Route::get('/loan-categories/{id}/edit', 'LoanCategoryController@edit');
+Route::put('/loan-categories/{id}', 'LoanCategoryController@update');
+
 
 });

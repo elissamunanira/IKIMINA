@@ -67,11 +67,16 @@
                     <li><a class="sidebar-sub-toggle"><i class="ti-bag"></i> Loans <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="/saving/create">Loan Categories</a></li>
-                            <li><a href="/loans">Loans</a></li>
+                            <li><a class="sidebar-sub-toggle">Loan Categories<span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <ul>
+                            <li><a href="/loarnCategories/create">+Loan Category</a></li>
+                            <li><a href="/loan-categories">All Categories</a></li>
+                        </ul>
+                            </li>
+                            <li><a href="/loans">All Loans</a></li>
                         </ul>
                     </li>
-                    <li><a href="/loans"><i class="ti-bag"></i> Loans </a></li>
 
                     <li class="label">Apps</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Charts <span
