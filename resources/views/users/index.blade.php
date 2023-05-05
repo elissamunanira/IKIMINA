@@ -134,24 +134,6 @@
                                                         @endif
                                                     </td>
 
-                                                    {{-- <td class="py-2">
-
-                                                        @if($user->status == 1)
-                                                        <a href="{{route('users.update.status',['user_id'=>$user->id,'status_code'=> 0])}}" class="btn btn-success m-2">
-                                                            <i class="fa fa-check"></i>
-    
-                                                        </a>
-                                                        @else
-    
-                                                        <a href="{{route('users.update.status',['user_id'=>$user->id,'status_code'=> 1])}}" class="btn btn-danger m-2">
-                                                            <i class="fa fa-ban"></i>
-                                                       </a>
-    
-                                                       @endif
-    
-                                                    </td> --}}
-
-
                                                     <td>
                                                         <a class="btn btn-success" href="{{ url('savings',$user->id) }}">Saving</a>
                                                         <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
