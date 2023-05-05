@@ -26,12 +26,14 @@ class LoanCategoriesController extends Controller
     {
          $validatedData = $request->validate([
         'name' => 'required|string',
+        'principal' => 'required|numeric',
         'interest_rate' => 'required|numeric|min:0',
         'duration' => 'required|integer|min:1',
     ]);
 
     $loanCategory = new LoanCategory();
     $loanCategory->name = $validatedData['name'];
+    $loanCategory->principal = $validatedData['principal'];
     $loanCategory->interest_rate = $validatedData['interest_rate'];
     $loanCategory->duration = $validatedData['duration'];
     $loanCategory->save();
@@ -59,8 +61,15 @@ class LoanCategoriesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
-    }
+         $loanCategory = LoanCategory::find($id);
+        $loanCategory->name = $request->input('name');
+        $loanCategory->principal = $request->input('principal');
+        $loanCategory->interest_rate = $request->input('interest_rate');
+        $loanCategory->duration = $request->input('duration');
+        $loanCategory->save();
+
+        return redirect('/loan-categories')->with('success', 'Loan category updated successfully');
+}
 
     /**
      * Remove the specified resource from storage.
