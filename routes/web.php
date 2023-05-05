@@ -101,7 +101,7 @@ Route::put('/loan/{id}', [LoanController::class, 'update'])->name('loan.update')
 Route::get('/loan/{id}/edit', [LoanController::class, 'edit'])->name('loan.edit');
 
 
-
+Route::get('/loan-categories', 'LoanCategoryController@index');
 Route::get('/loan-categories/create', 'LoanCategoryController@create');
 Route::post('/loan-categories/store', 'LoanCategoryController@store');
 Route::get('/loan-categories/{id}/edit', 'LoanCategoryController@edit');
