@@ -48,7 +48,7 @@
                                         <td>{{ $loan->user->firstname }}</td>
                                         <td>{{ $loan->created_at }}</td>
                                         <td>{{ $loan->amount }} RWF</td>
-                                        <td>{{ $loan->interest_rate }}</td>
+                                        <td>{{ $interest}}</td>
                                         <td>{{ $loan->duration }} Months</td>
                                         <td>
                                             @if($loan->status == 'pending')
