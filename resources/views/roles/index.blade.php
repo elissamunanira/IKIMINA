@@ -39,7 +39,7 @@
                                     <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>No</th>
+                                                <th>#</th>
                                                 <th>Name</th>
                                                 <th width="280px">Action</th>
                                             </tr>
