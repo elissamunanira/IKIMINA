@@ -27,10 +27,11 @@
             </div>
             <!-- /# row -->
             <section id="main-content">
-                <div class="row">
-                    <div class="container">
-                        <h2>Member's Savings </h2>
-                        <table class="table">
+                
+                <div class="card">
+                    <div class="bootstrap-data-table-panel">
+                        <div class="table-responsive">
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -51,6 +52,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 </div>
             </section>
