@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="container">
                         <h3>Savings records for <strong>{{ $user->firstname }} {{ $user->lastname }}</strong></h3>
-                        <table class="table">
+                                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
                                     <th>Date</th>

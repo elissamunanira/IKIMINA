@@ -29,7 +29,6 @@
             <section id="main-content">
                 <div class="row">
                     <div class="container">
-                        {{-- <h3>loans records for <strong>{{ $user->firstname }} {{ $user->lastname }}</strong></h3> --}}
                         <table class="table">
                             <thead>
                                 <tr>
