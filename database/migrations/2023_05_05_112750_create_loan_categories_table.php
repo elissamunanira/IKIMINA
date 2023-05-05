@@ -13,17 +13,11 @@ return new class extends Migration
     {
         Schema::create('loan_categories', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('loan_id');
             $table->string('name');
             $table->decimal('principal', 10, 2);
             $table->decimal('interest_rate', 5, 2);
             $table->integer('duration');
             $table->timestamps();
-
-            $table->foreign('loan_id')
-                ->references('id')
-                ->on('loans')
-                ->onDelete('cascade');
         });
     }
 
