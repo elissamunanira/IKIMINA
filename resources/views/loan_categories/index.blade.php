@@ -47,6 +47,7 @@
                                         <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                             <thead>
                                                 <tr>
+                                                    <th>#</th>
                                                     <th>Name</th>
                                                     <th>Interest_rate</th>
                                                     <th>Period/Duration</th>
@@ -56,6 +57,7 @@
                                             <tbody>
                                                 @foreach ($loanCategories as $loanCategory)
                                                     <tr>
+                                                        <td>{{ ++$i }}</td>
                                                         <td>{{ $loanCategory->name }}</td>
                                                         <td>{{ $loanCategory->interest_rate }}</td>
                                                         <td>{{ $loanCategory->duration}} Months</td>

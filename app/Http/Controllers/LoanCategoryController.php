@@ -14,8 +14,10 @@ class LoanCategoryController extends Controller
      */
       public function index()
     {
+
+        $i = 0;
         $loanCategories = LoanCategory::all();
-        return view('loan_categories.index', compact('loanCategories'));
+        return view('loan_categories.index', compact('loanCategories','i'));
     }
 
     public function create()
