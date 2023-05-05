@@ -370,18 +370,18 @@
     @yield('content')
 
     
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="footer">
-                <p>2018 © Admin Board. - <a href="#">example.com</a></p>
+    <!-- Footer -->
+    <footer class="sticky-footer bg-black">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; ikibina <span id="date"></span></span>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
+    <!-- End of Footer -->
 </div>
 </div>
 </div>
-
 <!-- jquery vendor -->
 <script src="/dashboard/js/lib/jquery.min.js"></script>
 <script src="/dashboard/js/lib/jquery.nanoscroller.min.js"></script>
@@ -410,6 +410,26 @@
 <script src="/dashboard/js/lib/owl-carousel/owl.carousel-init.js"></script>
 <!-- scripit init-->
 <script src="/dashboard/js/dashboard2.js"></script>
+
+
+{{-- datatable links --}}
+
+<script src="/dashboard/lib/jquery.nanoscroller.min.js"></script>
+<!-- nano scroller -->
+<script src="/dashboard/lib/menubar/sidebar.js"></script>
+<script src="/dashboard/lib/preloader/pace.min.js"></script>
+<!-- sidebar -->
+
+<!-- scripit init-->
+<script src="/dashboard/js/lib/data-table/datatables.min.js"></script>
+<script src="/dashboard/js/lib/data-table/dataTables.buttons.min.js"></script>
+<script src="/dashboard/js/lib/data-table/buttons.flash.min.js"></script>
+<script src="/dashboard/js/lib/data-table/jszip.min.js"></script>
+<script src="/dashboard/js/lib/data-table/pdfmake.min.js"></script>
+<script src="/dashboard/js/lib/data-table/vfs_fonts.js"></script>
+<script src="/dashboard/js/lib/data-table/buttons.html5.min.js"></script>
+<script src="/dashboard/js/lib/data-table/buttons.print.min.js"></script>
+<script src="/dashboard/js/lib/data-table/datatables-init.js"></script>
 </body>
 
 </html>

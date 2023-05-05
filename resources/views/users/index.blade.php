@@ -171,41 +171,11 @@
                         </div>
                         <!-- /# column -->
                     </div>
-                    <!-- /# row -->
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="footer">
-                                <p>2023 © Admin Board. - <a href="#">Ikibina</a></p>
-                            </div>
-                        </div>
-                    </div>
                 </section>
             </div>
         </div>
     </div>
-
-    <!-- jquery vendor -->
-    <script src="/dashboard/lib/jquery.min.js"></script>
-    <script src="/dashboard/lib/jquery.nanoscroller.min.js"></script>
-    <!-- nano scroller -->
-    <script src="/dashboard/lib/menubar/sidebar.js"></script>
-    <script src="/dashboard/lib/preloader/pace.min.js"></script>
-    <!-- sidebar -->
-    
-    <!-- bootstrap -->
-
-    <script src="js/lib/bootstrap.min.js"></script><script src="js/scripts.js"></script>
-    <!-- scripit init-->
-    <script src="/dashboard/js/lib/data-table/datatables.min.js"></script>
-    <script src="/dashboard/js/lib/data-table/dataTables.buttons.min.js"></script>
-    <script src="/dashboard/js/lib/data-table/buttons.flash.min.js"></script>
-    <script src="/dashboard/js/lib/data-table/jszip.min.js"></script>
-    <script src="/dashboard/js/lib/data-table/pdfmake.min.js"></script>
-    <script src="/dashboard/js/lib/data-table/vfs_fonts.js"></script>
-    <script src="/dashboard/js/lib/data-table/buttons.html5.min.js"></script>
-    <script src="/dashboard/js/lib/data-table/buttons.print.min.js"></script>
-    <script src="/dashboard/js/lib/data-table/datatables-init.js"></script>
+                    
 
 @endsection
 
