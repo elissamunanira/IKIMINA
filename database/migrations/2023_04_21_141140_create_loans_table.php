@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
+            $table->string('category');
             $table->unsignedBigInteger('user_id');
             $table->decimal('amount', 10, 2);
-            $table->integer('duration');
-            $table->decimal('interest_rate', 5, 2);
             $table->enum('status', ['pending', 'approved', 'rejected', 'paid'])->default('pending');
             $table->timestamps();
 
