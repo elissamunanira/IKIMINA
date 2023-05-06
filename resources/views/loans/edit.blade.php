@@ -24,7 +24,7 @@
                                     </select>
 
                                     
-                                        <form action="{{ route('loans.update', $loan->id) }}" method="post">
+                                        {{-- <form action="{{ route('loans.update', $loan->id) }}" method="post">
                                             @csrf
                                             @method('PUT')
 
@@ -32,7 +32,7 @@
                                             <input type="text" name="paid_amount" id="paid_amount">
 
                                             <button type="submit">Update Loan</button>
-                                        </form>
+                                        </form> --}}
 
                                     @error('status')
                                         <span class="invalid-feedback" role="alert">
