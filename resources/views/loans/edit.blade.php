@@ -23,6 +23,17 @@
                                         <option value="paid" @if($loan->status === 'paid') selected @endif>{{ __('Paid') }}</option>
                                     </select>
 
+                                    
+                                        <form action="{{ route('loans.update', $loan->id) }}" method="post">
+                                            @csrf
+                                            @method('PUT')
+
+                                            <label for="paid_amount">Paid Amount:</label>
+                                            <input type="text" name="paid_amount" id="paid_amount">
+
+                                            <button type="submit">Update Loan</button>
+                                        </form>
+
                                     @error('status')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
