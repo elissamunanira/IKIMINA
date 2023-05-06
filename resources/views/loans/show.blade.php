@@ -31,6 +31,15 @@
                             </div>
                             @endif
                             </div>
+
+                            {{-- <h1>Loan Details</h1>
+
+                            <p>Loan Amount: ${{ $loan->loan_amount }}</p>
+                            <p>Interest Rate: {{ $loan->interest_rate }}%</p>
+                            <p>Loan Term: {{ $loan->loan_term }} months</p>
+                            <p>Monthly Payment: ${{ $monthlyPayment }}</p> --}}
+
+
                     </div>
                     </div>
                     </div>
