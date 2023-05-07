@@ -25,6 +25,7 @@ class BudgetLineController extends Controller
         $validatedData = $request->validate([
             'budget_line_name' => 'required|string|max:255',
             'budget_line_amount' => 'required|numeric|min:0',
+            'budget_line_description' => 'required' 
         ]);
 
         $budgetLine = $budget->budgetLines()->create($validatedData);
