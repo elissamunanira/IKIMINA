@@ -37,6 +37,10 @@
                             <input type="text" name="budget_line_name" id="name" class="form-control" required>
                         </div>
                         <div class="form-group">
+                            <label for="budget_line_description">Description</label>
+                            <input type="number" step="0.01" name="budget_line_description" id="budget_line_description" class="form-control" required>
+                        </div>
+                        <div class="form-group">
                             <label for="amount">Amount</label>
                             <input type="number" step="0.01" name="budget_line_amount" id="amount" class="form-control" required>
                         </div>
