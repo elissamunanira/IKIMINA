@@ -33,7 +33,7 @@
                                 <h1>{{ $budgetLine->budget_line_name }}</h1>
                                     <p>Amount To Be Used: {{ $budgetLine->budget_line_amount }} RWF</p>
                                     <p>Budget: {{ $budget->budget_name }}</p>
-                                    {{-- <p>Budget Description: {{ $budgetLine->budget->description }}</p> --}}
+                                    <p>Budget Line Description: {{ $budgetLine->budget_line_description }}</p>
 
 
                                     <a class = "btn btn-primary" href="/budgets/{{$budget->id}}/budgetlines/{{$budgetLine->id}}/edit">Edit</a>
