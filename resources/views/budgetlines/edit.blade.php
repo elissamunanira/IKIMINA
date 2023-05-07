@@ -40,6 +40,11 @@
                                 <label for="name">Budget Line Name</label>
                                 <input type="text" name="budget_line_name" id="name" class="form-control" value="{{ $budgetLine->budget_line_name }}" required>
                             </div>
+
+                            <div class="form-group">
+                                <label for="name">Description</label>
+                                <input type="text" name="budget_line_description" id="description" class="form-control" value="{{ $budgetLine->budget_line_description }}" required>
+                            </div>
                             
                             <div class="form-group">
                                 <label for="amount">Amount To Spend On</label>
