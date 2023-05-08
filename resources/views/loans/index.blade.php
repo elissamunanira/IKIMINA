@@ -35,7 +35,7 @@
                                     <th>Name</th>
                                     <th>Date Requested</th>
                                     <th>Amount</th>
-                                    <th>Interest Rate</th>
+                                    {{-- <th>Interest Rate</th> --}}
                                     <th>Duration</th>
                                     <th>Status</th>
                                     <th>Action</th>
@@ -48,7 +48,7 @@
                                         <td>{{ $loan->user->firstname }}</td>
                                         <td>{{ $loan->created_at }}</td>
                                         <td>{{ $loan->amount }} RWF</td>
-                                        <td>{{ $interest}}</td>
+                                        {{-- <td>{{ $interest}}</td> --}}
                                         <td>{{ $loan->duration }} Months</td>
                                         <td>
                                             @if($loan->status == 'pending')
