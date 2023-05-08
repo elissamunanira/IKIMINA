@@ -15,10 +15,9 @@ class Loan extends Model
         return $this->belongsTo(Loan::class);
     }
 
-
     public function loanCategory()
     {
-        return $this->belongsTo(LoanCategory::class);
+        return $this->belongsToMany(LoanCategory::class);
     }
 
 

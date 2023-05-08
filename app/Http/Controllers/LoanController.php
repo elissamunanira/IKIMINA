@@ -38,7 +38,7 @@ class LoanController extends Controller
         // $loan->interest_rate = $request->input('interest_rate');
         $loan->status = 'pending';
         $loan->save();
-        $loan->LoanCategory()->attach($category_id);
+        $loan->loanCategory()->attach($category_id);
 
         // Redirect the user back to the loan request form with a success message
         return redirect()->back()->with('success', 'Loan request submitted successfully.');
