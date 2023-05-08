@@ -44,7 +44,7 @@
                                     <tr>
                                         <td>{{++$i}}</td>
                                         <td>{{ $saving->created_at }}</td>
-                                        <td>{{ $saving->month->format('Y-M') }}</td>
+                                        <td>{{ $saving->month }}</td>
                                         <td>{{ $saving->amount }} RWF</td>
                                     </tr>
                                 @endforeach

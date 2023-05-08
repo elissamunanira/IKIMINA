@@ -13,6 +13,17 @@
                             @csrf
 
                             <div class="form-group row">
+                                <label for="category"class="col-md-4 col-form-label text-md-right">Loan Category:</label>
+                                <div class="col-md-6">
+                                    <select name="category" class="form-control">
+                                        <option value="">--- Select Category ---</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->category }} </option>">
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="amount" class="col-md-4 col-form-label text-md-right">{{ __('Loan Amount') }}</label>
 
                                 <div class="col-md-6">

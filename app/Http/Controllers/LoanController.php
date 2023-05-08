@@ -19,12 +19,23 @@ class LoanController extends Controller
 
     public function store(Request $request)
     {
+        // $branch_id=$request->branch_name;
+        // // dd($branch_id);
+        // $branch_details = Branch::find($branch_id);
+        // $branch_name= $branch_details->branch_name;
+        // $post = new Post();
+        // $post->branch_name=$branch_name;
+
         // Store the loan request in the database
+        $category_id = $request->category;
+        $category_details = LoanCategory::find($category_id);
+        $loanCategory = $category_details->category;
         $loan = new Loan();
+        $loan->category = $loanCategory;
         $loan->user_id = auth()->user()->id;
         $loan->amount = $request->input('amount');
-        $loan->duration = $request->input('duration');
-        $loan->interest_rate = $request->input('interest_rate');
+        // $loan->duration = $request->input('duration');
+        // $loan->interest_rate = $request->input('interest_rate');
         $loan->status = 'pending';
         $loan->save();
 
@@ -35,8 +46,10 @@ class LoanController extends Controller
 
     public function create()
     {
+
+        $categories = LoanCategory::all();
         $users = User::all();
-        return view('loans.create',compact('users'));
+        return view('loans.create',compact('users','categories'));
     }
 
 
