@@ -33,15 +33,19 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Date</th>
+                                    <th>Month Paid</th>
                                     <th>Amount</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($savings as $saving)
                                     <tr>
-                                        <td>{{ $saving->month }}</td>
-                                        <td>{{ $saving->amount }}</td>
+                                        <td>{{++$i}}</td>
+                                        <td>{{ $saving->created_at }}</td>
+                                        <td>{{ $saving->month->format('Y-M') }}</td>
+                                        <td>{{ $saving->amount }} RWF</td>
                                     </tr>
                                 @endforeach
                             </tbody>

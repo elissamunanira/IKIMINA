@@ -9,7 +9,7 @@
                     <div class="col-lg-8 p-r-0 title-margin-right">
                         <div class="page-header">
                             <div class="page-title">
-                                <h1>Hello, <span>Welcome to Users Management</span></h1>
+                                <h1>Hello, <span>Welcome to Loan Categories Field</span></h1>
                             </div>
                         </div>
                     </div>
@@ -19,7 +19,7 @@
                             <div class="page-title">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="/dash">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Users</li>
+                                    <li class="breadcrumb-item active">Loan categories</li>
                                 </ol>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-left">
-                            <a class="btn btn-primary" href="{{ route('users.create') }}"> Create New User</a>
+                            <a class="btn btn-primary" href="/loan-categories/create"> Create New Loan Category</a>
                         </div>
                     </div>
                 </div>

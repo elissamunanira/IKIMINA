@@ -48,8 +48,9 @@ class SavingController extends Controller
 
     public function showSavings(User $user)
     {
+        $i = 0;
         $savings = Saving::where('user_id', $user->id)->get();
-        return view('savings.index', compact('user', 'savings'));
+        return view('savings.index', compact('user', 'savings','i'));
     }
     public function mySavings()
     {
