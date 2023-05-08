@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('category_loan', function (Blueprint $table) {
-            $table->unsignedBigInteger('category_id');
+        Schema::create('loan_loan_category', function (Blueprint $table) {
+            $table->unsignedBigInteger('loan_category_id');
             $table->unsignedBigInteger('loan_id');
-            $table->foreign('category_id')->references('id')->on('loan_categories')->onDelete('cascade');
+            $table->foreign('loan_category_id')->references('id')->on('loan_categories')->onDelete('cascade');
             $table->foreign('loan_id')->references('id')->on('loans')->onDelete('cascade');
-            $table->primary(['category_id','loan_id']);
+            $table->primary(['loan_category_id','loan_id']);
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('category_loan');
+        Schema::dropIfExists('loan_loan_category');
     }
 };
