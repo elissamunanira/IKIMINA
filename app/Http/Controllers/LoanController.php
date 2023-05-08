@@ -29,7 +29,7 @@ class LoanController extends Controller
         // Store the loan request in the database
         $category_id = $request->category;
         $category_details = LoanCategory::find($category_id);
-        $loanCategory = $category_details->category;
+        $loanCategory = $category_details->name;
         $loan = new Loan();
         $loan->category = $loanCategory;
         $loan->user_id = auth()->user()->id;
