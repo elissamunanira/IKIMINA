@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
-            $table->string('category');
+            $table->string('loan_category');
             $table->unsignedBigInteger('user_id');
-            $table->decimal('amount', 10, 2);
+            $table->decimal('loan_amount', 10, 2);
+            $table->decimal('interest_amount', 10, 2);
+            $table->decimal('total_amount', 10, 2);
             $table->enum('status', ['pending', 'approved', 'rejected', 'paid'])->default('pending');
             $table->timestamps();
-
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

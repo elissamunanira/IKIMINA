@@ -15,25 +15,31 @@
                             <div class="form-group row">
                                 <label for="category"class="col-md-4 col-form-label text-md-right">Loan Category:</label>
                                 <div class="col-md-6">
-                                    <select name="category" class="form-control">
+                                    <select id = "loan_category" name="category" class="form-control">
                                         <option value="">--- Select Category ---</option>
-                                        @foreach ($categories as $category)
+                                        @foreach ($loan_categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->name }} </option>">
                                         @endforeach
                                     </select>
                                 </div>
+                            </div> 
+
+                            <div class="form-group row">
+                                <label for="loan_amount"class="col-md-4 col-form-label text-md-right">Loan Amount</label>
+                                <div class="col-md-6">
+                                    <input type="number" class="form-control" id="loan_amount" name="loan_amount" required>
+                                </div>
                             </div>
                             <div class="form-group row">
-                                <label for="amount" class="col-md-4 col-form-label text-md-right">{{ __('Loan Amount') }}</label>
-
+                                <label for="interest_amount"class="col-md-4 col-form-label text-md-right">Interest Amount</label>
                                 <div class="col-md-6">
-                                    <input id="amount" type="number" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ old('amount') }}" required autocomplete="amount" autofocus>
-
-                                    @error('amount')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
+                                    <input class="form-control" id="interest_amount" name="interest_amount" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="total_amount"class="col-md-4 col-form-label text-md-right">Total Amount to be Paid Back</label>
+                                <div class="col-md-6">
+                                    <input class="form-control" id="total_amount" name="total_amount" readonly>
                                 </div>
                             </div>
 
@@ -50,4 +56,25 @@
             </div>
         </div>
     </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>$(document).ready(function() {
+    $('#loan_category, #loan_amount').on('change', function() {
+        var loan_category = $('#loan_category').val();
+        var amount = $('#loan_amount').val();
+        
+        $.ajax({
+        url: '{!!URL::to('/calculate_interest')!!}',
+        type: 'POST',
+        data: { loan_category: loan_category, loan_amount: loan_amount },
+          dataType: 'json',
+        success: function(data) {
+            $('#interest_amount').val(response.interest_amount);
+            $('#total_amount').val(response.total_amount);
+        }
+        });
+    });
+    });
+    </script>
 @endsection

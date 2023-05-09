@@ -33,10 +33,9 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
+                                    <th>Category</th>
                                     <th>Date Requested</th>
                                     <th>Amount</th>
-                                    {{-- <th>Interest Rate</th> --}}
-                                    <th>Duration</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -46,10 +45,9 @@
                                     <tr>
                                         
                                         <td>{{ $loan->user->firstname }}</td>
+                                        <td>{{ $loan->loan_category }}</td>
                                         <td>{{ $loan->created_at }}</td>
-                                        <td>{{ $loan->amount }} RWF</td>
-                                        {{-- <td>{{ $interest}}</td> --}}
-                                        <td>{{ $loan->duration }} Months</td>
+                                        <td>{{ $loan->total_amount }} RWF</td>
                                         <td>
                                             @if($loan->status == 'pending')
                                                 <span class="badge rounded-pill bg-warning">pending</span>
@@ -61,7 +59,8 @@
                                                 <span class="badge rounded-pill bg-info">paid</span>
                                             @endif
                                         </td>
-                                        <td> <a href="{{ route('loan.edit',$loan->id) }}">Action</a>
+                                        <td> 
+                                            <a href="{{ route('loan.edit',$loan->id) }}">Action</a>
                                         </td>
                                     </tr>
                                 @endforeach

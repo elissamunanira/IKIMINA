@@ -106,6 +106,6 @@ Route::get('/loan-categories/create', [LoanCategoryController::class, 'create'])
 Route::post('/loan-categories/store', [LoanCategoryController::class, 'store'])->name('loan_categories.store');
 Route::get('/loan-categories/{id}/edit', [LoanCategoryController::class, 'edit'])->name('loan_categories.edit');
 Route::put('/loan-categories/{id}', [LoanCategoryController::class, 'update']);
-
+Route::get('/calculate_interest', [LoanController::class, 'calculateInterest'])->name('calculate-interest');
 
 });
