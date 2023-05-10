@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController};
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -93,6 +93,7 @@ Route::get('/my-savings', [SavingController::class, 'mySavings'])->name('my-savi
 
 
     //Loan route
+
 Route::get('/loan-request', [LoanController::class, 'create'])->name('loans.create');
 Route::post('/loan-request', [LoanController::class, 'store'])->name('loan.store');
 Route::get('/loan-decision/{id}', [LoanController::class, 'show'])->name('loans.show');
@@ -107,5 +108,23 @@ Route::post('/loan-categories/store', [LoanCategoryController::class, 'store'])-
 Route::get('/loan-categories/{id}/edit', [LoanCategoryController::class, 'edit'])->name('loan_categories.edit');
 Route::put('/loan-categories/{id}', [LoanCategoryController::class, 'update']);
 Route::get('/calculate_interest', [LoanController::class, 'calculateInterest'])->name('calculate-interest');
+
+    //penalties routes
+
+Route::get('/penalties/create', [PenaltyController::class, 'create'])->name('penalties.create');
+Route::post('/penalties', [PenaltyController::class, 'store'])->name('penalties.store');
+Route::get('/penalties/{penalty}/edit', [PenaltyController::class, 'edit'])->name('penalties.edit');
+Route::put('/penalties/{penalty}',  [PenaltyController::class, 'update'])->name('penalties.update');
+
+
+    //rules routes
+
+Route::get('/rules', [RuleController::class, 'index'])->name('rules.index');
+Route::get('/rules/create', [RuleController::class, 'create'])->name('rules.create');
+Route::post('/rules', [RuleController::class, 'store'])->name('rules.store');
+Route::get('/rules/{rule}/edit', [RuleController::class, 'edit'])->name('rules.edit');
+Route::put('/rules/{rule}', [RuleController::class, 'update'])->name('rules.update');
+Route::delete('/rules/{rule}', [RuleController::class, 'destroy'])->name('rules.destroy');
+
 
 });

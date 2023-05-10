@@ -3,26 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Rule;
 
 class PenaltyController extends Controller
 {
     public function index()
     {
-        $penalties = Penalty::with(['member', 'rule'])->orderBy('created_at', 'desc')->get();
+        $penalties = Penalty::with(['user', 'rule'])->orderBy('created_at', 'desc')->get();
         return view('penalties.index', compact('penalties'));
     }
 
     public function create()
     {
-        $members = Member::all();
+        $users = user::all();
         $rules = Rule::all();
-        return view('penalties.create', compact('members', 'rules'));
+        return view('penalties.create', compact('users', 'rules'));
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'member_id' => 'required|exists:members,id',
+            'user_id' => 'required|exists:users,id',
             'rule_id' => 'required|exists:rules,id',
             'description' => 'required',
             'amount' => 'required|numeric',
