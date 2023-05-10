@@ -11,10 +11,11 @@ class LoanController extends Controller
 {
      public function index()
     {
-        $user = User::all();
+        $i = 0;
+        // $user = User::all();
         $loans = Loan::with('user')->get();
-        // $interest = $this->amount * $this->interest_rate * $this->duration / 12;
-        return view('loans.index', compact('loans','user'));
+        return view('loans.index', compact('loans','i'));
+        
     }
 
     public function store(Request $request)

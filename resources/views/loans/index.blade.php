@@ -32,6 +32,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Name</th>
                                     <th>Category</th>
                                     <th>Date Requested</th>
@@ -44,6 +45,7 @@
                                 @foreach ($loans as $loan)
                                     <tr>
                                         
+                                        <td>{{ ++$i }}</td>
                                         <td>{{ $loan->user->firstname }}</td>
                                         <td>{{ $loan->loan_category }}</td>
                                         <td>{{ $loan->created_at }}</td>
