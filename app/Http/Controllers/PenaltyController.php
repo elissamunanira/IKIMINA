@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Rule;
+use App\Models\Penalty;
 
 class PenaltyController extends Controller
 {
     public function index()
     {
+        $i = 0;
         $penalties = Penalty::with(['user', 'rule'])->orderBy('created_at', 'desc')->get();
-        return view('penalties.index', compact('penalties'));
+        return view('penalties.index', compact('penalties','i'));
     }
 
     public function create()
@@ -35,11 +37,16 @@ class PenaltyController extends Controller
         // Apply the penalty
         // ...
 
-        return redirect()->route('penalties.index');
+        return redirect()->route('penalties.index')->with('success','New Penalty created successfully');
     }
 
     public function pay(Penalty $penalty)
     {
         $penalty->update(['paid' => true]);
+    }
+    public function destroy(Penalty $penalty){
+        delete();
+
+        return redirect()->route('penalities.index')->with('success','penalty deleted successfully');
     }
 }

@@ -9,7 +9,7 @@ class Penalty extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['member_id', 'rule_id', 'description', 'amount', 'paid'];
+    protected $fillable = ['user_id', 'rule_id', 'description', 'amount', 'paid'];
 
     public function user()
     {

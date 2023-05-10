@@ -44,13 +44,19 @@
                                         @csrf
 
                                         <div class="form-group">
-                                            <label for="member_id">Member ID:</label>
-                                            <input type="text" class="form-control" id="member_id" name="member_id" value="{{ old('member_id') }}" required>
+                                            <label for="member_id">Member </label>
+                                            <select class="form-control" id="member_id" name="user_id" value="{{ old('member_id') }}" required>
+                                                    <option selected>--Select Member To assign the penalty</option>
+                                                @foreach($users as $user)
+                                                    <option value="{{ $user->id }}">{{ $user->firstname }} {{ $user->lastname }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="rule_id">Rule:</label>
                                             <select class="form-control" id="rule_id" name="rule_id" required>
+                                                    <option selected>--Select Violeted Rule--</option>
                                                 @foreach ($rules as $rule)
                                                     <option value="{{ $rule->id }}">{{ $rule->name }}</option>
                                                 @endforeach

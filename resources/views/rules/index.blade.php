@@ -31,29 +31,34 @@
                         <a class="btn btn-primary" href="/rules/create">+New Rule</a>
                         <div class="card">
                             <div class="card-body">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($rules as $rule)
-                                            <tr>
-                                                <td>{{ $rule->name }}</td>
-                                                <td>{{ $rule->description}}</td>
-                                                <td>{{ $rule->name}}</td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
+                                <div class="bootstrap-data-table-panel">
+                                <div class="table-responsive">
+                                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Title</th>
+                                                    <th>Description</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($rules as $rule)
+                                                    <tr>
+                                                        <td>{{ ++$i }}</td>
+                                                        <td>{{ $rule->name }}</td>
+                                                        <td>{{ $rule->description}}</td>
+                                                        <td><a href="{{ route('rules.edit',$rule->id) }}">Edit</a></td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </section>
         </div>
     </div>

@@ -9,8 +9,9 @@ class RuleController extends Controller
 {
      public function index()
     {
+        $i = 0;
         $rules = Rule::orderBy('created_at', 'desc')->get();
-        return view('rules.index', compact('rules'));
+        return view('rules.index', compact('rules','i'));
     }
 
     public function create()
@@ -28,7 +29,7 @@ class RuleController extends Controller
 
         Rule::create($validated);
 
-        return redirect()->route('rules.index');
+        return redirect()->route('rules.index')->with('success','Rule Created Successfully');
     }
 
     public function edit(Rule $rule)
@@ -41,12 +42,12 @@ class RuleController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'description' => 'required',
-            'penalty_points' => 'required|numeric',
+            // 'penalty_points' => 'required|numeric',
         ]);
 
         $rule->update($validated);
 
-        return redirect()->route('rules.index');
+        return redirect()->route('rules.index')->with('success','Rule Updated Successfully');
     }
 
     public function destroy(Rule $rule)

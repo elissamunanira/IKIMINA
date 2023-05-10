@@ -111,10 +111,12 @@ Route::get('/calculate_interest', [LoanController::class, 'calculateInterest'])-
 
     //penalties routes
 
+Route::get('/penalties', [PenaltyController::class, 'index'])->name('penalties.index');
 Route::get('/penalties/create', [PenaltyController::class, 'create'])->name('penalties.create');
-Route::post('/penalties', [PenaltyController::class, 'store'])->name('penalties.store');
+Route::post('/penalties/store', [PenaltyController::class, 'store'])->name('penalties.store');
 Route::get('/penalties/{penalty}/edit', [PenaltyController::class, 'edit'])->name('penalties.edit');
 Route::put('/penalties/{penalty}',  [PenaltyController::class, 'update'])->name('penalties.update');
+Route::delete('/penalties/{penalty}',  [PenaltyController::class, 'destroy'])->name('penalties.destroy');
 
 
     //rules routes

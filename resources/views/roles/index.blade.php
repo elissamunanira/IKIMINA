@@ -62,9 +62,6 @@
 
                                                                 <div class="dropdown-divider"></div>
 
-                                                                @can('role-edit')
-                                                                <a class="dropdown-item" href="{{ route('roles.edit',$role->id) }}">Edit</a>
-                                                                @endcan
 
                                                                 <div class="dropdown-divider"></div>
                                                                 @can('role-delete')
