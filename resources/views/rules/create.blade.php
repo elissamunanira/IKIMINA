@@ -4,20 +4,20 @@
     <div class="main">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-8 p-r-0 title-margin-right">
+                <div class="col-lg-8 p-r-0 name-margin-right">
                     <div class="page-header">
-                        <div class="page-title">
-                            <h1>Add New Penalty</h1>
+                        <div class="page-name">
+                            <h1>Add New Rule</h1>
                         </div>
                     </div>
                 </div>
                 <!-- /# column -->
-                <div class="col-lg-4 p-l-0 title-margin-left">
+                <div class="col-lg-4 p-l-0 name-margin-left">
                     <div class="page-header">
-                        <div class="page-title">
+                        <div class="page-name">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/dash">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Peanlty</li>
+                                <li class="breadcrumb-item active">Rule</li>
                             </ol>
                         </div>
                     </div>
@@ -28,6 +28,7 @@
             <section id="main-content">
                 <div class="row">
                     <div class="col-lg-12">
+                        <a class="btn btn-primary" href="/rules">Back</a>
                         <div class="card">
                             <div class="card-body">
                                 <div class="form-validation">
@@ -40,42 +41,41 @@
                                             @endphp
                                         </div>
                                         @endif
-                                       <form method="POST" action="{{ route('penalties.store') }}">
+                                        <form method="POST" action="{{ route('rules.store') }}">
                                         @csrf
 
                                         <div class="form-group">
-                                            <label for="member_id">Member ID:</label>
-                                            <input type="text" class="form-control" id="member_id" name="member_id" value="{{ old('member_id') }}" required>
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" required autofocus>
+                                            @error('name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="rule_id">Rule:</label>
-                                            <select class="form-control" id="rule_id" name="rule_id" required>
-                                                @foreach ($rules as $rule)
-                                                    <option value="{{ $rule->id }}">{{ $rule->name }}</option>
-                                                @endforeach
-                                            </select>
+                                            <label for="description">Description</label>
+                                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" required>{{ old('description') }}</textarea>
+                                            @error('description')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
 
-                                        <div class="form-group">
-                                            <label for="description">Description:</label>
-                                            <textarea class="form-control" id="description" name="description" rows="3" required>{{ old('description') }}</textarea>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="amount">Amount:</label>
-                                            <input type="number" class="form-control" id="amount" name="amount" value="{{ old('amount') }}" required>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-primary">Create Penalty</button>
+                                        <button type="submit" class="btn btn-primary">Create Rule</button>
                                     </form>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
             </section>
+        </div>
+    </div>
+</div>
 
 @endsection
 

@@ -77,6 +77,7 @@
                             <li><a href="/loans">All Loans</a></li>
                         </ul>
                     </li>
+                    <li><a href="/rules"><i class="ti-ruler"></i> Cooperative Rules </a></li>
 
                     <li class="label">Apps</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Charts <span

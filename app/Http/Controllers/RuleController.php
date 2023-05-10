@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Rule;
 
 class RuleController extends Controller
 {
@@ -22,7 +23,7 @@ class RuleController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'description' => 'required',
-            'penalty_points' => 'required|numeric',
+            // 'penalty_points' => 'required|numeric',
         ]);
 
         Rule::create($validated);
