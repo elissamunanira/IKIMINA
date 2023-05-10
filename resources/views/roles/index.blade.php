@@ -40,6 +40,7 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
+                                                <th>created at</th>
                                                 <th>Name</th>
                                                 <th width="280px">Action</th>
                                             </tr>
@@ -48,6 +49,7 @@
                                             @foreach ($roles as $key => $role)
                                             <tr>
                                                 <td>{{ ++$i }}</td>
+                                                <td>{{ $role->created_at }}</td>
                                                 <td>{{ $role->name }}</td>
                                                 <td>
                                                     
