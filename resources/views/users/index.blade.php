@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-left">
-                            <a class="btn btn-primary" href="{{ route('users.create') }}"> Create New User</a>
+                            <a class="btn btn-primary" href="{{ route('users.create') }}"> + New Member</a>
                         </div>
                     </div>
                 </div>

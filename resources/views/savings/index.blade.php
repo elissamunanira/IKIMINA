@@ -28,29 +28,38 @@
             <!-- /# row -->
             <section id="main-content">
                 <div class="row">
-                    <div class="container">
+                    <div class="col-lg-12"> 
                         <h3>Saving records for <strong>{{ $user->firstname }} {{ $user->lastname }}</strong></h3>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Date</th>
-                                    <th>Month Paid</th>
-                                    <th>Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($savings as $saving)
-                                    <tr>
-                                        <td>{{++$i}}</td>
-                                        <td>{{ $saving->created_at }}</td>
-                                        <td>{{ $saving->month }}</td>
-                                        <td>{{ $saving->amount }} RWF</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
+                        <div class="card">
+                            <div class="container">
+                                
+                                <div class="bootstrap-data-table-panel">
+                                    <div class="table-responsive">
+                                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Date</th>
+                                                    <th>Month Paid</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($savings as $saving)
+                                                    <tr>
+                                                        <td>{{++$i}}</td>
+                                                        <td>{{ $saving->created_at }}</td>
+                                                        <td>{{ $saving->month }}</td>
+                                                        <td>{{ $saving->amount }} RWF</td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                 </div>
             </section>
         </div>

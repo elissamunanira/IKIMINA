@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-left">
-                            <a class="btn btn-primary" href="/loan-categories/create"> Create New Loan Category</a>
+                            <a class="btn btn-primary" href="/loan-categories/create">+Loan Category</a>
                         </div>
                     </div>
                 </div>
