@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Saving;
+use App\Models\Loan;
 
 class SavingController extends Controller
 {
@@ -52,12 +53,14 @@ class SavingController extends Controller
         $savings = Saving::where('user_id', $user->id)->get();
         return view('savings.index', compact('user', 'savings','i'));
     }
-    public function mySavings()
+    public function myAccount()
     {
         $i=0;
+        $v=0;
         $user = auth()->user();
         $savings = $user->savings;
-        return view('savings.my-savings', compact('savings','i'));
+        $loans = $user->loans;
+        return view('account.my-account', compact('savings','loans','v','i'));
     }
 
 

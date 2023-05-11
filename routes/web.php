@@ -89,7 +89,7 @@ Route::get('/saving' , [SavingController::class, 'index']) ;
 
 Route::get('/totalSavings' , [SavingController::class, 'singleTotalSavings']);
 Route::post('/savings' , [SavingController::class, 'store'])->name('savings.store');
-Route::get('/my-savings', [SavingController::class, 'mySavings'])->name('my-savings');
+Route::get('/my-account', [SavingController::class, 'myAccount'])->name('my-account');
 
 
     //Loan route
