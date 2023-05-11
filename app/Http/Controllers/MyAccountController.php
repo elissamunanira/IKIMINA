@@ -12,7 +12,7 @@ use App\Models\LoanCategory;
 class MyAccountController extends Controller
 {
     
-    public function myAccount()
+    public function mySaving()
     {
         $i=0;
         $user = auth()->user();
@@ -35,7 +35,7 @@ class MyAccountController extends Controller
     {
         $i=0; 
         $user = auth()->user(); 
-        $penalties = $user->penalties;
+        $penalties = $user->Penalty;
         return view('account.my-penalties', compact('penalties','i'));
     }
 

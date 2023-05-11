@@ -68,7 +68,14 @@
                     <li><a href="/rules"><i class="ti-ruler"></i> Cooperative Rules </a></li>
                     <li><a href="/penalties"><i class="ti-ruler"></i> Penalties </a></li>
                     
-                    <li><a href="{{ route('my-account') }}"><i class="ti-money"></i>My Account</a></li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> My Account <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="{{ route('my-saving') }}">My Saving</a></li>
+                            <li><a href="{{ route('my-loan') }}">My Loan</a></li>
+                            <li><a href="{{ route('my-penalties') }}">My Penalties</a></li>
+                        </ul>
+                    </li>
 
                     <li class="label">Apps</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Charts <span

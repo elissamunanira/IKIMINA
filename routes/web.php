@@ -92,7 +92,7 @@ Route::post('/savings' , [SavingController::class, 'store'])->name('savings.stor
 
   //my account
 
-Route::get('/my-account', [MyAccountController::class, 'myAccount'])->name('my-account');
+Route::get('/my-saving', [MyAccountController::class, 'mySaving'])->name('my-saving');
 Route::get('/my-loan', [MyAccountController::class, 'myLoan'])->name('my-loan');
 Route::get('/my-penalties', [MyAccountController::class, 'myPenalty'])->name('my-penalties');
 
