@@ -13,7 +13,7 @@ class LoanController extends Controller
     {
         $i = 0;
         // $user = User::all();
-        $loans = Loan::with('user')->get();
+        $loans = Loan::with('user')->orderBy('created_at', 'desc')->get();
         return view('loans.index', compact('loans','i'));
         
     }

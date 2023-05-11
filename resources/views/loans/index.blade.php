@@ -26,48 +26,55 @@
                 <!-- /# column -->
             </div>
             <!-- /# row -->
-            <section id="main-content">
+             <section id="main-content">
                 <div class="row">
-                    <div class="container">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Category</th>
-                                    <th>Date Requested</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($loans as $loan)
-                                    <tr>
-                                        
-                                        <td>{{ ++$i }}</td>
-                                        <td>{{ $loan->user->firstname }}</td>
-                                        <td>{{ $loan->loan_category }}</td>
-                                        <td>{{ $loan->created_at }}</td>
-                                        <td>{{ $loan->total_amount }} RWF</td>
-                                        <td>
-                                            @if($loan->status == 'pending')
-                                                <span class="badge rounded-pill bg-warning">pending</span>
-                                            @elseif($loan->status == 'approved')
-                                                <span class="badge rounded-pill bg-success">approved</span>
-                                            @elseif($loan->status == 'rejected')
-                                                <span class="badge rounded-pill bg-danger">rejected</span>
-                                            @else
-                                                <span class="badge rounded-pill bg-info">paid</span>
-                                            @endif
-                                        </td>
-                                        <td> 
-                                            <a href="{{ route('loan.edit',$loan->id) }}">Action</a>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                    <div class="col-lg-12">
+                        {{-- <a class="btn btn-primary" href="/dash">Back</a> --}}
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="bootstrap-data-table-panel">
+                                <div class="table-responsive">
+                                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Category</th>
+                                            <th>Date Requested</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($loans as $loan)
+                                            <tr>
+                                                
+                                                <td>{{ ++$i }}</td>
+                                                <td>{{ $loan->user->firstname }} {{ $loan->user->lastname }}</td>
+                                                <td>{{ $loan->loan_category }}</td>
+                                                <td>{{ $loan->created_at }}</td>
+                                                <td>{{ $loan->total_amount }} RWF</td>
+                                                <td>
+                                                    @if($loan->status == 'pending')
+                                                        <span class="badge rounded-pill bg-warning">pending</span>
+                                                    @elseif($loan->status == 'approved')
+                                                        <span class="badge rounded-pill bg-success">approved</span>
+                                                    @elseif($loan->status == 'rejected')
+                                                        <span class="badge rounded-pill bg-danger">rejected</span>
+                                                    @else
+                                                        <span class="badge rounded-pill bg-info">paid</span>
+                                                    @endif
+                                                </td>
+                                                <td> 
+                                                    <a href="{{ route('loan.edit',$loan->id) }}">Action</a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

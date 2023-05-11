@@ -28,6 +28,7 @@
             <!-- /# row -->
             <section id="main-content">
                 
+                <a class="btn btn-primary" href="/saving/create">+Saving</a>
                 <div class="card">
                     <div class="bootstrap-data-table-panel">
                         <div class="table-responsive">

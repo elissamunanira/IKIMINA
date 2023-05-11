@@ -53,27 +53,15 @@
                        
                     </li>
                     
-                    <li><a href="/users"><i class="ti-user"></i> Users </a></li>
+                    <li><a href="/users"><i class="fa fa-users" aria-hidden="true"></i> Users </a></li>
                     <li><a href="/roles"><i class="ti-layout-tab"></i> Roles </a></li>
 
-                    <li><a class="sidebar-sub-toggle"><i class="ti-briefcase"></i> Savings <span
-                                class="sidebar-collapse-icon ti-angle-down"></span></a>
-                        <ul>
-                            <li><a href="/saving/create">+Savings</a></li>
-                            <li><a href="/totalSavings">Savings</a></li>
-                        </ul>
-                    </li>
-                    
+                    <li><a href="/totalSavings"><i class="ti-briefcase"></i>Savings</a></li>
+
                     <li><a class="sidebar-sub-toggle"><i class="ti-bag"></i> Loans <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a class="sidebar-sub-toggle">Loan Categories<span
-                                class="sidebar-collapse-icon ti-angle-down"></span></a>
-                            <ul>
-                            <li><a href="/loan-categories/create">+Loan Category</a></li>
-                            <li><a href="/loan-categories">All Categories</a></li>
-                        </ul>
-                            </li>
+                            <li><a href="/loan-categories">Loan Categories</a></li> 
                             <li><a href="/loans">All Loans</a></li>
                         </ul>
                     </li>
