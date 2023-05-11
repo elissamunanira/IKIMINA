@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController};
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -89,7 +89,12 @@ Route::get('/saving' , [SavingController::class, 'index']) ;
 
 Route::get('/totalSavings' , [SavingController::class, 'singleTotalSavings']);
 Route::post('/savings' , [SavingController::class, 'store'])->name('savings.store');
-Route::get('/my-account', [SavingController::class, 'myAccount'])->name('my-account');
+
+  //my account
+
+Route::get('/my-account', [MyAccountController::class, 'myAccount'])->name('my-account');
+Route::get('/my-loan', [MyAccountController::class, 'myLoan'])->name('my-loan');
+Route::get('/my-penalties', [MyAccountController::class, 'myPenalty'])->name('my-penalties');
 
 
     //Loan route

@@ -26,9 +26,9 @@
                 <!-- /# column -->
             </div>
             <section id="main-content">
-                <div class="row">
+                <div class="row"> 
                     <div class="col-md-12">
-                                <center><h4 class="card-title"><strong>My Savings</strong></h4></center>  
+                                <center><h4 class="card-title"><strong>Loans</strong></h4></center>
                         <div class="card">
                             <div class="card-body">
                                 <div class="bootstrap-data-table-panel">
@@ -37,16 +37,22 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Month Paid</th>
-                                                <th>Amount</th>
+                                                <th>Category</th>
+                                                <th>Date requested</th>
+                                                <th>Money Requested</th>
+                                                <th>Money To Pay</th>
+                                                <th>status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($savings as $saving)
+                                            @foreach ($loans as $loan)
                                                 <tr>
-                                                    <td>{{++$i}}</td>
-                                                    <td>{{ $saving->month }}</td>
-                                                    <td>{{ $saving->amount }} RWF</td>
+                                                    <td>{{++$v}}</td>
+                                                    <td>{{ $loan->loan_category }}</td>
+                                                    <td>{{ $loan->created_at }}</td>
+                                                    <td>{{ $loan->loan_amount }} RWF</td>
+                                                    <td>{{ $loan->total_amount }} RWF</td>
+                                                    <td>{{ $loan->status }} </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
@@ -55,7 +61,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
             </section>
         </div>
     </div>

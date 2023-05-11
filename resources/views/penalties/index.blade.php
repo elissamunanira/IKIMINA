@@ -28,7 +28,7 @@
             <section id="main-content">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a class="btn btn-primary" href="/penalties/create">+New Rule</a>
+                        <a class="btn btn-primary" href="/penalties/create">+New Penalty</a>
                         <div class="card">
                             <div class="card-body">
                                 <div class="bootstrap-data-table-panel">

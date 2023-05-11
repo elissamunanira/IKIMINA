@@ -66,6 +66,7 @@
                         </ul>
                     </li>
                     <li><a href="/rules"><i class="ti-ruler"></i> Cooperative Rules </a></li>
+                    <li><a href="/penalties"><i class="ti-ruler"></i> Penalties </a></li>
                     
                     <li><a href="{{ route('my-account') }}"><i class="ti-money"></i>My Account</a></li>
 
