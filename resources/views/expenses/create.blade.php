@@ -63,9 +63,16 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <label class="col-lg-2 col-form-label" for="description">description</label>
+                                                <label class="col-lg-2 col-form-label" for="expense_date">Date</label>
                                                 <div class="col-lg-6">
-                                                <input class="form-control" type="text" name="description" id="description" required> 
+                                                <input class="form-control" type="text" name="expense_date" id="expense_date" required> 
+                                                </div> 
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-lg-2 col-form-label" for="expense_description">Description</label>
+                                                <div class="col-lg-6">
+                                                <input class="form-control" type="text" name="expense_description" id="expense_description" required> 
                                                 </div> 
                                             </div>
 
