@@ -15,6 +15,7 @@ return new class extends Migration
            $table->id();
             $table->unsignedBigInteger('budget_id');
             $table->string('budget_line_name');
+            $table->string('budget_line_description');
             $table->decimal('budget_line_amount', 15, 2);
             $table->timestamps();
 
