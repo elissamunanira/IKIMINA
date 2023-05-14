@@ -39,20 +39,28 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                {{-- <th>Rule Destroyed</th> --}}
+                                                <th>Rule Destroyed</th>
                                                 <th>Date Destroyed</th>
                                                 <th>Amount to pay</th>
+                                                <th>Description</th>
                                                 <th>status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($penalties as $penalty)
                                                 <tr>
-                                                    <td>{{++$v}}</td>
-                                                    {{-- <td>{{ $penalty->rule->name }}</td> --}}
+                                                    <td>{{++$i}}</td>
+                                                    <td>{{ $penalty->rule->name }}</td>
                                                     <td>{{ $penalty->created_at }}</td>
                                                     <td>{{ $penalty->amount }} RWF</td>
-                                                    <td>{{ $penalty->status }} </td>
+                                                    <td>{{ $penalty->description }}</td>
+                                                    <td> 
+                                                        @if($penalty->paid == 0)
+                                                            <span class="badge rounded-pill bg-warning">NOT PAID</span>
+                                                        @else
+                                                            <span class="badge rounded-pill bg-success">PAID</span>
+                                                        @endif
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
