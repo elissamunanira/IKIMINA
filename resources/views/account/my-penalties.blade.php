@@ -27,11 +27,11 @@
             </div>
             <section id="main-content">
                 <div class="row"> 
-                    <div class="col-md-8">
+                    <div class="col-md-12">
+                                <center><h4 class="card-title"><strong>My penalties</strong></h4></center> 
+                                   
                         <div class="card">
                             <div class="card-body">
-                                <center><h4 class="card-title"><strong>penaltys</strong></h4></center> 
-                                   
                                 
                                 <div class="bootstrap-data-table-panel">
                                     <div class="table-responsive">
