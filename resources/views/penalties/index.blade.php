@@ -51,7 +51,7 @@
                                                     <td>{{ $penalty->user->firstname }} {{ $penalty->user->lastname }}</td>
                                                     <td>{{ $penalty->rule->name }}</td>
                                                     <td>{{ $penalty->description }}</td>
-                                                    <td>{{ $penalty->amount }} RWF</td>
+                                                    <td>{{ $penalty->rule->rule_amount }} RWF</td>
                                                     <td>
                                                         <a href="{{ route('penalties.edit', $penalty->id) }}" class="btn btn-primary">Edit</a>
                                                         <form action="{{ route('penalties.destroy', $penalty->id) }}" method="POST" style="display: inline;">

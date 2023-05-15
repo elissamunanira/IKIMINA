@@ -65,6 +65,16 @@
                                             @enderror
                                         </div>
 
+                                        <div class="form-group">
+                                            <label for="rule_amount">Rule_amount</label>
+                                            <textarea class="form-control @error('rule_amount') is-invalid @enderror" id="rule_amount" name="rule_amount" required>{{ $rule->rule_amount }}</textarea>
+                                            @error('rule_amount')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+
                                         <input type="hidden" name="id" value="{{ $rule->id }}">
 
                                         <button type="submit" class="btn btn-primary">Update Rule</button>

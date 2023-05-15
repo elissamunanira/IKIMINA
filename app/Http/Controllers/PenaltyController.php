@@ -28,8 +28,7 @@ class PenaltyController extends Controller
         $validated = $request->validate([
             'user_id' => 'required|exists:users,id',
             'rule_id' => 'required|exists:rules,id',
-            'description' => 'required',
-            'amount' => 'required|numeric',
+            'description' => 'required', 
         ]);
 
         $penalty = Penalty::create($validated);

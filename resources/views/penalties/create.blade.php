@@ -66,12 +66,7 @@
                                         <div class="form-group">
                                             <label for="description">Description:</label>
                                             <textarea class="form-control" id="description" name="description" rows="3" required>{{ old('description') }}</textarea>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="amount">Amount:</label>
-                                            <input type="number" class="form-control" id="amount" name="amount" value="{{ old('amount') }}" required>
-                                        </div>
+                                        </div> 
 
                                         <button type="submit" class="btn btn-primary">Create Penalty</button>
                                     </form>

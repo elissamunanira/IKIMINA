@@ -39,6 +39,7 @@
                                                     <th>#</th>
                                                     <th>Title</th>
                                                     <th>Description</th>
+                                                    <th>Money</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -48,6 +49,7 @@
                                                         <td>{{ ++$i }}</td>
                                                         <td>{{ $rule->name }}</td>
                                                         <td>{{ $rule->description}}</td>
+                                                        <td>{{ $rule->rule_amount}}</td>
                                                         <td><a href="{{ route('rules.edit',$rule->id) }}">Edit</a></td>
                                                     </tr>
                                                 @endforeach
