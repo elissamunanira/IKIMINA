@@ -46,8 +46,7 @@
 
                                         <div class="form-group">
                                             <label for="member_id">Member </label>
-                                            <select class="form-control" id="member_id" name="user_id" value="{{ old('member_id') }}" required>
-                                                    <option selected>--Select Member To assign the penalty</option>
+                                            <select class="form-control" id="member_id" name="user_id" value="{{ old('member_id') }}" required> 
                                                 @foreach($users as $user)
                                                     <option value="{{ $user->id }}">{{ $user->firstname }} {{ $user->lastname }}</option>
                                                 @endforeach
@@ -56,8 +55,7 @@
 
                                         <div class="form-group">
                                             <label for="rule_id">Rule:</label>
-                                            <select class="form-control" id="rule_id" name="rule_id" required>
-                                                    <option selected>--Select Violeted Rule--</option>
+                                            <select class="form-control" id="rule_id" name="rule_id" required> 
                                                 @foreach ($rules as $rule)
                                                     <option value="{{ $rule->id }}">{{ $rule->name }}</option>
                                                 @endforeach
@@ -65,8 +63,8 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="description">{{$penalty->description}}</label>
-                                            <textarea class="form-control" id="description" name="description" rows="3" required>{{ old('description') }}</textarea>
+                                            <label for="description">Description</label>
+                                            <textarea class="form-control" id="description" name="description" rows="3"  required>{{ old('description') }}{{$penalty->description}}</textarea>
                                         </div> 
 
                                         <button type="submit" class="btn btn-primary">Update Penalty</button>
