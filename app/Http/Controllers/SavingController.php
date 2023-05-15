@@ -53,10 +53,27 @@ class SavingController extends Controller
         $savings = Saving::where('user_id', $user->id)->get();
         return view('savings.index', compact('user', 'savings','i'));
     }
-    public function edit(){
-        
+    public function edit($id){
+        $savings = Saving::with('user')->find($id);
+        $users = User::select(DB::raw("CONCAT(firstname, ' ', lastname) AS full_name"), 'id')->pluck('full_name', 'id');
+        return view('savings.edit',compact('savings','users'));
     }
 
+    public function update(){
+        $validatedData = $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'amount' => 'required|numeric|min:0',
+            'month' => 'required|date',
+        ]);
+
+        $savings = Saving::find($id);
+        $savings->user_id = $validatedData['user_id'];
+        $savings->amount = $validatedData['amount'];
+        $savings->month = $validatedData['month'];
+        $savings->save();
+
+        return redirect()->back()->with('success', 'Savings record Updated successfully.');
+    }
 
     public function totalSavings(){
         

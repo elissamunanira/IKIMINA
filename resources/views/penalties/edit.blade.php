@@ -7,7 +7,7 @@
                 <div class="col-lg-8 p-r-0 title-margin-right">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Add New Penalty</h1>
+                            <h1>Penalty Editing Field</h1>
                         </div>
                     </div>
                 </div>
@@ -46,18 +46,20 @@
 
                                         <div class="form-group">
                                             <label for="member_id">Member </label>
-                                            <select class="form-control" id="member_id" name="user_id" value="{{ old('member_id') }}" required> 
-                                                @foreach($users as $user)
-                                                    <option value="{{ $user->id }}">{{ $user->firstname }} {{ $user->lastname }}</option>
+                                            <select name="user_id" id="user_id" class="form-control">
+                                                <option value="">Select a user</option>
+                                                @foreach($users as $userId => $userName)
+                                                    <option value="{{ $userId }}" {{ $penalty->user_id == $userId ? 'selected' : '' }}>{{ $userName }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="rule_id">Rule:</label>
-                                            <select class="form-control" id="rule_id" name="rule_id" required> 
-                                                @foreach ($rules as $rule)
-                                                    <option value="{{ $rule->id }}">{{ $rule->name }}</option>
+                                            <select name="rule_id" id="rule_id" class="form-control">
+                                                <option value="">Select a rule</option>
+                                                @foreach($rules as $ruleId => $ruleName)
+                                                    <option value="{{ $ruleId }}" {{ $penalty->rule_id == $ruleId ? 'selected' : '' }}>{{ $ruleName }}</option>
                                                 @endforeach
                                             </select>
                                         </div>

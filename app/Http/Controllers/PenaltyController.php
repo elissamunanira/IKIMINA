@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Rule;
 use App\Models\Penalty;
+use Illuminate\Support\Facades\DB;
 
 class PenaltyController extends Controller
 {
@@ -36,10 +37,12 @@ class PenaltyController extends Controller
         return redirect()->route('penalties.index')->with('success','New Penalty created successfully');
     }
 
-    public function edit(Penalty $penalty){ 
-        $users = User::all();
-        $rules = Rule::all();
-        return view('penalties.edit', compact('penalty','users','rules'));
+    public function edit( $id){ 
+        // $users = User::find($id);
+        $penalty = Penalty::with(['rule','user'])->find($id);
+        $rules = Rule::pluck('name', 'id');
+        $users = User::select(DB::raw("CONCAT(firstname, ' ', lastname) AS full_name"), 'id')->pluck('full_name', 'id');
+        return view('penalties.edit', compact('penalty','users','rules' ));
     }
 
     public function update(Penalty $penalty, Request $request){

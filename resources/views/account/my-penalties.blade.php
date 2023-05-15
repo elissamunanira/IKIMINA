@@ -52,7 +52,7 @@
                                                     <td>{{++$i}}</td>
                                                     <td>{{ $penalty->rule->name }}</td>
                                                     <td>{{ $penalty->created_at }}</td>
-                                                    <td>{{ $penalty->amount }} RWF</td>
+                                                    <td>{{ $penalty->rule->rule_amount }} RWF</td>
                                                     <td>{{ $penalty->description }}</td>
                                                     <td> 
                                                         @if($penalty->paid == 0)
