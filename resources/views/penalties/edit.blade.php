@@ -40,8 +40,9 @@
                                             @endphp
                                         </div>
                                         @endif
-                                       <form method="POST" action="{{ route('penalties.store') }}">
+                                       <form action="{{ route('penalties.update',  $penalty->id) }}" method="POST">
                                         @csrf
+                                        @method('PUT')
 
                                         <div class="form-group">
                                             <label for="member_id">Member </label>
@@ -64,7 +65,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="description">Description:</label>
+                                            <label for="description">{{$penalty->description}}</label>
                                             <textarea class="form-control" id="description" name="description" rows="3" required>{{ old('description') }}</textarea>
                                         </div> 
 

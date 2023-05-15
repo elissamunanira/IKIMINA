@@ -53,14 +53,8 @@ class SavingController extends Controller
         $savings = Saving::where('user_id', $user->id)->get();
         return view('savings.index', compact('user', 'savings','i'));
     }
-    public function myAccount()
-    {
-        $i=0;
-        $v=0;
-        $user = auth()->user();
-        $savings = $user->savings;
-        $loans = $user->loans;
-        return view('account.my-account', compact('savings','loans','v','i'));
+    public function edit(){
+        
     }
 
 

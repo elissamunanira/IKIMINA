@@ -36,13 +36,13 @@ class PenaltyController extends Controller
         return redirect()->route('penalties.index')->with('success','New Penalty created successfully');
     }
 
-    public function edit($id){
-        $penalties = Penalty::find($id);
-        $users = User::find($id);
-        return view('penalties.edit', compact('penalties'));
+    public function edit(Penalty $penalty){ 
+        $users = User::all();
+        $rules = Rule::all();
+        return view('penalties.edit', compact('penalty','users','rules'));
     }
 
-    public function update($id){
+    public function update(Penalty $penalty, Request $request){
 
         $validated = $request->validate([
             'user_id' => 'required|exists:users,id',
@@ -50,7 +50,7 @@ class PenaltyController extends Controller
             'description' => 'required', 
         ]);
 
-        $penalty = Penalty::update($validated); 
+        $penalty -> update($validated); 
 
         return redirect()->route('penalties.index')->with('success','Penalty updated successfully');
     }
