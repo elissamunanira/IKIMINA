@@ -9,5 +9,5 @@ class Rule extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['name','description'];
+    protected $fillable = ['name','description','rule_amount'];
 }

@@ -24,7 +24,7 @@ class RuleController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'description' => 'required',
-            // 'penalty_points' => 'required|numeric',
+            'rule_amount' => 'required',
         ]);
 
         Rule::create($validated);
@@ -42,7 +42,7 @@ class RuleController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'description' => 'required',
-            // 'penalty_points' => 'required|numeric',
+            'rule_amount' => 'required',
         ]);
 
         $rule->update($validated);

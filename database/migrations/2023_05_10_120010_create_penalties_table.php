@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('rule_id');
             $table->text('description');
-            $table->decimal('amount', 8, 2);
             $table->boolean('paid')->default(false);
             $table->timestamps();
 

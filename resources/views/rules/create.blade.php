@@ -64,6 +64,17 @@
                                             @enderror
                                         </div>
 
+
+                                         <div class="form-group">
+                                            <label for="rule_amount">rule_amount</label>
+                                            <input type = "number" class="form-control @error('rule_amount') is-invalid @enderror" id="rule_amount" name="rule_amount" placeholder="Enter the amount of money to be paid when rule destroyed" >{{ old('rule_amount') }} 
+                                            @error('rule_amount')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+
                                         <button type="submit" class="btn btn-primary">Create Rule</button>
                                     </form>
                                 </div>
