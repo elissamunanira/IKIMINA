@@ -65,8 +65,8 @@
                             <li><a href="/loans">All Loans</a></li>
                         </ul>
                     </li>
-                    <li><a href="/rules"><i class="fa fa-gavel" aria-hidden="true"></i>Cooperative Rules </a></li>
-                    <li><a href="/penalties"><i class="ti-ruler"></i> Penalties </a></li>
+                    <li><a href="/rules"><i class="ti-ruler"></i>Cooperative Rules </a></li>
+                    <li><a href="/penalties"><i class="fa fa-gavel" aria-hidden="true"></i>Penalties </a></li>
                     
                     <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> My Account <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
