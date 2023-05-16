@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController};
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController, BudgetController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -135,5 +135,12 @@ Route::get('/rules/{rule}/edit', [RuleController::class, 'edit'])->name('rules.e
 Route::put('/rules/{rule}', [RuleController::class, 'update'])->name('rules.update');
 Route::delete('/rules/{rule}', [RuleController::class, 'destroy'])->name('rules.destroy');
 
+
+    //budget routes
+
+Route::get('/budgets', 'BudgetController@index')->name('budgets.index');
+Route::get('/budgets/create', 'BudgetController@create')->name('budgets.create');
+Route::post('/budgets', 'BudgetController@store')->name('budgets.store');
+Route::get('/budgets/{budget}', 'BudgetController@show')->name('budgets.show');
 
 });
