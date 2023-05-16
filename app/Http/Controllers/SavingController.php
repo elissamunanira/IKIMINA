@@ -54,9 +54,9 @@ class SavingController extends Controller
         return view('savings.index', compact('user', 'savings','i'));
     }
     public function edit($id){
-        $savings = Saving::with('user')->find($id);
+        $saving = Saving::with('user')->find($id);
         $users = User::select(DB::raw("CONCAT(firstname, ' ', lastname) AS full_name"), 'id')->pluck('full_name', 'id');
-        return view('savings.edit',compact('savings','users'));
+        return view('savings.edit',compact('saving','users'));
     }
 
     public function update(){
