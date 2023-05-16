@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Saving;
 use App\Models\Loan;
+use Illuminate\Support\Facades\DB;
 
 class SavingController extends Controller
 {

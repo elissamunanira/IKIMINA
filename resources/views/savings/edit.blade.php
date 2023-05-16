@@ -34,21 +34,21 @@
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label for="user_id">Member</label>
-                                <select name="user_id" class="form-control">
-                                    <option value="">--- Select Member ---</option>
-                                    @foreach ($users as $user)
-                                        <option value="{{ $user->id }}">{{ $user->firstname }} {{ $user->lastname }} </option>
+                                <label for="user_id">Member</label> 
+                                <select name="user_id" id="user_id" class="form-control">
+                                    <option value="">Select a user</option>
+                                    @foreach($users as $userId => $userName)
+                                        <option value="{{ $userId }}" {{ $saving->user_id == $userId ? 'selected' : '' }}>{{ $userName }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="amount">Amount:</label>
-                                <input type="number" name="amount" class="form-control" required>
+                                <input type="number" name="amount" class="form-control" value = "{{ $saving->amount }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="month">Month:</label>
-                                <input type="date" name="month" class="form-control" required>
+                                <input type="date" name="month" class="form-control" value = "{{ $saving->month }}" required>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
