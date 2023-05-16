@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('budgets', function (Blueprint $table) {
             $table->id();
             $table->string('action_name');
-            $table->date('starting_date');
-            $table->date('ending_date');
-            $table->numeric('budget_amaount');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->decimal('budget_amount',10 ,2);
             $table->timestamps();
         });
     }
