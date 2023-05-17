@@ -75,9 +75,9 @@ Route::get('/logout',[UserController::class, 'logout']);
 // Autheticanted Routes
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('dash',[DashboardController::class, 'index']);
-    Route::resource('roles', RoleController::class);
-    Route::resource('users', UserController::class);
+Route::get('dash',[DashboardController::class, 'index']);
+Route::resource('roles', RoleController::class);
+Route::resource('users', UserController::class);
 
 
 
@@ -87,8 +87,8 @@ Route::get('/savings/{user}' , [SavingController::class, 'showSavings']);
 Route::get('/saving/create' , [SavingController::class, 'create']);
 Route::post('/savings' , [SavingController::class, 'store'])->name('savings.store');
 Route::get('/saving' , [SavingController::class, 'index']) ;
-Route::get('/saving/{id}/edit' , [SavingController::class, 'edit'])->name('savings.update') ;
-Route::put('/saving/{id}' , [SavingController::class, 'update']);
+Route::get('/saving/{id}/edit' , [SavingController::class, 'edit'])->name('saving.edit');
+Route::put('/saving/{id}' , [SavingController::class, 'update'])->name('savings.update');
 Route::delete('/saving/{id}' , [SavingController::class, 'delete']);
 Route::get('/totalSavings' , [SavingController::class, 'singleTotalSavings']);
 

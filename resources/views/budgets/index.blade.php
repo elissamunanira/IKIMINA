@@ -49,7 +49,7 @@
                                                     <td>{{ $budget->action_name }}</td>
                                                     <td>{{ $budget->start_date }}</td>
                                                     <td>{{ $budget->end_date }}</td>
-                                                    <td>{{ $budget->budget_amount }}</td>
+                                                    <td>{{ $budget->budget_amount }} RWF</td>
                                                     <td>
                                                         <a href="{{ route('budgets.edit', $budget->id) }}">Edit</a>
                                                         <form method="POST" action="{{ route('budgets.destroy', $budget->id) }}" style="display: inline;">

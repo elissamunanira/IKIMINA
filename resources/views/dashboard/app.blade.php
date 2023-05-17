@@ -57,15 +57,16 @@
                     <li><a href="/roles"><i class="ti-layout-tab"></i> Roles </a></li>
 
                     <li><a href="/totalSavings"><i class="ti-briefcase"></i>Savings</a></li>
+                    <li><a href="/budgets"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Budget</a></li>
 
-                    <li><a class="sidebar-sub-toggle"><i class="ti-bag"></i> Loans <span
+                    <li><a class="sidebar-sub-toggle"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Loans <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="/loan-categories">Loan Categories</a></li> 
                             <li><a href="/loans">All Loans</a></li>
                         </ul>
                     </li>
-                    <li><a href="/rules"><i class="ti-ruler"></i>Cooperative Rules </a></li>
+                    <li><a href="/rules"><i class="fa fa-balance-scale" aria-hidden="true"></i>Cooperative Rules </a></li>
                     <li><a href="/penalties"><i class="fa fa-gavel" aria-hidden="true"></i>Penalties </a></li>
                     
                     <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> My Account <span

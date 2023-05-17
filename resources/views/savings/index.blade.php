@@ -42,6 +42,7 @@
                                                     <th>Date</th>
                                                     <th>Month Paid</th>
                                                     <th>Amount</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -51,6 +52,7 @@
                                                         <td>{{ $saving->created_at }}</td>
                                                         <td>{{ $saving->month }}</td>
                                                         <td>{{ $saving->amount }} RWF</td>
+                                                        <td><a href="/saving/{{ $saving->id }}/edit">Edit</a></td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>

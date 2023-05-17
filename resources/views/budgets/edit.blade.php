@@ -44,19 +44,35 @@
                                         <form method="POST" action="{{ route('budgets.update', $budget->id) }}">
                                             @csrf
                                             @method('PUT')
-                                            <label for="name">Name:</label>
-                                            <input type="text" name="action_name" id="name" value="{{ $budget->action_name }}" required><br>
+                                            <div class="form-group row">
+                                                <label class="col-lg-2 col-form-label" for="name">Name:</label>
+                                                <div class="col-lg-6">
+                                                    <input type="text" name="action_name" id="name" value="{{ $budget->action_name }}" required>
+                                                </div> 
+                                            </div>
 
-                                            <label for="start_date">Start Date:</label>
-                                            <input type="date" name="start_date" id="start_date" value="{{ $budget->start_date }}" required><br>
+                                            <div class="form-group row">
+                                                <label class="col-lg-2 col-form-label" for="start_date">Start Date:</label>
+                                                <div class="col-lg-6">
+                                                    <input type="date" name="start_date" id="start_date" value="{{ $budget->start_date }}" required>
+                                                </div> 
+                                            </div>
 
-                                            <label for="end_date">End Date:</label>
-                                            <input type="date" name="end_date" id="end_date" value="{{ $budget->end_date }}" required><br>
+                                            <div class="form-group row">
+                                                <label class="col-lg-2 col-form-label" for="end_date">End Date:</label>
+                                                <div class="col-lg-6">
+                                                    <input type="date" name="end_date" id="end_date" value="{{ $budget->end_date }}" required>
+                                                </div> 
+                                            </div>
 
-                                            <label for="amount">Amount:</label>
-                                            <input type="number" name="budget_amount" id="amount" step="0.01" value="{{ $budget->budget_amount }}" required><br>
+                                            <div class="form-group row">
+                                                <label class="col-lg-2 col-form-label" for="amount">Amount:</label>
+                                                <div class="col-lg-6">
+                                                    <input type="number" name="budget_amount" id="amount" step="0.01" value="{{ $budget->budget_amount }}" required>
+                                                </div> 
+                                            </div>
 
-                                            <input type="submit" value="Update">
+                                            <input class="btn btn-primary" type="submit" value="Update">
                                         </form>
 
                                     </div>

@@ -10,4 +10,9 @@ class Budget extends Model
     use HasFactory;
      
     protected $fillable = ['action_name', 'start_date', 'end_date', 'budget_amount' ];
+
+    public function expenses()
+    {
+        return $this->hasMany(Expense::class);
+    }
 }
