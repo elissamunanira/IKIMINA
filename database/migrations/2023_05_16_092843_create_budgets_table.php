@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('budgets', function (Blueprint $table) {
             $table->id();
-            $table->string('action_name');
+            $table->string('budget_name');
             $table->date('start_date');
             $table->date('end_date');
-            $table->decimal('budget_amount',10 ,2);
+            $table->decimal('budget_amount',15 ,2);
             $table->timestamps();
         });
     }

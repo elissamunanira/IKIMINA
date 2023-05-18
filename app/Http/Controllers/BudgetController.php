@@ -32,7 +32,7 @@ class BudgetController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-        'action_name' => 'required',
+        'budget_name' => 'required',
         'start_date' => 'required',
         'end_date' => 'required',
         'budget_amount' => 'required|numeric',
@@ -68,13 +68,13 @@ class BudgetController extends Controller
         $budget = Budget::findOrFail($id);
 
         $request->validate([
-            'action_name' => 'required',
+            'budget_name' => 'required',
             'start_date' => 'required|date',
             'end_date' => 'required|date',
             'budget_amount' => 'required|numeric',
         ]);
 
-        $budget->action_name = $request->action_name;
+        $budget->budget_name = $request->budget_name;
         $budget->start_date = $request->start_date;
         $budget->end_date = $request->end_date;
         $budget->budget_amount = $request->budget_amount;

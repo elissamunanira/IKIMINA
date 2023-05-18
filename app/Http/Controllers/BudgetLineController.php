@@ -21,8 +21,8 @@ class BudgetLineController extends Controller
     public function store(Request $request, Budget $budget)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'amount' => 'required|numeric|min:0',
+            'budget_line_name' => 'required|string|max:255',
+            'budget_line_amount' => 'required|numeric|min:0',
         ]);
 
         $budgetLine = $budget->budgetLines()->create($validatedData);
@@ -43,8 +43,8 @@ class BudgetLineController extends Controller
     public function update(Request $request, Budget $budget, BudgetLine $budgetLine)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'amount' => 'required|numeric|min:0',
+            'budget_line_name' => 'required|string|max:255',
+            'budget_line_amount' => 'required|numeric|min:0',
         ]);
 
         $budgetLine->update($validatedData);

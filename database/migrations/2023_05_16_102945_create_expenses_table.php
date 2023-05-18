@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('expenses', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('budget_id');
-            $table->string('description');
-            $table->decimal('expense_amount');
+             $table->id();
+            $table->unsignedBigInteger('budget_line_id');
+            $table->string('expense_name');
+            $table->decimal('expense_amount', 15, 2);
             $table->timestamps();
-            
-            $table->foreign('budget_id')->references('id')->on('budgets')->onDelete('cascade');
+
+            $table->foreign('budget_line_id')->references('id')->on('budget_lines')->onDelete('cascade');
         });
     }
 

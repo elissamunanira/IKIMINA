@@ -48,7 +48,7 @@
                                             @foreach ($budgets as $budget)
                                                 <tr>
                                                     <td>{{ ++$i }}</td>
-                                                    <td>{{ $budget->action_name }}</td>
+                                                    <td>{{ $budget->budget_name }}</td>
                                                     <td>{{ $budget->start_date }}</td>
                                                     <td>{{ $budget->end_date }}</td>
                                                     <td>{{ $budget->budget_amount }} RWF</td>

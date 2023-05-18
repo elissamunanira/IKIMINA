@@ -48,7 +48,7 @@
                                             <div class="form-group row">
                                                 <label class="col-lg-2 col-form-label" for="name">Name:</label>
                                                 <div class="col-lg-6">
-                                                <input class="form-control" type="text" name="action_name" id="name" required> 
+                                                <input class="form-control" type="text" name="budget_name" id="name" required> 
                                                 </div> 
                                             </div>
 

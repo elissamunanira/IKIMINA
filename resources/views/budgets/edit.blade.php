@@ -47,7 +47,7 @@
                                             <div class="form-group row">
                                                 <label class="col-lg-2 col-form-label" for="name">Name:</label>
                                                 <div class="col-lg-6">
-                                                    <input type="text" name="action_name" id="name" value="{{ $budget->action_name }}" required>
+                                                    <input type="text" name="budget_name" id="name" value="{{ $budget->budget_name }}" required>
                                                 </div> 
                                             </div>
 

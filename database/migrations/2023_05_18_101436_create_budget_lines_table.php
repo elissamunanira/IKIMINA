@@ -15,7 +15,7 @@ return new class extends Migration
            $table->id();
             $table->unsignedBigInteger('budget_id');
             $table->string('budget_line_name');
-            $table->decimal('budget_line_amount', 12, 2);
+            $table->decimal('budget_line_amount', 15, 2);
             $table->timestamps();
 
             $table->foreign('budget_id')->references('id')->on('budgets')->onDelete('cascade');

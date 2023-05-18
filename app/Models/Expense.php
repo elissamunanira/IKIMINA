@@ -9,5 +9,11 @@ class Expense extends Model
 {
     use HasFactory;
 
+
+    public function budgetLine()
+    {
+        return $this->belongsTo(BudgetLine::class);
+    }
     
+
 }
