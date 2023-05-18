@@ -7,7 +7,7 @@
                 <div class="col-lg-8 p-r-0 name-margin-right">
                     <div class="page-header">
                         <div class="page-name">
-                            <h1>Budget</h1>
+                            <h1>Budgetlines</h1>
                         </div>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                         <div class="page-name">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/dash">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Budget</li>
+                                <li class="breadcrumb-item active">Budgetlines</li>
                             </ol>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
             <section id="main-content">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a class="btn btn-primary" href="{{ route('budgets.create') }}">+New </a>
+                        <a class="btn btn-primary" href="{{ route('budgets.budgetlines.create', $budget) }}">+New </a>
                         <div class="card">
                             <div class="card-body">
                                 <h1>Budget Lines for {{ $budget->name }}</h1>
@@ -40,7 +40,7 @@
                                         @foreach ($budgetLines as $budgetLine)
                                             <li>
                                                 <a href="{{ route('budgets.budgetlines.show', ['budget' => $budget, 'budgetline' => $budgetLine]) }}">
-                                                    {{ $budgetLine->name }} - ${{ $budgetLine->amount }}
+                                                    {{ $budgetLine->budget_line_name }} - ${{ $budgetLine->budget_line_amount }}
                                                 </a>
                                             </li>
                                         @endforeach

@@ -27,7 +27,7 @@ class BudgetLineController extends Controller
 
         $budgetLine = $budget->budgetLines()->create($validatedData);
 
-        return redirect()->route('budgetlines.show', ['budget' => $budget, 'budgetline' => $budgetLine]);
+        return redirect()->route('budgets.budgetlines.show', ['budget' => $budget, 'budgetline' => $budgetLine]);
     }
 
     public function show(Budget $budget, BudgetLine $budgetLine)
@@ -49,13 +49,13 @@ class BudgetLineController extends Controller
 
         $budgetLine->update($validatedData);
 
-        return redirect()->route('budgetlines.show', ['budget' => $budget, 'budgetline' => $budgetLine]);
+        return redirect()->route('budgets.budgetlines.show', ['budget' => $budget, 'budgetline' => $budgetLine]);
     }
 
     public function destroy(Budget $budget, BudgetLine $budgetLine)
     {
         $budgetLine->delete();
 
-        return redirect()->route('budgetlines.index', $budget);
+        return redirect()->route('budgets.budgetlines.index', $budget);
     }
 }

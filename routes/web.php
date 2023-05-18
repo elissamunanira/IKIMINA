@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController, BudgetController,BudgetLineController};
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController, BudgetController,BudgetLineController,ExpenseController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -148,8 +148,12 @@ Route::delete('budgets/{budget}', [BudgetController::class, 'destroy'])->name('b
 
 // Budgetline routes
 
-Route::get('/budgetlines/{budget}', [BudgetLineController::class, 'index']);
-Route::get('/budgetlines/{budget}/create', [BudgetLineController::class, 'create']);
+// Route::get('/budgetlines/{budget}', [BudgetLineController::class, 'index']);
+// Route::get('/budgetlines/{budget}/create', [BudgetLineController::class, 'create']);
+
+
+Route::resource('budgets.budgetlines', 'BudgetLineController');
+Route::resource('budgets.budgetlines.expenses', 'ExpenseController');
 
 
 });
