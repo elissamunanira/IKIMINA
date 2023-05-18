@@ -9,6 +9,8 @@ class BudgetLine extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['budget_line_name','budget_line_amount'];
+
     public function budget()
     {
         return $this->belongsTo(Budget::class);

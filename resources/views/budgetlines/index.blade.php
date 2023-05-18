@@ -31,7 +31,7 @@
                         <a class="btn btn-primary" href="{{ route('budgets.budgetlines.create', $budget) }}">+New </a>
                         <div class="card">
                             <div class="card-body">
-                                <h1>Budget Lines for {{ $budget->name }}</h1>
+                                <h1>Budget Lines for {{ $budget->budget_name }}</h1>
 
                                 @if ($budgetLines->isEmpty())
                                     <p>No budget lines found.</p>

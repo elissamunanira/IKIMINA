@@ -32,8 +32,8 @@
                         <div class="card">
                             <div class="card-body">
                                 <h1>{{ $budget->name }}</h1>
-                                    <p>Description: {{ $budget->description }}</p>
-                                    <p>Total Amount: ${{ $budget->total_amount }}</p>
+                                    <p>Budget Name: {{ $budget->budget_name }}</p>
+                                    <p>Total Amount: {{ $budget->budget_amount }} RWF</p>
 
                                     <h2>Budget Lines</h2>
                                     @if ($budget->budgetLines->isEmpty())
@@ -43,7 +43,7 @@
                                             @foreach ($budget->budgetLines as $budgetLine)
                                                 <li>
                                                     <a href="{{ route('budgets.budgetlines.show', ['budget' => $budget, 'budgetline' => $budgetLine]) }}">
-                                                        {{ $budgetLine->name }} - ${{ $budgetLine->amount }}
+                                                        {{ $budgetLine->budget_line_name }} = {{ $budgetLine->budget_line_amount }} RWF
                                                     </a>
                                                 </li>
                                             @endforeach
