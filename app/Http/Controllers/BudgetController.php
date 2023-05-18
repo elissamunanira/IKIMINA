@@ -47,9 +47,10 @@ class BudgetController extends Controller
      * Display the specified resource.
      */
    public function show(Budget $budget)
-{
-    return view('budgets.show', compact('budget'));
-}
+    {
+        // $budget = Budget::find($budget);
+        return view('budgets.show', compact('budget'));
+    }
 
     /**
      * Show the form for editing the specified resource.

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController, BudgetController,BudgetLineController,ExpenseController};
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -148,12 +149,23 @@ Route::delete('budgets/{budget}', [BudgetController::class, 'destroy'])->name('b
 
 // Budgetline routes
 
-// Route::get('/budgetlines/{budget}', [BudgetLineController::class, 'index']);
-// Route::get('/budgetlines/{budget}/create', [BudgetLineController::class, 'create']);
+// Route::get('/budgetlines/{budget}', [BudgetLineController::class, 'index'])->name('budgets.budgetlines.index');
+// Route::get('/budgetlines/{budget}/create', [BudgetLineController::class, 'create'])->name('budgets.budgetlines.create');
 
 
-Route::resource('budgets.budgetlines', 'BudgetLineController');
-Route::resource('budgets.budgetlines.expenses', 'ExpenseController');
+// Route::resource('budgets.budgetlines', 'BudgetLineController');
+// Route::resource('budgets.budgetlines.expenses', 'ExpenseController');
+
+
+Route::prefix('budgets')->group(function () {
+    Route::get('{budget}/budgetlines', [BudgetLineController::class, 'index'])->name('budgets.budgetlines.index');
+    Route::get('{budget}/budgetlines/create', [BudgetLineController::class, 'create'])->name('budgets.budgetlines.create');
+    Route::post('{budget}/budgetlines', [BudgetLineController::class, 'store'])->name('budgets.budgetlines.store');
+    Route::get('{budget}/budgetlines/{budgetline}', [BudgetLineController::class, 'show'])->name('budgets.budgetlines.show');
+    Route::get('{budget}/budgetlines/{budgetline}/edit', [BudgetLineController::class, 'edit'])->name('budgets.budgetlines.edit');
+    Route::put('{budget}/budgetlines/{budgetline}', [BudgetLineController::class, 'update'])->name('budgets.budgetlines.update');
+    Route::delete('{budget}/budgetlines/{budgetline}', [BudgetLineController::class, 'destroy'])->name('budgets.budgetlines.destroy');
+});
 
 
 });

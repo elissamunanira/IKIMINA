@@ -30,7 +30,7 @@
             <section id="main-content">
                 <div class="row">
                     <div class="container">
-                        <form action="{{ route('budgetlines.store', $budget) }}" method="POST">
+                        <form action="{{ route('budgets.budgetlines.store', $budget) }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="name">Budget Line Name</label>
