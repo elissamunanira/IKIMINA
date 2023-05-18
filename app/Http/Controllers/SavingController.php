@@ -67,11 +67,11 @@ class SavingController extends Controller
             'month' => 'required|date',
         ]);
 
-        $savings = Saving::find($id);
-        $savings->user_id = $validatedData['user_id'];
-        $savings->amount = $validatedData['amount'];
-        $savings->month = $validatedData['month'];
-        $savings->save();
+        $saving = Saving::find($id);
+        $saving->user_id = $validatedData['user_id'];
+        $saving->amount = $validatedData['amount'];
+        $saving->month = $validatedData['month'];
+        $saving->save();
 
         return redirect()->back()->with('success', 'Savings record Updated successfully.');
     }

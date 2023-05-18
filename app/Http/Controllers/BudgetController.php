@@ -12,9 +12,10 @@ class BudgetController extends Controller
      */
     public function index()
     {
+         $i = 0;
          $budgets = Budget::all();
 
-    return view('budgets.index', compact('budgets'));
+        return view('budgets.index', compact('budgets','i'));
     }
 
     /**

@@ -36,6 +36,7 @@
                                     <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                       <thead>
                                             <tr>
+                                                <th>#</th>
                                                 <th>Name</th>
                                                 <th>Start Date</th>
                                                 <th>End Date</th>
@@ -46,6 +47,7 @@
                                         <tbody>
                                             @foreach ($budgets as $budget)
                                                 <tr>
+                                                    <td>{{ ++$i }}</td>
                                                     <td>{{ $budget->action_name }}</td>
                                                     <td>{{ $budget->start_date }}</td>
                                                     <td>{{ $budget->end_date }}</td>

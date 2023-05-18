@@ -49,7 +49,7 @@
                                                         <td>{{ ++$i }}</td>
                                                         <td>{{ $rule->name }}</td>
                                                         <td>{{ $rule->description}}</td>
-                                                        <td>{{ $rule->rule_amount}}</td>
+                                                        <td>{{ $rule->rule_amount}} RWF</td>
                                                         <td><a href="{{ route('rules.edit',$rule->id) }}">Edit</a></td>
                                                     </tr>
                                                 @endforeach
