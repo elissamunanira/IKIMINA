@@ -79,12 +79,25 @@
                                                     </td>
 
                                                     <td>
-                                                        <a class="btn btn-success" href="{{ url('savings',$user->id) }}">Saving</a>
+                                                        {{-- <a class="btn btn-success" href="{{ url('savings',$user->id) }}">Saving</a>
                                                         <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
                                                         <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
                                                             {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
                                                                 {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                                                            {!! Form::close() !!}
+                                                            {!! Form::close() !!} --}}
+
+                                                            <div class="dropdown">
+                                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="actionsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Actions
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="actionsDropdown">
+                                                                    <a class="dropdown-item" href="{{ route('users.show',$user->id) }}">Show</a>
+                                                                    <a class="dropdown-item" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                                                                    {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
+                                                                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                                                                    {!! Form::close() !!}
+                                                                </div>
+                                                            </div>
                                                     </td>
                                                 </tr>
                                             @endforeach
