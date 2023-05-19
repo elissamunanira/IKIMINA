@@ -10,8 +10,9 @@ class BudgetLineController extends Controller
 {
     public function index(Budget $budget)
     {
+        $i = 0;
         $budgetLines = $budget->budgetLines;
-        return view('budgetlines.index', compact('budget', 'budgetLines'));
+        return view('budgetlines.index', compact('i','budget', 'budgetLines'));
     }
 
     public function create(Budget $budget)

@@ -38,10 +38,10 @@
 
                                     <a class = "btn btn-primary" href="/budgets/{{$budget->id}}/budgetlines/{{$budgetLine->id}}/edit">Edit</a>
 
-                                    <form action="{{ route('budgets.budgetlines.destroy', ['budget' => $budgetLine->budget, 'budgetLine' => $budgetLine]) }}" method="POST">
+                                    <form action="{{ route('budgets.budgetlines.destroy', ['budget' => $budgetLine->budget, 'budgetLine' => $budgetLine]) }}" method="POST" style="display: inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-danger pull-right" type="submit" onclick="return confirm('Are you sure you want to delete this budget line?')">Delete</button>
+                                        <button class="btn btn-danger pull-right" style="display: inline;" type="submit" onclick="return confirm('Are you sure you want to delete this budget line?')">Delete</button>
                                     </form>
 
                             </div>
