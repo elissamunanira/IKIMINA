@@ -31,7 +31,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h1>{{ $budgetLine->budget_line_name }}</h1>
-                                    <p>Amount: {{ $budgetLine->budget_line_amount }} RWF</p>
+                                    <p>Amount To Be Used: {{ $budgetLine->budget_line_amount }} RWF</p>
                                     <p>Budget: {{ $budget->budget_name }}</p>
                                     {{-- <p>Budget Description: {{ $budgetLine->budget->description }}</p> --}}
 

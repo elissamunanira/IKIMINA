@@ -33,7 +33,7 @@
                                 <h1>Budget Lines for {{ $budget->budget_name }}</h1>
 
                                 @if ($budgetLines->isEmpty())
-                                    <p>No budget lines found.</p>
+                                    <p>No budget lines for this budget found.</p>
                                 @else
                                     <ul>
                                         @foreach ($budgetLines as $budgetLine)

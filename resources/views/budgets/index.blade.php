@@ -60,7 +60,7 @@
                                                         <a class="dropdown-item" href="{{ route('budgets.edit', $budget->id) }}">Edit</a>
                                                         <form method="POST" action="{{ route('budgets.destroy', $budget->id) }}" style="display: inline;">
 
-                                                        {{-- <a class="dropdown-item" href="{{ route('budgets.budgetlines', ['budget' => $budgetLine->budget]) }}">BudgetLines</a> --}}
+                                                        <a class="dropdown-item" href="/budgets/{{ $budget->id }}/budgetlines">BudgetLines</a>
 
                                                         <form method="POST" action="{{ route('budgets.destroy', $budget->id) }}" style="display: inline;">
 
