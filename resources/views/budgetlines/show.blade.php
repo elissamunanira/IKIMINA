@@ -28,7 +28,6 @@
             <section id="main-content">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a class="btn btn-primary" href="{{ route('budgets.create') }}">+New </a>
                         <div class="card">
                             <div class="card-body">
                                 <h1>{{ $budget->name }}</h1>
@@ -50,7 +49,7 @@
                                         </ul>
                                     @endif
 
-                                    <a href="{{ route('budgets.budgetlines.create', $budget) }}">Create Budget Line</a>
+                                    <a class="btn btn-primary" href="{{ route('budgets.budgetlines.create', $budget) }}">+Budget Line</a>
                             </div>
                         </div>
                     </div>
