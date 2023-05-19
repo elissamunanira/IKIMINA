@@ -35,7 +35,7 @@
                                 @if ($budgetLines->isEmpty())
                                     <p>No budget lines found.</p>
                                 @else
-                                    <ol>
+                                    <ul>
                                         @foreach ($budgetLines as $budgetLine)
                                             <li> {{++$i}}.
                                                 <a href="{{ route('budgets.budgetlines.show', ['budget' => $budget, 'budgetLine' => $budgetLine]) }}">
@@ -43,7 +43,7 @@
                                                 </a>
                                             </li>
                                         @endforeach
-                                    </ol>
+                                    </ul>
                                 @endif
 
                                 <a class="btn btn-primary" href="{{ route('budgets.budgetlines.create', $budget) }}">+Budget Line</a>

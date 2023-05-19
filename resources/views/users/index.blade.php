@@ -52,7 +52,7 @@
                                                     <th>Email</th>
                                                     <th>Role</th>
                                                     <th>Status</th>
-                                                    <th>action</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
