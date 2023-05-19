@@ -42,7 +42,7 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="amount">Amount</label>
+                                <label for="amount">Amount To Spend On</label>
                                 <input type="number" step="0.01" name="budget_line_amount " id="amount" class="form-control" value="{{ $budgetLine->budget_line_amount }}" required>
                             </div>
 
