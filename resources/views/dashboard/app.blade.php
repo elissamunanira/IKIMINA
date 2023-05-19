@@ -60,7 +60,7 @@
                     <li><a class="sidebar-sub-toggle"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Budget<span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="/budgets">Budgets</a></li> 
-                            <li><a href="/budgetlines">Budgetlines</a></li>
+                            <li><a href="/budgets/{budget}/budgetlines">Budgetlines</a></li>
                         </ul> 
                     </li>
 

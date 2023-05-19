@@ -30,18 +30,19 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h1>{{ $budgetLine->name }}</h1>
-                                    <p>Amount: ${{ $budgetLine->amount }}</p>
-                                    <p>Budget: {{ $budgetLine->budget->name }}</p>
-                                    <p>Budget Description: {{ $budgetLine->budget->description }}</p>
+                                <h1>{{ $budgetLine->budget_line_name }}</h1>
+                                    <p>Amount: {{ $budgetLine->budget_line_amount }}</p>
+                                    <p>Budget: {{ $budget->budget_name }}</p>
+                                    {{-- <p>Budget Description: {{ $budgetLine->budget->description }}</p> --}}
 
-                                    <a href="{{ route('budgets.budgetlines.edit', ['budget' => $budgetLine->budget, 'budgetline' => $budgetLine]) }}">Edit</a>
 
-                                    <form action="{{ route('budgets.budgetlines.destroy', ['budget' => $budgetLine->budget, 'budgetline' => $budgetLine]) }}" method="POST">
+                                    <a href="/budgets/{{$budget->id}}/budgetlines/{{$budgetLine->id}}/edit">Edit</a>
+
+                                    {{-- <form action="{{ route('budgets.budgetlines.destroy', ['budget' => $budgetLine->budget, 'budgetline' => $budgetLine]) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" onclick="return confirm('Are you sure you want to delete this budget line?')">Delete</button>
-                                    </form>
+                                    </form> --}}
 
                             </div>
                         </div>

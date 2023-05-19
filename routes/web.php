@@ -161,10 +161,10 @@ Route::prefix('budgets')->group(function () {
     Route::get('{budget}/budgetlines', [BudgetLineController::class, 'index'])->name('budgets.budgetlines.index');
     Route::get('{budget}/budgetlines/create', [BudgetLineController::class, 'create'])->name('budgets.budgetlines.create');
     Route::post('{budget}/budgetlines', [BudgetLineController::class, 'store'])->name('budgets.budgetlines.store');
-    Route::get('{budget}/budgetlines/{budgetline}', [BudgetLineController::class, 'show'])->name('budgets.budgetlines.show');
-    Route::get('{budget}/budgetlines/{budgetline}/edit', [BudgetLineController::class, 'edit'])->name('budgets.budgetlines.edit');
-    Route::put('{budget}/budgetlines/{budgetline}', [BudgetLineController::class, 'update'])->name('budgets.budgetlines.update');
-    Route::delete('{budget}/budgetlines/{budgetline}', [BudgetLineController::class, 'destroy'])->name('budgets.budgetlines.destroy');
+    Route::get('{budget}/budgetlines/{budgetLine}', [BudgetLineController::class, 'show'])->name('budgets.budgetlines.show');
+    Route::get('{budget}/budgetlines/{budgetLine}/edit', [BudgetLineController::class, 'edit'])->name('budgets.budgetlines.edit');
+    Route::put('{budget}/budgetlines/{budgetLine}', [BudgetLineController::class, 'update'])->name('budgets.budgetlines.update');
+    Route::delete('{budget}/budgetlines/{budgetLine}', [BudgetLineController::class, 'destroy'])->name('budgets.budgetlines.destroy');
 });
 
 

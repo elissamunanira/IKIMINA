@@ -48,7 +48,6 @@ class BudgetController extends Controller
      */
    public function show(Budget $budget)
     {
-        // $budget = Budget::find($budget);
         return view('budgets.show', compact('budget'));
     }
 
