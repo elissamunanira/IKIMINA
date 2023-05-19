@@ -38,7 +38,7 @@
                                     <ol>
                                         @foreach ($budgetLines as $budgetLine)
                                             <li>
-                                                <a href="{{ route('budgets.budgetlines.show', ['budget' => $budget, 'budgetline' => $budgetLine]) }}">
+                                                <a href="{{ route('budgets.budgetlines.show', ['budget' => $budget, 'budgetLine' => $budgetLine]) }}">
                                                     {{ $budgetLine->budget_line_name }} - ${{ $budgetLine->budget_line_amount }}
                                                 </a>
                                             </li>

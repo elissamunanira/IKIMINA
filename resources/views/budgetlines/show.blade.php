@@ -31,18 +31,18 @@
                         <div class="card">
                             <div class="card-body">
                                 <h1>{{ $budgetLine->budget_line_name }}</h1>
-                                    <p>Amount: {{ $budgetLine->budget_line_amount }}</p>
+                                    <p>Amount: {{ $budgetLine->budget_line_amount }} RWF</p>
                                     <p>Budget: {{ $budget->budget_name }}</p>
                                     {{-- <p>Budget Description: {{ $budgetLine->budget->description }}</p> --}}
 
 
-                                    <a href="/budgets/{{$budget->id}}/budgetlines/{{$budgetLine->id}}/edit">Edit</a>
+                                    <a class = "btn btn-primary" href="/budgets/{{$budget->id}}/budgetlines/{{$budgetLine->id}}/edit">Edit</a>
 
-                                    {{-- <form action="{{ route('budgets.budgetlines.destroy', ['budget' => $budgetLine->budget, 'budgetline' => $budgetLine]) }}" method="POST">
+                                    <form action="{{ route('budgets.budgetlines.destroy', ['budget' => $budgetLine->budget, 'budgetLine' => $budgetLine]) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" onclick="return confirm('Are you sure you want to delete this budget line?')">Delete</button>
-                                    </form> --}}
+                                        <button class="btn btn-danger pull-right" type="submit" onclick="return confirm('Are you sure you want to delete this budget line?')">Delete</button>
+                                    </form>
 
                             </div>
                         </div>
