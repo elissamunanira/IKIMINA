@@ -92,7 +92,7 @@
                                                                 </button>
                                                                 <div class="dropdown-menu" aria-labelledby="actionsDropdown">
                                                                     <a class="dropdown-item" href="{{ route('users.show',$user->id) }}">Show</a>
-                                                                    <a class="dropdown-item" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                                                                    <a class="dropdown-item" href="{{ url('savings',$user->id) }}">Saving</a>
                                                                     {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
                                                                         {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                                                                     {!! Form::close() !!}
