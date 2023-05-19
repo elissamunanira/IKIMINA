@@ -79,25 +79,15 @@
                                                     </td>
 
                                                     <td>
-                                                        {{-- <a class="btn btn-success" href="{{ url('savings',$user->id) }}">Saving</a>
-                                                        <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
-                                                        <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
-                                                            {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
-                                                                {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                                                            {!! Form::close() !!} --}}
-
-                                                            <div class="dropdown">
-                                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="actionsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    Actions
-                                                                </button>
-                                                                <div class="dropdown-menu" aria-labelledby="actionsDropdown">
-                                                                    <a class="dropdown-item" href="{{ route('users.show',$user->id) }}">Show</a>
-                                                                    <a class="dropdown-item" href="{{ url('savings',$user->id) }}">Saving</a>
-                                                                    {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
-                                                                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                                                                    {!! Form::close() !!}
-                                                                </div>
+                                                        <div class="dropdown text-sans-serif"><i class="tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></i>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                                <a class="dropdown-item" href="{{ route('users.show',$user->id) }}">Show</a>
+                                                                <a class="dropdown-item" href="{{ url('savings',$user->id) }}">Saving</a>
+                                                                {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
+                                                                    {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                                                                {!! Form::close() !!}
                                                             </div>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             @endforeach

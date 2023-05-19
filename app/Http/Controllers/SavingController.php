@@ -40,7 +40,7 @@ class SavingController extends Controller
         $savings->month = $validatedData['month'];
         $savings->save();
 
-        return redirect()->back()->with('success', 'Savings record added successfully.');
+        return redirect()->route('savings.totalSavings')->with('success', 'Savings record added successfully.');
     }
 
     public function create(){
@@ -60,20 +60,22 @@ class SavingController extends Controller
         return view('savings.edit',compact('saving','users'));
     }
 
-    public function update(){
-        $validatedData = $request->validate([
+    public function update(Request $request,$id){
+
+        $request->validate([
             'user_id' => 'required|exists:users,id',
             'amount' => 'required|numeric|min:0',
             'month' => 'required|date',
         ]);
 
         $saving = Saving::find($id);
-        $saving->user_id = $validatedData['user_id'];
-        $saving->amount = $validatedData['amount'];
-        $saving->month = $validatedData['month'];
+
+        $saving->user_id = $request->user_id;
+        $saving->amount = $request->amount;
+        $saving->month = $request->month;
         $saving->save();
 
-        return redirect()->back()->with('success', 'Savings record Updated successfully.');
+        return redirect()->route('savings.totalSavings')->with('success', 'Savings record Updated successfully.');
     }
 
     public function totalSavings(){
