@@ -116,19 +116,42 @@ class LoanController extends Controller
 
     }
 
-    public function update(Request $request, $id)
-    {
-        $loan = Loan::findOrFail($id);
-        $loan->status = $request->input('status');
-        $loan->save();
+    // public function update(Request $request, $id)
+    // {
+    //     $loan = Loan::findOrFail($id);
+    //     $loan->status = $request->input('status');
+    //     $loan->save();
 
-        return redirect()->route('loans.show', ['id' => $loan->id]);
+    //     return redirect()->route('loans.show', ['id' => $loan->id]);
+    // }
+
+     public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'loan_amount' => 'required|numeric',
+            'interest_rate' => 'required|numeric',
+            'loan_term' => 'required|integer',
+            // Add validation rules for other fields
+        ]);
+
+        $loan = Loan::findOrFail($id);
+
+        $loan->update($validatedData);
+
+        // Calculate monthly payment
+        $monthlyPayment = $this->calculateMonthlyPayment($loan->loan_amount, $loan->interest_rate, $loan->loan_term);
+
+        return view('loans.show', compact('loan', 'monthlyPayment'));
     }
 
-    // public function calculateInterest()
-    // {
-    //     $interest = $this->principal * $this->interest_rate * $this->duration / 12;
-    //     return view ('loans.index',compact('interest'));
-    // }
+    private function calculateMonthlyPayment($loanAmount, $interestRate, $loanTerm)
+    {
+        $monthlyInterestRate = $interestRate / 100 / 12;
+        $numPayments = $loanTerm;
+
+        $monthlyPayment = ($loanAmount * $monthlyInterestRate) / (1 - pow(1 + $monthlyInterestRate, -$numPayments));
+
+        return $monthlyPayment;
+    }
 
 }

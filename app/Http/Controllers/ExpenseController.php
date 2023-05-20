@@ -79,22 +79,7 @@ class ExpenseController extends Controller
 
     /**
      * Update the specified resource in storage.
-     */
-
-    //   public function update(Request $request, Expense $expense)
-    // {
-    //     $validatedData = $request->validate([
-    //         'expense_name' => 'required',
-    //         'expense_amount' => 'required|numeric',
-    //         'description' => 'required',
-    //         'budget_line_id' => 'required|exists:budget_lines,id',
-    //     ]);
-
-    //     $expense->update($validatedData);
-
-    //         return redirect()->route('expenses.index')->with('success', 'Expense updated successfully.');
-    // }
-
+     */  
 
       public function update(Request $request, $budgetLineId, $expenseId)
     {
@@ -116,12 +101,6 @@ class ExpenseController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    // public function destroy(Expense $expense)
-    // {
-    //     $expense->delete();
-
-    //     return redirect()->route('expenses.index')->with('success', 'Expense deleted successfully.');
-    // }
 
      public function destroy($budgetLineId, $expenseId)
     {
