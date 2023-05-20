@@ -128,20 +128,22 @@ class LoanController extends Controller
      public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'loan_amount' => 'required|numeric',
-            'interest_rate' => 'required|numeric',
-            'loan_term' => 'required|integer',
-            // Add validation rules for other fields
-        ]);
+        'paid_amount' => 'required|numeric',
+    ]);
 
-        $loan = Loan::findOrFail($id);
+    $loan = Loan::findOrFail($id);
 
-        $loan->update($validatedData);
+    $paidAmount = $validatedData['paid_amount'];
+    $remainingAmount = max(0, $loan->loan_amount - $paidAmount);
 
-        // Calculate monthly payment
-        $monthlyPayment = $this->calculateMonthlyPayment($loan->loan_amount, $loan->interest_rate, $loan->loan_term);
+    $loan->loan_amount = $remainingAmount;
+    $loan->save();
 
-        return view('loans.show', compact('loan', 'monthlyPayment'));
+    // Calculate monthly payment based on the updated loan amount
+    $monthlyPayment = $this->calculateMonthlyPayment($loan->loan_amount, $loan->interest_rate, $loan->loan_term);
+
+    return view('loans.show', compact('loan', 'monthlyPayment'));
+    
     }
 
     private function calculateMonthlyPayment($loanAmount, $interestRate, $loanTerm)
