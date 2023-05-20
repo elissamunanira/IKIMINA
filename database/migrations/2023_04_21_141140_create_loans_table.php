@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('loan_amount', 10, 2);
             $table->decimal('interest_amount', 10, 2);
             $table->decimal('total_amount', 10, 2);
+            $table->decimal('paid_amount', 10, 2);
             $table->enum('status', ['pending', 'approved','due', 'rejected', 'paid'])->default('pending');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
