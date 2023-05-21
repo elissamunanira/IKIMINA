@@ -574,7 +574,7 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
-                        <img class="img-fluid rounded" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid rounded" src="/home/img/team-1.jpg" alt="">
                         <div class="team-text">
                             <h4 class="mb-0">Kate Winslet</h4>
                             <div class="team-social d-flex">
@@ -604,7 +604,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
-                        <img class="img-fluid rounded" src="img/team-3.jpg" alt="">
+                        <img class="img-fluid rounded" src="/home/img/team-3.jpg" alt="">
                         <div class="team-text">
                             <h4 class="mb-0">Doris Jordan</h4>
                             <div class="team-social d-flex">
