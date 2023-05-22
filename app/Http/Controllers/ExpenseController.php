@@ -20,9 +20,10 @@ class ExpenseController extends Controller
      * Show the form for creating a new resource.
      */
 
-    public function create()
+    public function create($budgetLineId)
     {
-        //
+        $budgetLine = BudgetLine::findOrFail($budgetLineId);
+        return view('expenses.create', compact('budgetLine'));
     }
 
     /**
@@ -41,6 +42,20 @@ class ExpenseController extends Controller
         Expense::create($validatedData);
 
         return redirect()->route('expenses.index')->with('success', 'Expense created successfully.');
+
+        $validatedData = $request->validate([
+            'expense_name' => 'required',
+            'description' => 'required',
+            'amount' => 'required|numeric',
+        ]);
+
+        $budgetLine = BudgetLine::findOrFail($budgetLineId);
+        $expense = new Expense($validatedData);
+        $budgetLine->expenses()->save($expense);
+
+        return redirect()->route('budgets.show', $budgetLine->budget->id)
+            ->with('success', 'Expense created successfully');
+
     }
 
 
