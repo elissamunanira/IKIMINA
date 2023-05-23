@@ -95,4 +95,45 @@ class BudgetController extends Controller
 
         return redirect()->route('budgets.index')->with('success', 'Budget deleted successfully.');
     }
+
+
+        public function compareBudgetExpenses()
+    {
+        // Retrieve all budget lines
+        $budgetLines = BudgetLine::all();
+
+        // Initialize variables for total budgeted amount and total actual expenses
+        $totalBudgetedAmount = 0;
+        $totalActualExpenses = 0;
+
+        // Calculate the variance for each budget line and sum up the totals
+        foreach ($budgetLines as $budgetLine) {
+            // Sum up the budgeted amounts
+            $totalBudgetedAmount += $budgetLine->budget_line_amount;
+
+            // Retrieve the actual expenses for the budget line
+            $actualExpenses = $budgetLine->expenses()->sum('expense_amount');
+
+            // Sum up the actual expenses
+            $totalActualExpenses += $actualExpenses;
+
+            // Calculate the variance for the budget line
+            $variance = $actualExpenses - $budgetLine->amount;
+
+            // Add the variance to the budget line object
+            $budgetLine->variance = $variance;
+        }
+
+        // Calculate the overall variance (profit or loss)
+        $overallVariance = $totalActualExpenses - $totalBudgetedAmount;
+
+        return view('budget.compare', [
+            'budgetLines' => $budgetLines,
+            'totalBudgetedAmount' => $totalBudgetedAmount,
+            'totalActualExpenses' => $totalActualExpenses,
+            'overallVariance' => $overallVariance,
+        ]);
+    }
+
+
 }
