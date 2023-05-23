@@ -53,11 +53,11 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <a class="btn btn-primary" href="{{ route('budgets.budgetlines.create', $budget) }}">+Budget Line</a>
-                                        <h1>Budget Lines for {{ $budget->budget_name }} Budget</h1>
+                                        <h2>Budget Lines for <u><i>{{ $budget->budget_name }}</i></u> Budget</h2>
                                         <div class="card">
                                             <div class="card-body">
                                                 @if ($budgetLines->isEmpty())
-                                                    <p class="color-danger">No budget lines for this budget found.</p>
+                                                    <h3 class="color-danger">No budget lines for this budget found.</h3>
                                                 @else
                                                 <div class="bootstrap-data-table-panel">
                                                 <div class="table-responsive">

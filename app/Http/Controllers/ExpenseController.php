@@ -14,11 +14,12 @@ class ExpenseController extends Controller
      * Display a listing of the resource.
      */
 
-   public function index($id)
+   public function index(BudgetLine $budgetLine)
     {
         $i = 0;
-        $expenses = Expense::all();
-        $budgetLine = BudgetLine::findOrFail($id);
+        $expenses = $budgetLine->expenses;
+        // $expenses = Expense::all();
+        // $budgetLine = BudgetLine::findOrFail($id);
         return view('expenses.index', compact('expenses','budgetLine','i'));
     }
 
