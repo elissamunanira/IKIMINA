@@ -168,4 +168,16 @@ Route::prefix('budgets')->group(function () {
 });
 
 
+
+    // Routes for Expenses
+    // Route::resource('budget_lines.expenses', 'ExpenseController')->except(['index', 'show']);
+    Route::get('budget_lines/{budget_line}/expenses', [ExpenseController::class, 'index'])->name('budget_lines.expenses.index');
+    Route::get('budget_lines/{budget_line}/expenses/create', [ExpenseController::class, 'create'])->name('budget_lines.expenses.create');
+    Route::post('budget_lines/{budget_line}/expenses', [ExpenseController::class, 'store'])->name('budget_lines.expenses.store');
+    Route::get('budget_lines/{budget_line}/expenses/{expense}/edit', [ExpenseController::class, 'edit'])->name('budget_lines.expenses.edit');
+    Route::put('budget_lines/{budget_line}/expenses/{expense}', [ExpenseController::class, 'update'])->name('budget_lines.expenses.update');
+    Route::delete('budget_lines/{budget_line}/expenses/{expense}', [ExpenseController::class, 'destroy'])->name('budget_lines.expenses.destroy');
+    Route::get('budget_lines/{budget_line}/expenses/{expense}', [ExpenseController::class, 'show'])->name('budget_lines.expenses.show');
+
+
 });

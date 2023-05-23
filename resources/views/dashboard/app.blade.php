@@ -57,12 +57,14 @@
 
                     <li><a href="/roles"><i class="ti-layout-tab"></i> Roles </a></li>
 
-                    <li><a class="sidebar-sub-toggle"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Budget<span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <li><a href="/budgets"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Budgets</a></li> 
+
+                    {{-- <li><a class="sidebar-sub-toggle"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Budget<span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="/budgets">Budgets</a></li> 
-                            <li><a href="/budgets/{budget}/budgetlines">Budgetlines</a></li>
+                            <li><a href="/budgets/{{$budget->id}}/budgetlines">Budgetlines</a></li>
                         </ul> 
-                    </li>
+                    </li> --}}
 
                     <li><a href="/expenses"><i class="fa fa-table" aria-hidden="true"></i>Expenses</a></li>
                     <li><a href="/expenses"><i class="fa fa-life-ring" aria-hidden="true"></i>Mituelles</a></li>
