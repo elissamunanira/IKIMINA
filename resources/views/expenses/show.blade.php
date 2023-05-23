@@ -53,12 +53,12 @@
                                 <p>{{ $expense->budgetLine->name }}</p>
                             </div>
 
-                            <a href="{{ route('budget_lines.expenses.edit', [$expense->budgetLine->id, $expense->id]) }}">Edit Expense</a>
+                            <a class = "btn btn-primary" href="{{ route('budget_lines.expenses.edit', [$expense->budgetLine->id, $expense->id]) }}">Edit Expense</a>
 
-                            <form action="{{ route('budget_lines.expenses.destroy', [$expense->budgetLine->id, $expense->id]) }}" method="POST">
+                            <form action="{{ route('budget_lines.expenses.destroy', [$expense->budgetLine->id, $expense->id]) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" onclick="return confirm('Are you sure you want to delete this expense?')">Delete Expense</button>
+                                <button class="btn btn-danger pull-right" type="submit" onclick="return confirm('Are you sure you want to delete this expense?')">Delete Expense</button>
                             </form>
                         </div>
                     </div>

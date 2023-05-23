@@ -60,7 +60,7 @@
                                             <input type="number" name="expense_amount" id="expense_amount" value="{{ $expense->expense_amount }}" required>
                                         </div>
 
-                                        <button type="submit">Update Expense</button>
+                                        <button class="btn btn-primary" type="submit">Update Expense</button>
                                     </form>
 
                                     </div>
