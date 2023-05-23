@@ -56,6 +56,9 @@
                                         <h1>Budget Lines for {{ $budget->budget_name }} Budget</h1>
                                         <div class="card">
                                             <div class="card-body">
+                                                @if ($budgetLines->isEmpty())
+                                                    <p class="color-danger">No budget lines for this budget found.</p>
+                                                @else
                                                 <div class="bootstrap-data-table-panel">
                                                 <div class="table-responsive">
                                                     <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
@@ -68,9 +71,6 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            @if ($budgetLines->isEmpty())
-                                                                <p class="color-danger">No budget lines for this budget found.</p>
-                                                            @else
                                                         @foreach ($budgetLines as $budgetLine)
                                                                 <tr>
                                                                     <td>{{ ++$i }}</td>
@@ -94,11 +94,11 @@
                                                                     </td>
                                                                 </tr>
                                                             @endforeach
-                                                                @endif
                                                         </tbody>
                                                     </table>
                                                     </div>
                                                 </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
