@@ -32,7 +32,9 @@
                             <div class="card-body">
                             <h1>Budget vs Expenses Comparison</h1>
 
-                                <table>
+                                <div class="bootstrap-data-table-panel">
+                                <div class="table-responsive">
+                                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <th>Budget Line</th>
@@ -44,14 +46,16 @@
                                     <tbody>
                                         @foreach ($budgetLines as $budgetLine)
                                             <tr>
-                                                <td>{{ $budgetLine->name }}</td>
-                                                <td>{{ $budgetLine->amount }}</td>
-                                                <td>{{ $budgetLine->expenses()->sum('amount') }}</td>
+                                                <td>{{ $budgetLine->budget_line_name }}</td>
+                                                <td>{{ $budgetLine->budget_line_amount }}</td>
+                                                <td>{{ $budgetLine->expenses()->sum('expense_amount') }}</td>
                                                 <td>{{ $budgetLine->variance }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
+                                </div>
+                                </div>
 
                                 <h2>Overall Summary</h2>
                                 <p>Total Budgeted Amount: {{ $totalBudgetedAmount }}</p>

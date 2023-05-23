@@ -127,7 +127,7 @@ class BudgetController extends Controller
         // Calculate the overall variance (profit or loss)
         $overallVariance = $totalActualExpenses - $totalBudgetedAmount;
 
-        return view('budget.compare', [
+        return view('budgets.compare', [
             'budgetLines' => $budgetLines,
             'totalBudgetedAmount' => $totalBudgetedAmount,
             'totalActualExpenses' => $totalActualExpenses,
