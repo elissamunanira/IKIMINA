@@ -93,6 +93,10 @@ Route::put('/saving/{savings}' , [SavingController::class, 'update'])->name('sav
 Route::delete('/saving/{id}' , [SavingController::class, 'delete']);
 Route::get('/totalSavings' , [SavingController::class, 'singleTotalSavings'])->name('savings.totalSavings');
 
+
+Route::get('/import', [SavingController::class, 'showForm'])->name('import.form');
+Route::post('/import', [SavingController::class, 'uploadContent'])->name('import');
+
   //my account
 
 Route::get('/my-saving', [MyAccountController::class, 'mySaving'])->name('my-saving');
