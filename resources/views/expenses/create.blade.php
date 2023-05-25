@@ -28,6 +28,7 @@
             <section id="main-content">
                 <div class="row">
                     <div class="col-lg-12">
+                        <center><h4>Create Expense</h4></center>
                         <div class="card">
                             <div class="card-body">
                                 <div class="form-validation">
@@ -41,7 +42,6 @@
                                         </div>
                                         @endif
                                        
-                                        <h1>Create Expense</h1>
 
                                         <form action="{{ route('budget_lines.expenses.store', $budgetLine->id) }}" method="POST">
                                             @csrf
