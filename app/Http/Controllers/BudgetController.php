@@ -122,10 +122,14 @@ class BudgetController extends Controller
             // Calculate the variance for the budget line
             $variance = $actualExpenses - $budgetLine->amount;
 
-            $percentage = ($variance*100)/$budgetLine->amount;
+             // Calculate the percentage
+            $percentage = $totalBudgetedAmount != 0 ? ($variance / $totalBudgetedAmount) * 100 : 0;
 
             // Add the variance to the budget line object
             $budgetLine->variance = $variance;
+
+
+            $budgetLine->percentage = $percentage;
         }
 
         // Calculate the overall variance (profit or loss)
@@ -135,7 +139,7 @@ class BudgetController extends Controller
             'budgetLines' => $budgetLines,
             'totalBudgetedAmount' => $totalBudgetedAmount,
             'totalActualExpenses' => $totalActualExpenses,
-            'overallVariance' => $overallVariance,'percentage'=>$percentage,'i'=>$i
+            'overallVariance' => $overallVariance,'i'=>$i
         ]);
     }
 

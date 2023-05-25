@@ -49,7 +49,7 @@ class ExpenseController extends Controller
         $expense = new Expense($validatedData);
         $budgetLine->expenses()->save($expense);
 
-        return redirect()->route('budgets.show', $budgetLine->budget->id)
+        return redirect()->route('budget_lines.expenses.index', $budgetLineId)
             ->with('success', 'Expense created successfully');
 
     }

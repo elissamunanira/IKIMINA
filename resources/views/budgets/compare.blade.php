@@ -27,6 +27,15 @@
             <!-- /# row -->
             <section id="main-content">
                 <div class="row">
+
+                    <!-- /# row -->
+                    <div class="card">
+                        
+                        <h2>Overall Summary</h2>
+                        <p>Total Budgeted Amount: {{ $totalBudgetedAmount }} RWF</p>
+                        <p>Total Actual Expenses: {{ $totalActualExpenses }} RWF</p>
+                        <p>Overall Variance: {{ $overallVariance }} RWF</p>
+                    </div>
                     <div class="col-lg-12">
                         <center><h4>Budget vs Expenses Comparison</h4></center>
                         <div class="card">
@@ -41,6 +50,8 @@
                                             <th>Budgeted Amount</th>
                                             <th>Actual Expenses</th>
                                             <th>Variance</th>
+                                            <th>Percentage</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -51,6 +62,23 @@
                                                 <td>{{ $budgetLine->budget_line_amount }} RWF</td>
                                                 <td>{{ $budgetLine->expenses()->sum('expense_amount') }} RWF</td>
                                                 <td>{{ $budgetLine->variance }} RWF</td>
+                                                <td>{{ $budgetLine->percentage }}%</td>
+                                                <td>
+                                                    <div class="dropdown text-sans-serif"><i class="tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></i>
+                                                    <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+
+
+                                                    <a class="dropdown-item" href="/budget_lines/{{$budgetLine->id}}/expenses">Show/View</a>
+
+                                                    {{-- <a class="dropdown-item" href="/budget_lines/{{$budgetLine->id}}/expenses">Expenses</a> --}}
+
+                                                    {{-- <form method="POST" action="{{ route('budgets.destroy', $budget->id) }}" style="display: inline;">
+
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class = "btn btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete this budget?')">Delete</button>
+                                                    </form> --}}
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -58,10 +86,6 @@
                                 </div>
                                 </div>
 
-                                <h2>Overall Summary</h2>
-                                <p>Total Budgeted Amount: {{ $totalBudgetedAmount }} RWF</p>
-                                <p>Total Actual Expenses: {{ $totalActualExpenses }} RWF</p>
-                                <p>Overall Variance: {{ $overallVariance }} RWF</p>
                             </div>
                         </div>
                     </div>
