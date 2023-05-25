@@ -133,7 +133,7 @@ class SavingController extends Controller
         continue;
         }
         for ($c = 0; $c < $num; $c++) {
-        $importData_arr[$i][] = $filedata[$c];
+        $importData_arr[$i] = $filedata[$c];
         }
         $i++;
         }
@@ -145,10 +145,11 @@ class SavingController extends Controller
         $j++;
         try {
         DB::beginTransaction();
+
         Saving::create([
         'user_id' => $importData[1],
         'amount' => $importData[2],
-        'month' => $importData[3]
+        'date' => $importData[3]
         ]);
 
         //Send Email
@@ -176,14 +177,22 @@ class SavingController extends Controller
         }
         public function checkUploadedFileProperties($extension, $fileSize)
         {
+            
         $valid_extension = array("csv", "xlsx"); //Only want csv and excel files
         $maxFileSize = 2097152; // Uploaded file size limit is 2mb
+
         if (in_array(strtolower($extension), $valid_extension)) {
+
         if ($fileSize <= $maxFileSize) {
-        } else {
+        } 
+        
+        else {
         throw new \Exception('No file was uploaded', Response::HTTP_REQUEST_ENTITY_TOO_LARGE); //413 error
         }
-        } else {
+
+        } 
+        
+        else {
         throw new \Exception('Invalid file extension', Response::HTTP_UNSUPPORTED_MEDIA_TYPE); //415 error
         }
         }

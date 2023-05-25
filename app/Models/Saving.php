@@ -10,8 +10,9 @@ class Saving extends Model
     use HasFactory;
 
     protected $fillable = [
-        'amaount',
-        'date',
+        'user_id',
+        'amount',
+        'month'
     ];
 
 
