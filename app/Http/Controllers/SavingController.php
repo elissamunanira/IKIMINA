@@ -6,7 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Saving;
 use App\Models\Loan;
+// use App\Models\SavingImport;
 use Illuminate\Support\Facades\DB;
+
+//for importing files
+
+use App\Imports\SavingImport; 
+use Maatwebsite\Excel\Facades\Excel;
 
 class SavingController extends Controller
 {
@@ -94,4 +100,25 @@ class SavingController extends Controller
         $users = User::with('savings')->get();
         return view('savings.totalSaving',compact('users','i'));
     }
+
+    //importing the file that holds the savings
+
+     public function showForm()
+    {
+        return view('savings.import');
+    }
+
+    public function import(Request $request)
+    {
+        $file = $request->file('file');
+
+        // Excel::import(new SavingImport, $file);
+        Excel::import(new SavingImport, $file, null, \Maatwebsite\Excel\Excel::CSV);
+
+
+        return redirect()->back()->with('success', 'File imported successfully.');
+    }
+
+
+
 }
