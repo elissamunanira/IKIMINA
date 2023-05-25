@@ -182,6 +182,8 @@ Route::prefix('budgets')->group(function () {
     Route::put('budget_lines/{budget_line}/expenses/{expense}', [ExpenseController::class, 'update'])->name('budget_lines.expenses.update');
     Route::delete('budget_lines/{budget_line}/expenses/{expense}', [ExpenseController::class, 'destroy'])->name('budget_lines.expenses.destroy');
     Route::get('budget_lines/{budget_line}/expenses/{expense}', [ExpenseController::class, 'show'])->name('budget_lines.expenses.show');
+
+    //comparison/ reality of the budget and expense
     Route::get('/budget/compare', [BudgetController::class, 'compareBudgetExpenses'])->name('budget.compare');
 
 

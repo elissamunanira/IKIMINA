@@ -28,15 +28,15 @@
             <section id="main-content">
                 <div class="row">
                     <div class="col-lg-12">
+                        <center><h4>Budget vs Expenses Comparison</h4></center>
                         <div class="card">
                             <div class="card-body">
-                            <h1>Budget vs Expenses Comparison</h1>
-
                                 <div class="bootstrap-data-table-panel">
                                 <div class="table-responsive">
                                     <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
+                                            <th>#</th>
                                             <th>Budget Line</th>
                                             <th>Budgeted Amount</th>
                                             <th>Actual Expenses</th>
@@ -46,10 +46,11 @@
                                     <tbody>
                                         @foreach ($budgetLines as $budgetLine)
                                             <tr>
+                                                <td>{{ ++$i }}</td>
                                                 <td>{{ $budgetLine->budget_line_name }}</td>
-                                                <td>{{ $budgetLine->budget_line_amount }}</td>
-                                                <td>{{ $budgetLine->expenses()->sum('expense_amount') }}</td>
-                                                <td>{{ $budgetLine->variance }}</td>
+                                                <td>{{ $budgetLine->budget_line_amount }} RWF</td>
+                                                <td>{{ $budgetLine->expenses()->sum('expense_amount') }} RWF</td>
+                                                <td>{{ $budgetLine->variance }} RWF</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -58,9 +59,9 @@
                                 </div>
 
                                 <h2>Overall Summary</h2>
-                                <p>Total Budgeted Amount: {{ $totalBudgetedAmount }}</p>
-                                <p>Total Actual Expenses: {{ $totalActualExpenses }}</p>
-                                <p>Overall Variance: {{ $overallVariance }}</p>
+                                <p>Total Budgeted Amount: {{ $totalBudgetedAmount }} RWF</p>
+                                <p>Total Actual Expenses: {{ $totalActualExpenses }} RWF</p>
+                                <p>Overall Variance: {{ $overallVariance }} RWF</p>
                             </div>
                         </div>
                     </div>

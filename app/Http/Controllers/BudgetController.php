@@ -99,6 +99,8 @@ class BudgetController extends Controller
 
         public function compareBudgetExpenses()
     {
+
+        $i = 0;
         // Retrieve all budget lines
         $budgetLines = BudgetLine::all();
 
@@ -131,7 +133,7 @@ class BudgetController extends Controller
             'budgetLines' => $budgetLines,
             'totalBudgetedAmount' => $totalBudgetedAmount,
             'totalActualExpenses' => $totalActualExpenses,
-            'overallVariance' => $overallVariance,
+            'overallVariance' => $overallVariance,'i'=>$i
         ]);
     }
 
