@@ -36,6 +36,24 @@
                         <p>Total Actual Expenses: {{ $totalActualExpenses }} RWF</p>
                         <p>Overall Variance: {{ $overallVariance }} RWF</p>
                     </div>
+
+                    <div class="card"></div>
+
+                    <!-- /# row -->
+                    <div class="card">
+                        <h2>Budget Comparison</h2>
+
+                            <p>Allocated Amount: ${{ $allocatedAmount }}</p>
+                            <p>Total Expenses: ${{ $totalExpenses }}</p>
+
+                            @if ($comparisonResult == 0)
+                                <p>Budget is balanced.</p>
+                            @elseif ($comparisonResult == -1)
+                                <p>Budget is under-spent.</p>
+                            @else
+                                <p>Budget is over-spent.</p>
+                            @endif
+                    </div>
                     <div class="col-lg-12">
                         <center><h4>Budget vs Expenses Comparison</h4></center>
                         <div class="card">

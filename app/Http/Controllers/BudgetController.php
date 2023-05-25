@@ -100,6 +100,9 @@ class BudgetController extends Controller
         public function compareBudgetExpenses()
     {
 
+
+
+        
         $i = 0;
         // Retrieve all budget lines
         $budgetLines = BudgetLine::all();

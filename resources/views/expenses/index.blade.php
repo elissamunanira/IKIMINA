@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <a class="btn btn-primary" href="/budget_lines/{{ $budgetLine->id }}/expenses/create">+New </a>
-                        <h3>Expenses for <u><i>{{ $budgetLine->budget_line_name }}</i></u> Budget Line</h3>
+                        <center><h3>Expenses for <u><i>{{ $budgetLine->budget_line_name }}</i></u> Budget Line</h3></center>
                         <div class="card">
                             <div class="card-body">
                                 @if ($expenses->isEmpty())
