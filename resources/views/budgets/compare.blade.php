@@ -43,7 +43,7 @@
                     <div class="card">
                         <h2>Budget Comparison</h2>
 
-                            <p>Allocated Amount: ${{ $allocatedAmount }}</p>
+                            {{-- <p>Allocated Amount: ${{ $allocatedAmount }}</p>
                             <p>Total Expenses: ${{ $totalExpenses }}</p>
 
                             @if ($comparisonResult == 0)
@@ -52,7 +52,7 @@
                                 <p>Budget is under-spent.</p>
                             @else
                                 <p>Budget is over-spent.</p>
-                            @endif
+                            @endif --}}
                     </div>
                     <div class="col-lg-12">
                         <center><h4>Budget vs Expenses Comparison</h4></center>

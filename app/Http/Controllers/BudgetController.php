@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Budget;
 use App\Models\BudgetLine;
+use App\Models\Expense;
 
 class BudgetController extends Controller
 {
@@ -97,12 +98,20 @@ class BudgetController extends Controller
     }
 
 
-        public function compareBudgetExpenses()
+        public function compareBudgetExpenses($budgetId)
     {
 
 
+        // $budgetLines = BudgetLine::where('budget_id', $budgetId)->get();
+        // $expenses = Expense::where('budgetLine_id', $budgetLineId)->get();
 
-        
+        // $allocatedAmount = $budgetLines->sum('budget_line_amount');
+        // $totalExpenses = $expenses->sum('expense_amount');
+
+        // $comparisonResult = $allocatedAmount <=> $totalExpenses;
+
+
+
         $i = 0;
         // Retrieve all budget lines
         $budgetLines = BudgetLine::all();
@@ -139,6 +148,12 @@ class BudgetController extends Controller
         $overallVariance = $totalActualExpenses - $totalBudgetedAmount;
 
         return view('budgets.compare', [
+            
+
+            // 'allocatedAmount' => $allocatedAmount,
+            // 'totalExpenses' => $totalExpenses,
+            // 'comparisonResult' => $comparisonResult,
+
             'budgetLines' => $budgetLines,
             'totalBudgetedAmount' => $totalBudgetedAmount,
             'totalActualExpenses' => $totalActualExpenses,
