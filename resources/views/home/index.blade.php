@@ -153,7 +153,7 @@
         <div class="container">
             <div class="row g-4 align-items-end mb-4">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid rounded" src="img/about.jpg">
+                    <img class="img-fluid rounded" src="/home/img/about.jpg">
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">About Us</p>
@@ -375,7 +375,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-1.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="/home/img/service-1.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -395,7 +395,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-2.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="/home/img/service-2.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -415,7 +415,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-3.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="/home/img/service-3.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -435,7 +435,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-4.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="/home/img/service-4.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
