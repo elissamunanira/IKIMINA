@@ -524,7 +524,7 @@
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.3s">
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-1.jpg" alt="">
+                        <img class="img-fluid rounded" src="/home/img/service-1.jpg" alt="">
                         <a href=""><i class="fa fa-link fa-3x text-primary"></i></a>
                     </div>
                     <div class="project-title">
@@ -533,7 +533,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-2.jpg" alt="">
+                        <img class="img-fluid rounded" src="/home/img/service-2.jpg" alt="">
                         <a href=""><i class="fa fa-link fa-3x text-primary"></i></a>
                     </div>
                     <div class="project-title">
@@ -542,7 +542,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
+                        <img class="img-fluid rounded" src="/home/img/service-3.jpg" alt="">
                         <a href=""><i class="fa fa-link fa-3x text-primary"></i></a>
                     </div>
                     <div class="project-title">
@@ -551,7 +551,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-4.jpg" alt="">
+                        <img class="img-fluid rounded" src="/home/img/service-4.jpg" alt="">
                         <a href=""><i class="fa fa-link fa-3x text-primary"></i></a>
                     </div>
                     <div class="project-title">
