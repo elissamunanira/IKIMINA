@@ -15,7 +15,7 @@ use App\Http\Controllers\{UserController,RoleController,DashboardController,Savi
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.index');
 });
 
 
