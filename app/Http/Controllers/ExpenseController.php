@@ -59,11 +59,11 @@ class ExpenseController extends Controller
      * Display the specified resource.
      */
 
-    public function show($id)
+    public function show($id, $budgetLineId)
     {
         $expense = Expense::findOrFail($id);
-        // $budgetLine = BudgetLine::findOrFail($budgetLineId);
-        return view('expenses.show', compact('expense'));
+        $budgetLine = BudgetLine::findOrFail($budgetLineId);
+        return view('expenses.show', compact('expense','budgetLine'));
     }
 
     /**

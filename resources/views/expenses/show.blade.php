@@ -28,7 +28,7 @@
             <section id="main-content">
                 <div class="row">
                     <div class="col-lg-12">
-                        {{-- <a class="btn btn-primary" href="{{ route('budgets.create') }}">+New </a> --}}
+                        <a class="btn btn-primary" href="/budget_lines/{{ $budgetLine->id }}/expenses/create">+New </a>
                         <div class="card">
                             <div class="card-body">
                             <h1>Expense Details</h1>
