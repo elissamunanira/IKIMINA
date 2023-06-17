@@ -79,15 +79,15 @@ class SavingController extends Controller
         return redirect()->route('savings.totalSavings')->with('success', 'Savings record Updated successfully.');
     }
 
-    // public function totalSavings(){
+    public function totalSavings(){
         
-    //     $users = User::with('savings')->get();
+        $users = User::with('savings')->get();
 
-    //     foreach ($users as $user) {
-    //         $totalSavings = $user->savings->sum('amount');
-    //         return view('savings.totalSaving',compact('users','totalSavings'));
-    //     }
-    // }
+        foreach ($users as $user) {
+            $totalSavings = $user->savings->sum('amount');
+            return view('savings.totalSaving',compact('users','totalSavings'));
+        }
+    }
 
     public function singleTotalSavings(){
 

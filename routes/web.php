@@ -187,6 +187,14 @@ Route::prefix('budgets')->group(function () {
     Route::get('/budget/{budgetId}/compare', [BudgetController::class, 'compareBudgetExpenses'])->name('budget.compare');
 
     //routes for mituelle
-    Route::get('mituelles',[MituelleController::class,'index']);
+   
+    Route::get('/mituelles/{user}' , [MituelleController::class, 'showMituelles']);
+    Route::get('/mituelle/create' , [MituelleController::class, 'create']);
+    Route::post('/mituelles' , [MituelleController::class, 'store'])->name('mituelles.store');
+    Route::get('/mituelle' , [MituelleController::class, 'index'])->name('mituelles.index');
+    Route::get('/mituelle/{id}/edit' , [MituelleController::class, 'edit'])->name('mituelle.edit');
+    Route::put('/mituelle/{mituelles}' , [MituelleController::class, 'update'])->name('mituelles.update');
+    Route::delete('/mituelle/{id}' , [MituelleController::class, 'delete']);
+    Route::get('/totalmituelles' , [MituelleController::class, 'singleTotalMituelles'])->name('mituelles.totalmituelles');
 
 });
