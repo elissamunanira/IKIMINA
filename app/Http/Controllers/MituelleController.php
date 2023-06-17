@@ -55,6 +55,14 @@ class MituelleController extends Controller
         //
     }
 
+    public function showMituelles(User $user)
+    {
+        $i = 0;
+        $mituelles = Mituelle::where('user_id', $user->id)->get();
+        return view('mituelles.index', compact('user', 'mituelles','i'));
+    }
+
+
     //total mituelle for single user
 
      public function singleTotalMituelles(){
