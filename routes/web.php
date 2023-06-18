@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController, BudgetController,BudgetLineController,ExpenseController,MituelleControlle};
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController, BudgetController,BudgetLineController,ExpenseController,MituelleController};
 
 /*
 |--------------------------------------------------------------------------
@@ -195,6 +195,6 @@ Route::prefix('budgets')->group(function () {
     Route::get('/mituelle/{id}/edit' , [MituelleController::class, 'edit'])->name('mituelle.edit');
     Route::put('/mituelle/{mituelles}' , [MituelleController::class, 'update'])->name('mituelles.update');
     Route::delete('/mituelle/{id}' , [MituelleController::class, 'delete']);
-    Route::get('/totalmituelles' , [MituelleController::class, 'singleTotalMituelles'])->name('mituelles.totalmituelles');
+    Route::get('/total-mituelles' , [MituelleController::class, 'singleTotalMituelles'])->name('mituelles.totalmituelles');
 
 });
