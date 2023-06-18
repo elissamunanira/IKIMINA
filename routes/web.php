@@ -190,7 +190,7 @@ Route::prefix('budgets')->group(function () {
    
     Route::get('/mituelles/{user}' , [MituelleController::class, 'showMituelles']);
     Route::get('/mituelle/create' , [MituelleController::class, 'create']);
-    Route::post('/mituelles' , [MituelleController::class, 'store'])->name('mituelles.store');
+    Route::post('/mituelles' , [MituelleController::class, 'store'])->name('mituelle.store');
     Route::get('/mituelle' , [MituelleController::class, 'index'])->name('mituelles.index');
     Route::get('/mituelle/{id}/edit' , [MituelleController::class, 'edit'])->name('mituelle.edit');
     Route::put('/mituelle/{mituelles}' , [MituelleController::class, 'update'])->name('mituelles.update');

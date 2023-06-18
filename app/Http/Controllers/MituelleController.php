@@ -23,7 +23,8 @@ class MituelleController extends Controller
      */
     public function create()
     {
-        return view('mituelle.create'); 
+        $users = User::all();
+        return view('mituelle.create',compact('users'));
     }
 
     /**
