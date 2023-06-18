@@ -38,7 +38,7 @@ class MituelleController extends Controller
             'mituelle_month' => 'required|date',
         ]);
 
-        $savings = new Saving;
+        $savings = new Mituelle;
         $savings->user_id = $validatedData['user_id'];
         $savings->amount = $validatedData['mituelle_amount'];
         $savings->month = $validatedData['mituelle_month'];
