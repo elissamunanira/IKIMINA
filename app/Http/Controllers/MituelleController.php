@@ -67,7 +67,7 @@ class MituelleController extends Controller
      public function singleTotalMituelles(){
 
         $i=0;
-        $users = User::with('Mituelle')->get();
+        $users = User::with('mituelle')->get();
         return view('mituelle.totalMituelle',compact('users','i'));
     }
 
