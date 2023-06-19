@@ -9,7 +9,7 @@
                 <div class="col-lg-8 p-r-0 title-margin-right">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Hello, <span>Welcome to Saving Management Field</span></h1>
+                            <h1>Hello, <span>Welcome to Mituelle Management Field</span></h1>
                         </div>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/dash">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Savings</li>
+                                <li class="breadcrumb-item active">Mituelles</li>
                             </ol>
                         </div>
                     </div>
