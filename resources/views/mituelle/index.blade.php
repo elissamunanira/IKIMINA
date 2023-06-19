@@ -50,8 +50,8 @@
                                                     <tr>
                                                         <td>{{++$i}}</td>
                                                         <td>{{ $mituelle->created_at }}</td>
-                                                        <td>{{ $mituelle->month }}</td>
-                                                        <td>{{ $mituelle->amount }} RWF</td>
+                                                        <td>{{ $mituelle->mituelle_month }}</td>
+                                                        <td>{{ $mituelle->mituelle_amount }} RWF</td>
                                                         <td><a href="/mituelle/{{ $mituelle->id }}/edit">Edit</a></td>
                                                     </tr>
                                                 @endforeach
