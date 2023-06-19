@@ -29,7 +29,7 @@
             <section id="main-content">
                 <div class="row">
                     <div class="col-lg-12"> 
-                        <h3>Saving records for <strong>{{ $user->firstname }} {{ $user->lastname }}</strong></h3>
+                        <h3>Mituelle records for <strong>{{ $user->firstname }} {{ $user->lastname }}</strong></h3>
                         <div class="card">
                             <div class="container">
                                 
@@ -46,13 +46,13 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($savings as $saving)
+                                                @foreach ($mituelles as $mituelle)
                                                     <tr>
                                                         <td>{{++$i}}</td>
-                                                        <td>{{ $saving->created_at }}</td>
-                                                        <td>{{ $saving->month }}</td>
-                                                        <td>{{ $saving->amount }} RWF</td>
-                                                        <td><a href="/saving/{{ $saving->id }}/edit">Edit</a></td>
+                                                        <td>{{ $mituelle->created_at }}</td>
+                                                        <td>{{ $mituelle->month }}</td>
+                                                        <td>{{ $mituelle->amount }} RWF</td>
+                                                        <td><a href="/mituelle/{{ $mituelle->id }}/edit">Edit</a></td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
