@@ -57,8 +57,13 @@ class MituelleController extends Controller
 
     //total mituelle for single user
 
+     public function singleTotalMituelles(){
 
-    
+        $i=0;
+        $users = User::with('mituelles')->get();
+        return view('mituelle.totalMituelle',compact('users','i'));
+    }
+
 
     /**
      * Show the form for editing the specified resource.
