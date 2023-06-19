@@ -55,6 +55,11 @@ class MituelleController extends Controller
         //
     }
 
+    //total mituelle for single user
+
+
+    
+
     /**
      * Show the form for editing the specified resource.
      */

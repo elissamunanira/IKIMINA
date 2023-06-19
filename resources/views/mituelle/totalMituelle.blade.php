@@ -37,7 +37,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Members Name</th>
-                                    <th>Total savings</th>
+                                    <th>Total mituelle</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
