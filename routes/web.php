@@ -186,5 +186,7 @@ Route::prefix('budgets')->group(function () {
     //comparison/ reality of the budget and expense
     Route::get('/budget/{budgetId}/compare', [BudgetController::class, 'compareBudgetExpenses'])->name('budget.compare');
 
+    //routes for mituelle
+    Route::get('mituelles',[MituelleController::class,'index']);
 
 });
