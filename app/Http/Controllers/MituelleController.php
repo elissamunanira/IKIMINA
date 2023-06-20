@@ -60,7 +60,7 @@ class MituelleController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('mituelle.edit');
     }
 
     /**
