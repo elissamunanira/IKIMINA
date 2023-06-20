@@ -24,7 +24,7 @@ class MituelleController extends Controller
      */
     public function create()
     {
-        //
+        return view('mituelle.create'); 
     }
 
     /**
