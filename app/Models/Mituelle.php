@@ -12,6 +12,6 @@ class Mituelle extends Model
     protected $fillable = ['user_id','mituelle_amount','mituelle_month'];
 
     public function user(){
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 }
