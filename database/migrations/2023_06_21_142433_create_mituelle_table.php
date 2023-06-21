@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('mituelle', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->decimal('mituelle_amount', 15, 2);
+            $table->date('mituelle_month');
             $table->timestamps();
+    
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
