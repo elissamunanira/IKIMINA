@@ -57,7 +57,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="/" class="navbar-brand ms-4 ms-lg-0">
-                <h1 class="display-5 text-primary m-0">Finanza</h1>
+                <h1 class="display-5 text-primary m-0">IKIMINA</h1>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
@@ -109,7 +109,7 @@
                                 <div class="col-lg-8">
                                     <p
                                         class="d-inline-block border border-white rounded text-primary fw-semi-bold py-1 px-3 animated slideInDown">
-                                        Welcome to Finanza</p>
+                                        Welcome to IKIMINA</p>
                                     <h1 class="display-1 mb-4 animated slideInDown">Your Financial Status Is Our Goal
                                     </h1>
                                     <a href="" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
@@ -126,7 +126,7 @@
                                 <div class="col-lg-7">
                                     <p
                                         class="d-inline-block border border-white rounded text-primary fw-semi-bold py-1 px-3 animated slideInDown">
-                                        Welcome to Finanza</p>
+                                        Welcome to IKIMINA</p>
                                     <h1 class="display-1 mb-4 animated slideInDown">True Financial Support For You</h1>
                                     <a href="" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
                                 </div>
