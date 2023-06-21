@@ -52,5 +52,9 @@ class User extends Authenticatable
         return $this->hasMany(Penalty::class);
     }
 
+    public function Mituelle()
+    {
+        return $this->hasMany(Mituelle::class);
+    }
 
 }
