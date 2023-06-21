@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Saving;
+use App\Models\Loan;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Response;
 
 class MituelleController extends Controller
 {
