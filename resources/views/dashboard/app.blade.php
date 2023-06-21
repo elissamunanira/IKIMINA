@@ -47,7 +47,7 @@
             <div class="nano-content">
                 <ul>
                     <div class="logo"><a href="/">
-                            <!-- <img src="images/logo.png" alt="" /> --><span>{{ config('app.name', 'IKIBINA') }}</span></a></div>
+                            <!-- <img src="images/logo.png" alt="" /> --><i class="fa fa-users" aria-hidden="true"></i><span>{{ config('app.name', 'IKIBINA') }}</span></a></div>
                     <li class="label">Main</li>
                     <li><a href="/dash"><i class="ti-home"></i> Dashboard </a>
                        
