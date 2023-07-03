@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    <a href="contact.html" class="nav-item nav-link">Login/Register</a>
+                    <a href="/login" class="nav-item nav-link">Login/Register</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
