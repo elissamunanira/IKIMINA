@@ -16,9 +16,7 @@ return new class extends Migration
             $table->string('loan_category');
             $table->unsignedBigInteger('user_id');
             $table->decimal('loan_amount', 15, 2);
-            $table->decimal('interest_amount', 15, 2);
-            $table->decimal('total_amount', 15, 2);
-            $table->decimal('paid_amount', 15, 2)->default(0);
+            
             $table->enum('status', ['pending', 'approved','due', 'rejected', 'paid'])->default('pending');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');

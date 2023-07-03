@@ -38,13 +38,13 @@ class MituelleController extends Controller
             'mituelle_month' => 'required|date',
         ]);
 
-        $savings = new Mituelle;
-        $savings->user_id = $validatedData['user_id'];
-        $savings->amount = $validatedData['mituelle_amount'];
-        $savings->month = $validatedData['mituelle_month'];
-        $savings->save();
+        $mituelles = new Mituelle;
+        $mituelles->user_id = $validatedData['user_id'];
+        $mituelles->amount = $validatedData['mituelle_amount'];
+        $mituelles->month = $validatedData['mituelle_month'];
+        $mituelles->save();
 
-        return redirect()->route('savings.totalSavings')->with('success', 'mituelle record added successfully.');
+        return redirect()->route('mituelle.totalmituelles')->with('success', 'mituelle record added successfully.');
     }
 
     /**
