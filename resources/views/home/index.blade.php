@@ -120,8 +120,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    {{-- <img class="w-100" src="/home/img/carousel-2.jpg" alt="Image"> --}}
-                    <img class="w-100" src="/home/img/ikimina.jpg" alt="Image">
+                    <img class="w-100" src="/home/img/carousel-2.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
