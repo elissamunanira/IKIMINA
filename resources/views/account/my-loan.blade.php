@@ -52,7 +52,15 @@
                                                     <td>{{ $loan->created_at }}</td>
                                                     <td>{{ $loan->loan_amount }} RWF</td>
                                                     <td>{{ $loan->total_amount }} RWF</td>
-                                                    <td>{{ $loan->status }} </td>
+                                                    <td>
+                                                        @if($loan->status ==1)
+                                                        <span class="badge rounded-pill bg-primary">active</span>
+                                                        @else
+                                                        <span class="badge rounded-pill bg-success">pending</span>
+                                                        
+                                                        @endif
+                                                        {{-- {{ $loan->status }}  --}}
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>

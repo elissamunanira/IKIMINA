@@ -35,7 +35,7 @@
                                     </div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Total Savings</div>
-                                        <div class="stat-digit">1,012</div>
+                                        <div class="stat-digit">11M rwf</div>
                                     </div>
                                 </div>
                             </div>
@@ -46,8 +46,8 @@
                                     <div class="stat-icon dib"><i class="ti-user color-primary border-primary"></i>
                                     </div>
                                     <div class="stat-content dib">
-                                        <div class="stat-text">Members</div>
-                                        <div class="stat-digit">961</div>
+                                        <div class="stat-text">Active Members</div>
+                                        <div class="stat-digit">36</div>
                                     </div>
                                 </div>
                             </div>
@@ -58,8 +58,8 @@
                                     <div class="stat-icon dib"><i class="ti-layout-grid2 color-pink border-pink"></i>
                                     </div>
                                     <div class="stat-content dib">
-                                        <div class="stat-text">Active Projects</div>
-                                        <div class="stat-digit">770</div>
+                                        <div class="stat-text">Total loans</div>
+                                        <div class="stat-digit">770k rwf</div>
                                     </div>
                                 </div>
                             </div>
@@ -69,8 +69,8 @@
                                 <div class="stat-widget-one">
                                     <div class="stat-icon dib"><i class="ti-link color-danger border-danger"></i></div>
                                     <div class="stat-content dib">
-                                        <div class="stat-text">Referral</div>
-                                        <div class="stat-digit">2,781</div>
+                                        <div class="stat-text">Total profits</div>
+                                        <div class="stat-digit">483K rwf</div>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                         <div class="col-lg-8">
                             <div class="card">
                                 <div class="card-title">
-                                    <h4>Fee Collections and Expenses</h4>
+                                    <h4>Expenses</h4>
 
                                 </div>
                                 <div class="card-body">
