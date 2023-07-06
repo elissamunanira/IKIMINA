@@ -8,7 +8,7 @@ use App\Models\BudgetLine;
 
 class BudgetLineController extends Controller
 {
-    public function index(Budget $budget)
+    public function index(Budget $budget, BudgetLine $budgetLine)
     {
         $i = 0;
         $budgetLines = $budget->budgetLines;
