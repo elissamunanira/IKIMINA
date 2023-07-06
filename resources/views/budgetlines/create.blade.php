@@ -34,8 +34,8 @@
                         @csrf
                         
                         <div class="form-group">
-                            <label for="description">Description</label>
-                            <input type="text" name="budget_line_description" id="description" class="form-control" required>
+                            <label for="name">Budget line Name</label>
+                            <input type="text" name="budget_line_name" id="name" class="form-control" required>
                         </div>
 
                         <div class="form-group">
