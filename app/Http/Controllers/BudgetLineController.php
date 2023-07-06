@@ -8,7 +8,7 @@ use App\Models\BudgetLine;
 
 class BudgetLineController extends Controller
 {
-    public function index(Budget $budget, BudgetLine $budgetLine)
+    public function index(Budget $budget)
     {
         $i = 0;
         $budgetLines = $budget->budgetLines;
@@ -20,7 +20,7 @@ class BudgetLineController extends Controller
         return view('budgetlines.create', compact('budget'));
     }
 
-    public function store(Request $request, Budget $budget)
+    public function store(Request $request, Budget $budget, BudgetLine $budgetLine)
     {
         $validatedData = $request->validate([
             'budget_line_name' => 'required|string|max:255',
