@@ -34,6 +34,11 @@
                         @csrf
                         
                         <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" name="budget_line_description" id="description" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
                             <label for="amount">Amount</label>
                             <input type="number" step="0.01" name="budget_line_amount" id="amount" class="form-control" required>
                         </div>
