@@ -65,7 +65,7 @@
                                             <div class="form-group row">
                                                 <label class="col-lg-2 col-form-label" for="expense_date">Date</label>
                                                 <div class="col-lg-6">
-                                                <input class="form-control" type="text" name="expense_date" id="expense_date" required> 
+                                                <input type="date" class="form-control" type="text" name="expense_date" id="expense_date" required> 
                                                 </div> 
                                             </div>
 

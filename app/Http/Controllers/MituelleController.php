@@ -40,11 +40,11 @@ class MituelleController extends Controller
 
         $mituelles = new Mituelle;
         $mituelles->user_id = $validatedData['user_id'];
-        $mituelles->amount = $validatedData['mituelle_amount'];
-        $mituelles->month = $validatedData['mituelle_month'];
+        $mituelles->mituelle_amount = $validatedData['mituelle_amount'];
+        $mituelles->mituelle_month = $validatedData['mituelle_month'];
         $mituelles->save();
 
-        return redirect()->route('mituelle.totalmituelles')->with('success', 'mituelle record added successfully.');
+        return redirect()->route('mituelles.totalmituelles')->with('success', 'mituelle record added successfully.');
     }
 
     /**
@@ -69,7 +69,10 @@ class MituelleController extends Controller
 
         $i=0;
         $users = User::with('mituelle')->get();
-        return view('mituelle.totalMituelle',compact('users','i'));
+        foreach ($users as $user) {
+            $totalmituelles = $user->mituelles->sum('mituelle_amount');
+        }
+        return view('mituelle.totalMituelle',compact('users','i','totalmituelles'));
     }
 
 
