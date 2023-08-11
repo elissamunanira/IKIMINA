@@ -66,8 +66,8 @@
                         </ul> 
                     </li> --}}
 
-                    <li><a href="/expenses"><i class="fa fa-table" aria-hidden="true"></i>Expenses</a></li>
-                    <li><a href="/expenses"><i class="fa fa-life-ring" aria-hidden="true"></i>Mituelles</a></li>
+                    {{-- <li><a href="/expenses"><i class="fa fa-table" aria-hidden="true"></i>Expenses</a></li> --}}
+                    <li><a href="/totalMituelle"><i class="fa fa-life-ring" aria-hidden="true"></i>Mituelles</a></li>
 
                     <li><a href="/totalSavings"><i class="ti-briefcase"></i>Savings</a></li>
 
