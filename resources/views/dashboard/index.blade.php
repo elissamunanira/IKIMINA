@@ -31,7 +31,7 @@
                         <div class="col-lg-3">
                             <div class="card">
                                 <div class="stat-widget-one">
-                                        <a href="/total-mituelle">
+                                        <a href="/totalSavings">
                                     <div class="stat-icon dib"><i class="ti-money color-success border-success"></i>
                                     </div>
                                     <div class="stat-content dib">
@@ -69,11 +69,13 @@
                         <div class="col-lg-3">
                             <div class="card">
                                 <div class="stat-widget-one">
+                                        <a href="/total-mituelle">
                                     <div class="stat-icon dib"><i class="ti-link color-danger border-danger"></i></div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Total Mituelle</div>
                                         <div class="stat-digit">{{$totalMituelle}} RWF</div>
                                     </div>
+                                        </a>
                                 </div>
                             </div>
                         </div>
