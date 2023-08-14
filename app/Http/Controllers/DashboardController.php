@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Saving;
+use App\Models\Loan;
+use App\Models\Mituelle;
 
 class DashboardController extends Controller
 {
@@ -12,7 +16,12 @@ class DashboardController extends Controller
     public function index()
     {
         //
-        return view('dashboard.index');
+
+        $usersCount = User::all()->count();
+        $totalSaving = Saving::sum('amount');
+        $totalLoan = Loan::sum('loan_amount'); 
+        $totalMituelle = Mituelle::sum('mituelle_amount'); 
+        return view('dashboard.index',compact('usersCount','totalSaving','totalLoan','totalMituelle'));
     }
 
     /**

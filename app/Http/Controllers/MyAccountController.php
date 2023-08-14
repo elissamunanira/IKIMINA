@@ -39,4 +39,12 @@ class MyAccountController extends Controller
         return view('account.my-penalties', compact('penalties','i'));
     }
 
+    public function myMituelle()
+    {
+        $i=0; 
+        $user = auth()->user(); 
+        $mituelles = $user->Mituelle;
+        return view('account.my-mituelles', compact('mituelles','i'));
+    }
+
 }

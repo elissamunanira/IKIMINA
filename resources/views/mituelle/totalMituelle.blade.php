@@ -8,7 +8,7 @@
                 <div class="col-lg-8 p-r-0 title-margin-right">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Hello, <span>Welcome to Saving Management Field</span></h1>
+                            <h1>Hello, <span>Welcome to mituelle Management Field</span></h1>
                         </div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/dash">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Savings</li>
+                                <li class="breadcrumb-item active">mituelles</li>
                             </ol>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
             <!-- /# row -->
             <section id="main-content">
                 
-                <a class="btn btn-primary" href="/saving/create">+Saving</a>
+                <a class="btn btn-primary" href="/mituelle/create">+Mituelle</a>
                 <div class="card">
                     <div class="bootstrap-data-table-panel">
                         <div class="table-responsive">
@@ -46,7 +46,7 @@
                                 <tr>
                                     <td>{{++$i}}</td>
                                     <td>{{ $user->firstname }} {{ $user->lastname }}</td> 
-                                    <td>{{ $user->mituelles->sum('mituelle_amount')}} RWF</td>
+                                    <td>{{ $user->mituelle->sum('mituelle_amount')}} RWF</td>
                                     <td><a class="btn btn-success" href="{{ url('mituelles',$user->id) }}">View</a></td>
                                 </tr> 
                                 @endforeach

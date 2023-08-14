@@ -102,6 +102,7 @@ Route::post('/import', [SavingController::class, 'uploadContent'])->name('import
 Route::get('/my-saving', [MyAccountController::class, 'mySaving'])->name('my-saving');
 Route::get('/my-loan', [MyAccountController::class, 'myLoan'])->name('my-loan');
 Route::get('/my-penalties', [MyAccountController::class, 'myPenalty'])->name('my-penalties');
+Route::get('/my-mituelles', [MyAccountController::class, 'myMituelle'])->name('my-mituelles');
 
 
     //Loan route
@@ -195,6 +196,6 @@ Route::prefix('budgets')->group(function () {
     Route::get('/mituelle/{id}/edit' , [MituelleController::class, 'edit'])->name('mituelle.edit');
     Route::put('/mituelle/{mituelles}' , [MituelleController::class, 'update'])->name('mituelles.update');
     Route::delete('/mituelle/{id}' , [MituelleController::class, 'delete']);
-    Route::get('/total-mituelles' , [MituelleController::class, 'singleTotalMituelles'])->name('mituelles.totalmituelles');
+    Route::get('/total-mituelle' , [MituelleController::class, 'singleTotalMituelles'])->name('mituelles.totalmituelles');
 
 });

@@ -67,7 +67,7 @@
                     </li> --}}
 
                     {{-- <li><a href="/expenses"><i class="fa fa-table" aria-hidden="true"></i>Expenses</a></li> --}}
-                    <li><a href="/totalMituelle"><i class="fa fa-life-ring" aria-hidden="true"></i>Mituelles</a></li>
+                    <li><a href="/total-mituelle"><i class="fa fa-life-ring" aria-hidden="true"></i>Mituelles</a></li>
 
                     <li><a href="/totalSavings"><i class="ti-briefcase"></i>Savings</a></li>
 
@@ -87,6 +87,7 @@
                             <li><a href="{{ route('my-saving') }}">My Saving</a></li>
                             <li><a href="{{ route('my-loan') }}">My Loan</a></li>
                             <li><a href="{{ route('my-penalties') }}">My Penalties</a></li>
+                            <li><a href="{{ route('my-mituelles') }}">My Mituelles</a></li>
                         </ul>
                     </li>
 

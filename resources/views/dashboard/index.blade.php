@@ -31,12 +31,14 @@
                         <div class="col-lg-3">
                             <div class="card">
                                 <div class="stat-widget-one">
+                                        <a href="/total-mituelle">
                                     <div class="stat-icon dib"><i class="ti-money color-success border-success"></i>
                                     </div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Total Savings</div>
-                                        <div class="stat-digit">11M rwf</div>
+                                        <div class="stat-digit">{{$totalSaving}} RWF</div>
                                     </div>
+                                        </a>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +49,7 @@
                                     </div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Active Members</div>
-                                        <div class="stat-digit">36</div>
+                                        <div class="stat-digit">{{$usersCount}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +61,7 @@
                                     </div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Total loans</div>
-                                        <div class="stat-digit">770k rwf</div>
+                                        <div class="stat-digit">{{$totalLoan}} RWF</div>
                                     </div>
                                 </div>
                             </div>
@@ -69,8 +71,8 @@
                                 <div class="stat-widget-one">
                                     <div class="stat-icon dib"><i class="ti-link color-danger border-danger"></i></div>
                                     <div class="stat-content dib">
-                                        <div class="stat-text">Total profits</div>
-                                        <div class="stat-digit">483K rwf</div>
+                                        <div class="stat-text">Total Mituelle</div>
+                                        <div class="stat-digit">{{$totalMituelle}} RWF</div>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +124,7 @@
                                                             nostrud exercitation <i class="fa fa-quote-right"></i>
                                                         </div>
                                                         <img class="testimonial-author-img"
-                                                            src="images/avatar/1.jpg" alt="" />
+                                                            src="/dashboard/images/avatar/1.jpg" alt="" />
                                                         <div class="testimonial-author">TYRION LANNISTER</div>
                                                         <div class="testimonial-author-position">Founder-Ceo. Dell Corp
                                                         </div>
@@ -138,7 +140,7 @@
                                                             nostrud exercitation <i class="fa fa-quote-right"></i>
                                                         </div>
                                                         <img class="testimonial-author-img"
-                                                            src="images/avatar/1.jpg" alt="" />
+                                                            src="/dashboard/images/avatar/1.jpg" alt="" />
                                                         <div class="testimonial-author">TYRION LANNISTER</div>
                                                         <div class="testimonial-author-position">Founder-Ceo. Dell Corp
                                                         </div>
@@ -154,7 +156,7 @@
                                                             nostrud exercitation <i class="fa fa-quote-right"></i>
                                                         </div>
                                                         <img class="testimonial-author-img"
-                                                            src="images/avatar/1.jpg" alt="" />
+                                                            src="/dashboard/images/avatar/1.jpg" alt="" />
                                                         <div class="testimonial-author">TYRION LANNISTER</div>
                                                         <div class="testimonial-author-position">Founder-Ceo. Dell Corp
                                                         </div>
@@ -170,7 +172,7 @@
                                                             nostrud exercitation <i class="fa fa-quote-right"></i>
                                                         </div>
                                                         <img class="testimonial-author-img"
-                                                            src="images/avatar/1.jpg" alt="" />
+                                                            src="/dashboard/images/avatar/1.jpg" alt="" />
                                                         <div class="testimonial-author">TYRION LANNISTER</div>
                                                         <div class="testimonial-author-position">Founder-Ceo. Dell Corp
                                                         </div>
@@ -186,7 +188,7 @@
                                                             nostrud exercitation <i class="fa fa-quote-right"></i>
                                                         </div>
                                                         <img class="testimonial-author-img"
-                                                            src="images/avatar/1.jpg" alt="" />
+                                                            src="/dashboard/images/avatar/1.jpg" alt="" />
                                                         <div class="testimonial-author">TYRION LANNISTER</div>
                                                         <div class="testimonial-author-position">Founder-Ceo. Dell Corp
                                                         </div>
@@ -202,7 +204,7 @@
                                                             nostrud exercitation <i class="fa fa-quote-right"></i>
                                                         </div>
                                                         <img class="testimonial-author-img"
-                                                            src="images/avatar/1.jpg" alt="" />
+                                                            src="/dashboard/images/avatar/1.jpg" alt="" />
                                                         <div class="testimonial-author">TYRION LANNISTER</div>
                                                         <div class="testimonial-author-position">Founder-Ceo. Dell Corp
                                                         </div>
@@ -416,7 +418,7 @@
                                 <div class="recent-comment m-t-15">
                                     <div class="media">
                                         <div class="media-left">
-                                            <a href="#"><img class="media-object" src="images/avatar/1.jpg"
+                                            <a href="#"><img class="media-object" src="/dashboard/images/avatar/1.jpg"
                                                     alt="..."></a>
                                         </div>
                                         <div class="media-body">
@@ -427,7 +429,7 @@
                                     </div>
                                     <div class="media">
                                         <div class="media-left">
-                                            <a href="#"><img class="media-object" src="images/avatar/2.jpg"
+                                            <a href="#"><img class="media-object" src="/dashboard/images/avatar/2.jpg"
                                                     alt="..."></a>
                                         </div>
                                         <div class="media-body">
@@ -438,7 +440,7 @@
                                     </div>
                                     <div class="media">
                                         <div class="media-left">
-                                            <a href="#"><img class="media-object" src="images/avatar/3.jpg"
+                                            <a href="#"><img class="media-object" src="/dashboard/images/avatar/3.jpg"
                                                     alt="..."></a>
                                         </div>
                                         <div class="media-body">
@@ -449,7 +451,7 @@
                                     </div>
                                     <div class="media">
                                         <div class="media-left">
-                                            <a href="#"><img class="media-object" src="images/avatar/1.jpg"
+                                            <a href="#"><img class="media-object" src="/dashboard/images/avatar/1.jpg"
                                                     alt="..."></a>
                                         </div>
                                         <div class="media-body">
@@ -460,7 +462,7 @@
                                     </div>
                                     <div class="media">
                                         <div class="media-left">
-                                            <a href="#"><img class="media-object" src="images/avatar/2.jpg"
+                                            <a href="#"><img class="media-object" src="/dashboard/images/avatar/2.jpg"
                                                     alt="..."></a>
                                         </div>
                                         <div class="media-body">
@@ -471,7 +473,7 @@
                                     </div>
                                     <div class="media no-border">
                                         <div class="media-left">
-                                            <a href="#"><img class="media-object" src="images/avatar/3.jpg"
+                                            <a href="#"><img class="media-object" src="/dashboard/images/avatar/3.jpg"
                                                     alt="..."></a>
                                         </div>
                                         <div class="media-body">

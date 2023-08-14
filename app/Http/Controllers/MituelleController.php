@@ -44,7 +44,7 @@ class MituelleController extends Controller
         $mituelles->mituelle_month = $validatedData['mituelle_month'];
         $mituelles->save();
 
-        return redirect()->route('mituelle.totalMituelle')->with('success', 'mituelle record added successfully.');
+        return redirect()->route('mituelles.totalmituelles')->with('success', 'mituelle record added successfully.');
     }
 
     /**
@@ -65,7 +65,7 @@ class MituelleController extends Controller
 
     //total mituelle for single user
 
-     public function singleTotalMituelles(){
+     public function totalMituelles(){
 
         $i=0;
         $users = User::with('mituelle')->get();
@@ -73,6 +73,13 @@ class MituelleController extends Controller
             $totalmituelles = $user->mituelles->sum('mituelle_amount');
         }
         return view('mituelle.totalMituelle',compact('users','i','totalmituelles'));
+    }
+
+     public function singleTotalMituelles(){
+
+        $i=0;
+        $users = User::with('mituelle')->get();
+        return view('mituelle.totalMituelle',compact('users','i'));
     }
 
 
