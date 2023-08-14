@@ -45,24 +45,28 @@
                         <div class="col-lg-3">
                             <div class="card">
                                 <div class="stat-widget-one">
+                                    <a href="/users">
                                     <div class="stat-icon dib"><i class="ti-user color-primary border-primary"></i>
                                     </div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Active Members</div>
                                         <div class="stat-digit">{{$usersCount}}</div>
                                     </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="card">
                                 <div class="stat-widget-one">
+                                    <a href="/loans">
                                     <div class="stat-icon dib"><i class="ti-layout-grid2 color-pink border-pink"></i>
                                     </div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Total loans</div>
                                         <div class="stat-digit">{{$totalLoan}} RWF</div>
                                     </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
