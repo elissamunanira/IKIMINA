@@ -116,7 +116,7 @@ class LoanController extends Controller
 
     }
 
-    public function loanStatus(Request $request, $id)
+    public function update(Request $request, $id)
     {
         $loan = Loan::findOrFail($id);
         $loan->status = $request->input('status');
@@ -125,7 +125,7 @@ class LoanController extends Controller
         return redirect()->route('loans.show', ['id' => $loan->id]);
     }
 
-     public function update(Request $request, $id)
+     public function updates(Request $request, $id)
     {
         $validatedData = $request->validate([
         'paid_amount' => 'required|numeric',

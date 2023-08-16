@@ -53,10 +53,10 @@
                                                     <td>{{ $loan->loan_amount }} RWF</td>
                                                     <td>{{ $loan->total_amount }} RWF</td>
                                                     <td>
-                                                        @if($loan->status ==1)
-                                                        <span class="badge rounded-pill bg-primary">active</span>
+                                                        @if($loan->status =='approved')
+                                                        <span class="badge rounded-pill bg-success">Approved</span>
                                                         @else
-                                                        <span class="badge rounded-pill bg-success">pending</span>
+                                                        <span class="badge rounded-pill bg-warning">pending</span>
                                                         
                                                         @endif
                                                         {{-- {{ $loan->status }}  --}}

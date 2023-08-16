@@ -111,6 +111,7 @@ Route::get('/loan-request', [LoanController::class, 'create'])->name('loans.crea
 Route::post('/loan-request', [LoanController::class, 'store'])->name('loan.store');
 Route::get('/loan-decision/{id}', [LoanController::class, 'show'])->name('loans.show');
 Route::get('/loans' , [LoanController::class, 'index']);
+Route::put('/loan/{id}', [LoanController::class, 'loanStatus'])->name('loan.loanStatus');
 Route::put('/loan/{id}', [LoanController::class, 'update'])->name('loan.update');
 Route::get('/loan/{id}/edit', [LoanController::class, 'edit'])->name('loan.edit');
 
