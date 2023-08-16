@@ -116,14 +116,14 @@ class LoanController extends Controller
 
     }
 
-    // public function update(Request $request, $id)
-    // {
-    //     $loan = Loan::findOrFail($id);
-    //     $loan->status = $request->input('status');
-    //     $loan->save();
+    public function loanStatus(Request $request, $id)
+    {
+        $loan = Loan::findOrFail($id);
+        $loan->status = $request->input('status');
+        $loan->save();
 
-    //     return redirect()->route('loans.show', ['id' => $loan->id]);
-    // }
+        return redirect()->route('loans.show', ['id' => $loan->id]);
+    }
 
      public function update(Request $request, $id)
     {
