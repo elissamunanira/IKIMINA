@@ -41,7 +41,8 @@
                                             <th>Name</th>
                                             <th>Category</th>
                                             <th>Date Requested</th>
-                                            <th>Amount</th>
+                                            <th>Amount requested</th>
+                                            <th>Total Amount to be paid</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -54,6 +55,7 @@
                                                 <td>{{ $loan->user->firstname }} {{ $loan->user->lastname }}</td>
                                                 <td>{{ $loan->loan_category }}</td>
                                                 <td>{{ $loan->created_at }}</td>
+                                                <td>{{ $loan->loan_amount }} RWF</td>
                                                 <td>{{ $loan->total_amount }} RWF</td>
                                                 <td>
                                                     @if($loan->status == 'pending')
