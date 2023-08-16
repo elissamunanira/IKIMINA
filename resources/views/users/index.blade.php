@@ -71,9 +71,9 @@
                                                     {{-- <td>{{ $user->status }}</td> --}}
                                                     <td>
                                                         @if($user->status ==1)
-                                                        <span class="badge rounded-pill bg-primary">active</span>
+                                                        <span class="badge rounded-pill bg-success">active</span>
                                                         @else
-                                                        <span class="badge rounded-pill bg-success">pending</span>
+                                                        <span class="badge rounded-pill bg-warning">pending</span>
                                                         
                                                         @endif
                                                     </td>

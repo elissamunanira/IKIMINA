@@ -55,6 +55,8 @@
                                                     <td>
                                                         @if($loan->status =='approved')
                                                         <span class="badge rounded-pill bg-success">Approved</span>
+                                                        @elseif($loan->status =='rejected')
+                                                        <span class="badge rounded-pill bg-danger">rejected</span>
                                                         @else
                                                         <span class="badge rounded-pill bg-warning">pending</span>
                                                         

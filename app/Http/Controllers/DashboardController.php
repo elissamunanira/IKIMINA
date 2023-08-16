@@ -17,9 +17,9 @@ class DashboardController extends Controller
     {
         //
 
-        $usersCount = User::all()->count();
+        $usersCount = User::where('status','1')->count();
         $totalSaving = Saving::sum('amount');
-        $totalLoan = Loan::sum('loan_amount'); 
+        $totalLoan = Loan::where('status','approved')->sum('loan_amount'); 
         $totalMituelle = Mituelle::sum('mituelle_amount'); 
         return view('dashboard.index',compact('usersCount','totalSaving','totalLoan','totalMituelle'));
     }
