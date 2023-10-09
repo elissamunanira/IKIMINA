@@ -197,6 +197,12 @@ return [
 
     ],
 
+    'providers' => [
+        // ...
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+    ],
+
+
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
