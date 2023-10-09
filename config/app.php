@@ -218,4 +218,9 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'aliases' => [
+        // ...
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+    ],
+
 ];
