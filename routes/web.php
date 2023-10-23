@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController, BudgetController,BudgetLineController,ExpenseController,MituelleController};
+
 
 /*
 |--------------------------------------------------------------------------
