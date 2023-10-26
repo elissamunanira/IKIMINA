@@ -36,7 +36,7 @@ class ForgetPasswordManager extends Controller
         return view("Auth.new-password", compact('token'));
     }
 
-    function resetPasswordPost(){
-
+    function resetPasswordPost(Request $request){
+        
     }
 }
