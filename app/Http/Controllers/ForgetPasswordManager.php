@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class ForgetPasswordManager extends Controller
@@ -37,6 +40,25 @@ class ForgetPasswordManager extends Controller
     }
 
     function resetPasswordPost(Request $request){
-        
+        $request->validate([
+            'email'=>'reuquied|email|exists:users',
+            'password'=>'required|String|min:8|confirmed',
+            'password_confirmation'=>'required',
+        ]);
+
+        $updatePassword = DB::table('password_resets')->where([
+            'email'=>$request->email,
+            'token'=>$request->token,
+        ])->first(); 
+
+        if (!$updatePassword){
+            return redirect()->to(route('reset.password'))->with('error','invalid');
+        }
+
+        User::where("email",$request->email)->update(["password"=>Hash::make($request->password)]);
+
+        DB::table('password_reset')->where(['email'=>$request->email])->delete();
+
+        return redirect()->to(route('login'))->rith('success', 'Password Reset Success');
     }
 }

@@ -18,7 +18,7 @@
                     <p>Please create new password</p>
                     <div class="row">
                         <div class="col-md-6 mb-4 pb-2">
-              
+                            <input type="text" hidden value="{{$token}}"/>
                           <div class="form-outline">
                             <input type="password" name="password" class="form-control form-cont" />
                             <label class="form-label"for="password" >Password</label>
