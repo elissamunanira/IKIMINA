@@ -32,7 +32,11 @@ class ForgetPasswordManager extends Controller
 
         return redirect()->to(route("forget.password"))->with("success","We have send an email to reset Password.");
     }
-    function resetPassword(){
+    function resetPassword($token){
+        return view("Auth.new-password", compact('token'));
+    }
+
+    function resetPasswordPost(){
 
     }
 }
