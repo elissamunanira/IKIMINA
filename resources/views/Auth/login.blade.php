@@ -53,7 +53,7 @@
           </div>
         <div class="mt-4 pt-2">
           <input class="btn btn-primary " type="submit" value="Login" />
-          <p><a href="/forget-password">Forgot Password</a></p>
+          <p><a href="/forget-password">Forgot Password?</a></p>
         </div>
         <div class="mt-4 pt-2">
           <p>If you are new here please <a href="/regis">Register</a></p>
