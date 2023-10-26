@@ -1,6 +1,6 @@
 @extends('Auth.app')
 @section('content')
-     <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">login</h3>
+     <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-cente">Login to IKIMINA</h3>
 
 
 
