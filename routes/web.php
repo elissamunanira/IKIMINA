@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController, BudgetController,BudgetLineController,ExpenseController,MituelleController};
-
+use App\Http\Controllers\{UserController,RoleController,DashboardController,SavingController,LoanController,LoanCategoryController,PenaltyController,RuleController,MyAccountController, BudgetController,BudgetLineController,ExpenseController,MituelleController,LoanPaymentController};
 
 /*
 |--------------------------------------------------------------------------
@@ -125,6 +123,16 @@ Route::get('/loan-categories/{id}/edit', [LoanCategoryController::class, 'edit']
 Route::put('/loan-categories/{id}', [LoanCategoryController::class, 'update']);
 // Route::get('/calculate_interest', [LoanController::class, 'calculateInterest'])->name('calculate-interest');
 
+//loan payment
+
+// Define a route to display the payment recording form
+Route::get('/record-loan-payment', [LoanPaymentController::class, 'showPaymentForm'])->name('payments.record_form');
+
+// Define a route to process payment recording
+Route::post('/record-payment', [LoanPaymentController::class, 'recordPayment'])->name('payments.record');
+
+Route::get('/loan-payment-records', [LoanPaymentController::class, 'index']);
+
     //penalties routes
 
 Route::get('/penalties', [PenaltyController::class, 'index'])->name('penalties.index');
@@ -202,15 +210,3 @@ Route::prefix('budgets')->group(function () {
     Route::get('/total-mituelle' , [MituelleController::class, 'singleTotalMituelles'])->name('mituelles.totalmituelles');
 
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-require __DIR__.'/auth.php';

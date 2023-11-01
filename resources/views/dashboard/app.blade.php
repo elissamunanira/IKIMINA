@@ -91,7 +91,7 @@
                         </ul>
                     </li>
 
-                    <li class="label">Apps</li>
+                    {{-- <li class="label">Apps</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Charts <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
@@ -178,7 +178,7 @@
                             <li><a href="page-register.html">Register</a></li>
                             <li><a href="page-reset-password.html">Forgot password</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                    <li><a href="/logout"><i class="ti-close"></i> Logout</a></li>
                 </ul>
             </div>

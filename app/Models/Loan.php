@@ -20,7 +20,9 @@ class Loan extends Model
     {
         return $this->belongsToMany(LoanCategory::class);
     }
-
+    public function payment() {
+        return $this->hasMany(Payment::class);
+    }
 
 
 }

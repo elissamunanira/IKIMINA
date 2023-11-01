@@ -11,7 +11,7 @@ use App\Models\Saving;
 
 class SavingImport implements ToModel
 {
-    public function map($row):array
+    public function model(array $row)
     {
         return new Saving([
             'user_id' => $row[0],
