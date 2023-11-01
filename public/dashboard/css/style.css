@@ -1519,7 +1519,7 @@ footer p {
   vertical-align: top;
 }
 .stat-widget-one .stat-icon i {
-  font-size: 30px;
+  font-size: 12px;
   border-width: 3px;
   border-style: solid;
   border-radius: 100px;
@@ -1536,7 +1536,7 @@ footer p {
   color: #868e96;
 }
 .stat-widget-one .stat-digit {
-  font-size: 24px;
+  font-size: 16px;
   color: #373757;
 }
 /*    Widget Two
@@ -1550,7 +1550,7 @@ footer p {
   color: #373757;
 }
 .stat-widget-two .stat-digit i {
-  font-size: 18px;
+  font-size: 14px;
   margin-right: 5px;
 }
 .stat-widget-two .stat-text {
@@ -1595,7 +1595,7 @@ footer p {
   padding: 27px;
 }
 .home-widget-three .stat-digit {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
   color: #373757;
 }
@@ -1737,7 +1737,7 @@ footer p {
   color: #28a745;
 }
 .stat-widget-eight .stat-content .stat-digit {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
   margin-left: 15px;
 }
@@ -1764,7 +1764,7 @@ footer p {
   font-size: 14px;
 }
 .stat-widget-nine .stat-digit {
-  font-size: 14px;
+  font-size: 12px;
 }
 .stat-widget-nine .like-count {
   font-size: 30px;
@@ -1810,13 +1810,13 @@ footer p {
     padding-left: 0;
   }
   .stat-widget-two .stat-digit {
-    font-size: 16px;
+    font-size: 14px;
   }
   .stat-widget-two .stat-text {
     font-size: 14px;
   }
   .stat-widget-three .stat-digit {
-    font-size: 20px;
+    font-size: 18px;
   }
   .stat-widget-four .stat-heading {
     font-size: 18px;
