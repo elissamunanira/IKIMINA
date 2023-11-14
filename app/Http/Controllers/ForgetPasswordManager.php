@@ -11,6 +11,6 @@ class ForgetPasswordManager extends Controller
         return view('Auth.forget-password');
     }
     public function forgotPasswordPost(){
-        
+        return view('Auth.forget-password');
     }
 }
