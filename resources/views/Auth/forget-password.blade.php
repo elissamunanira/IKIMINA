@@ -5,38 +5,6 @@
 
 
 
-                  @if(Session::get('Success'))
-                  <div class="alert alert-success">
-                    {{Session::get('Success')}}
-                    @php 
-                    Session::forget('Success')
-                    @endphp
-                  </div>
-                  @endif
 
-
-
-                  <form  action="{{url('/log')}}" method="post">
-                    @csrf
-      
-                    <div class="row">
-                      <div class="col-md-12 mb-4 pb-2">
-      
-                        <div class="form-outline">
-                          <input type="email" name="email" class="form-control form-control-lg" />
-                          <label class="form-label" for="emailAddress">Email</label>
-                        </div>
-
-                        @if($errors->has('email'))
-                        <span class="text-danger">
-                          {{$errors->first('email')}}
-                        </span>
-                        @endif
-      
-                      </div>
-                      
-                    </div>
-      
-                  </form>
       
 @endsection
