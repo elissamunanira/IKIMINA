@@ -1,7 +1,7 @@
 @extends('Auth.app')
 @section('content') 
 
-<h3 class="mb-4 pb-2 pb-md-0 mb-md-5">login</h3>
+<h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Forget Password</h3>
 
 
 
@@ -35,29 +35,6 @@
       
                       </div>
                       
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 mb-4 pb-2">
-        
-                          <div class="form-outline">
-                            <input type="password" name="password" class="form-control form-control-lg" />
-                            <label class="form-label"for="password" >Password</label>
-                          </div>
-
-                          @if($errors->has('password'))
-                          <span class="text-danger">
-                            {{$errors->first('password')}}
-                          </span>
-                          @endif
-        
-                        </div>
-                      </div>
-                    <div class="mt-4 pt-2">
-                      <input class="btn btn-primary " type="submit" value="Login" />
-                      <p><a href="#">Forgot Password</a></p>
-                    </div>
-                    <div class="mt-4 pt-2">
-                      <p>If you are new here please <a href="/regis">Register</a></p>
                     </div>
       
                   </form>
