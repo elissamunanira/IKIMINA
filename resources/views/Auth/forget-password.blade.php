@@ -1,5 +1,5 @@
 @extends('Auth.app')
-@section('content');
+@section('content')
      <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">login</h3>
 
 
