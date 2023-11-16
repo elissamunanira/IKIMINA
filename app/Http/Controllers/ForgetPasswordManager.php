@@ -11,5 +11,10 @@ class ForgetPasswordManager extends Controller
         return view('Auth.forget-password');
     }
     public function forgotPasswordPost(Request $request){
+        $request->validate([
+            'email' =>'required|email|exists:users',
+        ]);
+
+        $token = Str::random(length:64);
     }
 }
