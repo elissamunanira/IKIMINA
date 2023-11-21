@@ -72,6 +72,7 @@ Route::get('/logout',[UserController::class, 'logout']);
 
 Route::get('/forget-password',[ForgetPasswordManager::class, 'forgetPassword']);
 Route::post('/forget-password',[ForgetPasswordManager::class, 'forgetPasswordPost'])->name('forget.password.post');
+Route::get('/reset-password',[ForgetPasswordManager::class, 'resetPassword'])->name('reset.password');
 
 
 
