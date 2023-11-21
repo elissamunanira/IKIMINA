@@ -25,6 +25,14 @@ class ForgetPasswordManager extends Controller
             'token' => $token,
             'created_at' => Carbon::now(),
         ]);
-        Mail::send();
+        Mail::send('Auth.emails.forget-password',['token'=>$token], function ($message) use ($request){
+            $message->to($request->mail);
+            $message->subject("Reset Password");
+        });
+
+        return back();
+    }
+    function resetPassword(){
+
     }
 }
