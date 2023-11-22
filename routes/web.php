@@ -95,7 +95,7 @@ Route::get('/totalSavings' , [SavingController::class, 'singleTotalSavings'])->n
 
 
 Route::get('/import', [SavingController::class, 'showForm'])->name('import.form');
-Route::post('/import', [SavingController::class, 'uploadContent'])->name('import');
+Route::post('/import', [SavingController::class, 'uploadContent'])->name('saving.import');
 
   //my account
 

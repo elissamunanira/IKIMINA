@@ -8,6 +8,8 @@ use App\Models\Saving;
 use App\Models\Loan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Excel;
+
 
 class SavingController extends Controller
 {
@@ -101,7 +103,7 @@ class SavingController extends Controller
         return view('savings.import');
     }
 
-    public function upload(){
+    public function uploadContent(){
         Excel::import(new SavingImport, request()->file('file'));
 
         return redirect()->back();
