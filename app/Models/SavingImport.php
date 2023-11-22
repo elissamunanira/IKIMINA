@@ -14,9 +14,9 @@ class SavingImport implements ToModel
     public function model(array $row)
     {
         return new Saving([
-            'user_id' => $row[0],
-            'amount' => $row[1],
-            'month' => $row[2],
+            'user_id' => $row['user_id'],
+            'amount' => $row['amount'],
+            'month' => $row["month"],
         ]);
     }
 }

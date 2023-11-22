@@ -101,6 +101,12 @@ class SavingController extends Controller
         return view('savings.import');
     }
 
+    public function upload(){
+        Excel::import(new SavingImport, request()->file('file'));
+
+        return redirect()->back();
+    }
+
     // public function uploadContent(Request $request)
     //     {
 
