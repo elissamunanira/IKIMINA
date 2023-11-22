@@ -16,6 +16,22 @@
         
 </head>
 <body>
-    @yield('content');
+    
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-80">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-6">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 20px;">
+                <div class="card-body p-4 p-md-5" style="border-radius: 20px;background: #2B2D42; color:#fff">
+
+                @yield('content')
+
+                
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>
