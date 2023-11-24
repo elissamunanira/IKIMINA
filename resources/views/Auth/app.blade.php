@@ -25,7 +25,7 @@
                 <div class="card-body p-4 p-md-5" style="border-radius: 20px;background: #2B2D42; color:#fff">
 
                   
-                @include('inc.message')
+                @include('inc.messages')
                 @yield('content')
 
                 
