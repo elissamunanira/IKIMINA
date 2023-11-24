@@ -24,6 +24,8 @@
               <div class="card shadow-2-strong card-registration" style="border-radius: 20px;">
                 <div class="card-body p-4 p-md-5" style="border-radius: 20px;background: #2B2D42; color:#fff">
 
+                  
+                @include('inc.message')
                 @yield('content')
 
                 
