@@ -17,16 +17,22 @@
           <div class="row">
             <div class="col-md-12 mb-4 pb-2">
                  <p>Please fill out the form to reset your password</p>
+                  <input type="text" hidden name="token" value={{$token}}/> 
               <div class="form-outline">
-                <input type="email" name="email" class="form-control form-control-lg" />
+                <input type="password" name="password" class="form-control form-control-lg" />
                 <label class="form-label" for="password">New Password</label>
               </div>
   
-              @if($errors->has('email'))
+              @if($errors->has('password'))
               <span class="text-danger">
-                {{$errors->first('email')}}
+                {{$errors->first('password')}}
               </span>
               @endif
+
+              <div class="form-outline">
+                <input type="password" name="password_confirmation" class="form-control form-control-lg" />
+                <label class="form-label" for="password_confirmation">Confirm Password</label>
+              </div>
   
             </div>
             
