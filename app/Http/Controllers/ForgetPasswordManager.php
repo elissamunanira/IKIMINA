@@ -8,7 +8,6 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
 class ForgetPasswordManager extends Controller
@@ -42,7 +41,7 @@ class ForgetPasswordManager extends Controller
 
     function resetPasswordPost(Request $request){
         $request->validate([
-            'email'=>'reuquied|email|exists:users',
+            'email'=>'requied|email|exists:users',
             'password'=>'required|String|min:8|confirmed',
             'password_confirmation'=>'required',
         ]);
