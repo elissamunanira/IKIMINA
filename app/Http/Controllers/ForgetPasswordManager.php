@@ -25,5 +25,6 @@ class ForgetPasswordManager extends Controller
             'token' => $token,
             'created_at' => Carbon::now(),
         ]);
+        Mail::send();
     }
 }
