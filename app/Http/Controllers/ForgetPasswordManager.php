@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -52,7 +52,8 @@ class ForgetPasswordManager extends Controller
         ])->first(); 
 
         if (!$updatePassword){
-            return redirect()->to(route('reset.password'))->with('error','invalid');
+            // return redirect()->to(route('reset.password'))->with('error','invalid');
+            return redirect()->back()->with('error','invalid');
         }
 
         User::where('email',$request->email)->update(['password'=>Hash::make($request->password)]);
