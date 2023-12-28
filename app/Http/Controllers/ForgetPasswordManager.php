@@ -48,7 +48,7 @@ class ForgetPasswordManager extends Controller
 
         $updatePassword = DB::table('password_reset_tokens')->where([
             'email'=>$request->email,
-            'token'=>$request->token,
+            // 'token'=>$request->token,
         ])->first(); 
 
         if (!$updatePassword){

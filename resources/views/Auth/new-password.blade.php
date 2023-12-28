@@ -17,7 +17,7 @@
           <div class="row">
             <div class="col-md-12 mb-4 pb-2">
                  <p>Please fill out the form to reset your password</p>
-                  <input type="text" hidden name="token" value={{$token}}/>
+                  {{-- <input type="text" hidden name="token" value={{$token}}/> --}}
                   <div class="form-outline">
                     <input type="email" name="email" class="form-control form-control-lg" />
                     <label class="form-label" for="emailAddress">Email</label>
