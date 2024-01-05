@@ -42,7 +42,7 @@
                                             </div>
                                         @endif
 
-                                        <form action="{{ route('savings.import') }}" method="POST" enctype="multipart/form-data">
+                                        <form action="{{ route('saving.import') }}" method="POST" enctype="multipart/form-data">
                                             @csrf
                                             <div>
                                                 <label for="file">Select File:</label>
