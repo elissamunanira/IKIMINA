@@ -1,6 +1,8 @@
 <?php
 
+
 namespace App\Http\Controllers;
+
 
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -9,11 +11,9 @@ use App\Models\Loan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Excel;
+require_once __DIR__.'/../../../../app/Http/Controllers/libraries/PhpSpreadsheet/src/PhpSpreadsheet/Autoloader.php';
+
 use PhpOffice\PhpSpreadsheet\IOFactory;
-require_once __DIR__.'/../../../app/Http/Controllers/libraries/PhpSpreadsheet/vendor/autoload.php';
-
-
-
 
 class SavingController extends Controller
 {
