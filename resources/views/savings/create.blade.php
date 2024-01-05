@@ -30,7 +30,7 @@
              <section id="main-content">
                 <div class="row">
                     <div class="col-lg-12">
-                    <a class="btn btn-primary" href="/saving/create">+Saving</a>
+                    <a class="btn btn-primary" href="/saving/create">Import File</a>
                     <center><h4 class="card-title"><strong>Add New Saving record</strong></h4></center>
                         <div class="card">
                             <div class="card-body">
