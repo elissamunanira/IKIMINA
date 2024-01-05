@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Excel;
 use PhpOffice\PhpSpreadsheet\IOFactory;
-require_once __DIR__.'/vendor/libraries/PhpSpreadsheet/vendor/autoload.php';
+require_once __DIR__.'\vendor\libraries\PhpSpreadsheet\vendor\autoload.php';
 
 
 
