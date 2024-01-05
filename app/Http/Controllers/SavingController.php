@@ -9,6 +9,8 @@ use App\Models\Loan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Excel;
+use PhpOffice\PhpSpreadsheet\IOFactory;
+
 
 
 class SavingController extends Controller
@@ -103,14 +105,18 @@ class SavingController extends Controller
         return view('savings.import');
     }
 
-
-    public function import()
+    public function import(Request $request)
     {
         try {
-            $spreadsheet = IOFactory::load('path/to/your_excel_file.xlsx');
+            $request->validate([
+                'excel_file' => 'required|mimes:xlsx',
+            ]);
+    
+            $excelFile = $request->file('excel_file');
+            $spreadsheet = IOFactory::load($excelFile->getPathname());
             $worksheet = $spreadsheet->getActiveSheet();
             $data = [];
-
+    
             foreach ($worksheet->getRowIterator() as $row) {
                 $rowData = [];
                 foreach ($row->getCellIterator() as $cell) {
@@ -118,22 +124,21 @@ class SavingController extends Controller
                 }
                 $data[] = $rowData;
             }
-
+    
             // Now $data contains the Excel data. You can insert it into the database as needed.
-
+    
             // Example: Insert into a hypothetical "items" table
             foreach ($data as $row) {
-                DB::table('items')->insert([
-                    'column1' => $row[0],
-                    'column2' => $row[1],
-                    // Add more columns as needed
+                DB::table('savings')->insert([
+                    'user_id' => $row[0],
+                    'amount' => $row[1],
+                    'month' => $row[2],
                 ]);
             }
-
+    
             return redirect()->route('your.route')->with('success', 'Data imported successfully!');
         } catch (\Exception $e) {
             return redirect()->route('your.route')->with('error', 'Error importing data: ' . $e->getMessage());
         }
-    }    
-
+    }
 }
