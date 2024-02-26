@@ -85,6 +85,10 @@ Route::get('dash',[DashboardController::class, 'index']);
 Route::resource('roles', RoleController::class);
 Route::resource('users', UserController::class);
 
+//active members
+
+Route::get('active-members',[UserController::class, 'ActiveMembers']);
+
 
 
     //Savings route

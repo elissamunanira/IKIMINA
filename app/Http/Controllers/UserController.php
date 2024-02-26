@@ -40,6 +40,12 @@ class UserController extends Controller
         return view('users.index',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
+
+    //active users/members
+    public function ActiveMembers(Request $request){
+        $data = User::orderBy('id','DESC')->where('status','1')->paginate(5);
+        return view('users.active-members',compact('data'))->with('i', ($request->input('page', 1) -1)*5);
+        }
     
     /**
      * Show the form for creating a new resource.
