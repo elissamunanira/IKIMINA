@@ -84,9 +84,12 @@
                     @endguest
                     @auth
                     <div class="nav-item dropdown">
-                        <a href="/ikimina-dashboard" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{$users->firstname}}</a>
-                    <div class="dropdown-menu border-light m-0">
-                        <a href="/ikimina-dashboard" cclass="dropdown-item">Dashboard</a>
+                        <a href="/ikimina-dashboard" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ Auth::user()->firstname }}</a>
+                        <div class="dropdown-menu border-light m-0">
+                        <a href="/ikimina-dashboard"class="dropdown-item">Dashboard</a>
+                        <a href="/logout"class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
                     @endauth
                 </div>
                 <div class="d-none d-lg-flex ms-2">
