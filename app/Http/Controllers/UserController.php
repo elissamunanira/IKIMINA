@@ -271,7 +271,7 @@ class UserController extends Controller
             $request->session()->regenerate();
 
 
-                return redirect()->intended('/dash');
+                return redirect()->intended('/ikimina-dashboard');
 
         }
 
