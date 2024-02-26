@@ -81,7 +81,7 @@ Route::post('/reset-password',[ForgetPasswordManager::class, 'resetPasswordPost'
 // Autheticanted Routes
 
 Route::group(['middleware' => ['auth']], function() {
-Route::get('dash',[DashboardController::class, 'index']);
+Route::get('ikimina-dashboard',[DashboardController::class, 'index']);
 Route::resource('roles', RoleController::class);
 Route::resource('users', UserController::class);
 
