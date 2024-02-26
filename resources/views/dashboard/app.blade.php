@@ -376,7 +376,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/users">
+                                                <a href="/logout">
                                                     <i class="ti-power-off"></i>
                                                     <span>Logout</span>
                                                 </a>

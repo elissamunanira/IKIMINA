@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{config('app.name', 'ikibina')}}</title>
+    <title>{{config('app.name', 'ikimina')}}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -79,6 +79,9 @@
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    @auth
+                        <a href="/ilimina-dashboard">Dashboard</a>
+                    @endauth
                     <a href="/login" class="nav-item nav-link">Login/Register</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
