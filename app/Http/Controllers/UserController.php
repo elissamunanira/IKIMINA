@@ -270,9 +270,15 @@ class UserController extends Controller
 
             $request->session()->regenerate();
 
-
-                return redirect()->intended('/ikimina-dashboard');
-
+            $user = Auth::user();
+            switch ($user->role){
+                case 'admin':
+                    return redirect()->intended('/ikimina-dashboard');
+                    break;
+                case 'accountant':
+                    return redirect()->intended('accountant-dashboard');
+                    break;
+            }
         }
 
 
@@ -314,7 +320,6 @@ class UserController extends Controller
     // }
 
     public function logout(Request $request){
-        // auth()->logout();
 
     // Auth::logout();
         session_start();
