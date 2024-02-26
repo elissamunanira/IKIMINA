@@ -80,7 +80,7 @@
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                     @auth
-                        <a href="/ilimina-dashboard">Dashboard</a>
+                        <a href="/ikimina-dashboard">Dashboard</a>
                     @endauth
                     <a href="/login" class="nav-item nav-link">Login/Register</a>
                 </div>
