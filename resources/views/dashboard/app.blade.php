@@ -52,12 +52,17 @@
                     <li><a href="/ikimina-dashboard"><i class="ti-home"></i> Dashboard </a>
                        
                     </li>
-                    
+                    @can('user-list')
                     <li><a href="/users"><i class="fa fa-users" aria-hidden="true"></i> Users </a></li>
+                    @endcan
 
+                    @can('role-list')                       
                     <li><a href="/roles"><i class="ti-layout-tab"></i> Roles </a></li>
+                    @endcan
 
+                    @can('budget-record')
                     <li><a href="/budgets"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Budgets</a></li> 
+                    @endcan
 
                     {{-- <li><a class="sidebar-sub-toggle"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Budget<span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
@@ -67,19 +72,31 @@
                     </li> --}}
 
                     {{-- <li><a href="/expenses"><i class="fa fa-table" aria-hidden="true"></i>Expenses</a></li> --}}
+                    @can('mituelle-recording')
                     <li><a href="/total-mituelle"><i class="fa fa-life-ring" aria-hidden="true"></i>Mituelles</a></li>
+                    @endcan
 
+                    @can('savings-record')
                     <li><a href="/totalSavings"><i class="ti-briefcase"></i>Savings</a></li>
-
+                    @endcan
+                    
+                    @can('loan-approval')
                     <li><a class="sidebar-sub-toggle"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Loans <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="/loan-categories">Loan Categories</a></li> 
                             <li><a href="/loans">All Loans</a></li>
                         </ul>
-                    </li>
+                    </li> 
+                    @endcan
+
+                    @can('rule')
                     <li><a href="/rules"><i class="fa fa-balance-scale" aria-hidden="true"></i>Cooperative Rules </a></li>
+                    @endcan
+
+                    @can('penalties')
                     <li><a href="/penalties"><i class="fa fa-gavel" aria-hidden="true"></i>Penalties </a></li>
+                    @endcan
                     
                     <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> My Account <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>

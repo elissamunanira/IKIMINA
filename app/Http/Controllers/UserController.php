@@ -272,12 +272,14 @@ class UserController extends Controller
 
             $user = Auth::user();
             switch ($user->role){
-                case 'admin':
+                case 'Admin':
                     return redirect()->intended('/ikimina-dashboard');
                     break;
-                case 'accountant':
-                    return redirect()->intended('accountant-dashboard');
+                case 'Accountant':
+                    return redirect()->intended('/accountant-dashboard');
                     break;
+                default:
+                    return redirect()->intended('/member-dashboard');      
             }
         }
 
