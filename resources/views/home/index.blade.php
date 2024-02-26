@@ -78,11 +78,16 @@
                             <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    @auth
-                        <a href="/ikimina-dashboard">Dashboard</a>
-                    @endauth
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>                   
+                    @guest
                     <a href="/login" class="nav-item nav-link">Login/Register</a>
+                    @endguest
+                    @auth
+                    <div class="nav-item dropdown">
+                        <a href="/ikimina-dashboard" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{$users->firstname}}</a>
+                    <div class="dropdown-menu border-light m-0">
+                        <a href="/ikimina-dashboard" cclass="dropdown-item">Dashboard</a>
+                    @endauth
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
