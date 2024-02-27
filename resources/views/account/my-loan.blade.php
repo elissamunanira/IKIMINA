@@ -26,6 +26,7 @@
                 <!-- /# column -->
             </div>
             <section id="main-content">
+                <a class="btn btn-primary" href="{{route('loans.create')}}">Request Loan</a>
                 <div class="row"> 
                     <div class="col-md-12">
                                 <center><h4 class="card-title"><strong>Loans</strong></h4></center>

@@ -52,7 +52,7 @@
                     <li><a href="/ikimina-dashboard"><i class="ti-home"></i> Dashboard </a>
                        
                     </li>
-                    @can('user-list')
+                    @can('users-list')
                     <li><a href="/users"><i class="fa fa-users" aria-hidden="true"></i> Users </a></li>
                     @endcan
 

@@ -156,4 +156,14 @@ class LoanController extends Controller
         return $monthlyPayment;
     }
 
+    public function details(Request $id){
+        {
+            $i = 0;
+            // $user = User::all();
+            $loans = Loan::with('user')->orderBy('created_at', 'desc')->get();
+            return view('loans.details', compact('loans','i'));
+            
+        }
+    }
+
 }

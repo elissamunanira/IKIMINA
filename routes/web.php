@@ -123,6 +123,7 @@ Route::get('/loans' , [LoanController::class, 'index']);
 Route::put('/loan/{id}', [LoanController::class, 'loanStatus'])->name('loan.loanStatus');
 Route::put('/loan/{id}', [LoanController::class, 'update'])->name('loan.update');
 Route::get('/loan/{id}/edit', [LoanController::class, 'edit'])->name('loan.edit');
+Route::get('/loan/{id}/details', [LoanController::class, 'details'])->name('loan.details');
 
 
 Route::get('/loan-categories', [LoanCategoryController::class, 'index']);
