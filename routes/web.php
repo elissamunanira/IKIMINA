@@ -68,7 +68,7 @@ Route::get('regis',[UserController::class, 'registerForm']);
 Route::post('log',[UserController::class, 'login']);
 Route::post('/register',[UserController::class, 'register']);
 
-Route::get('/logout',[UserController::class, 'logout']);
+Route::get('/logout',[UserController::class, 'logout'])->name('logout');
 
 Route::get('/forget-password',[ForgetPasswordManager::class, 'forgetPassword'])->name('forget.password');
 Route::post('/forget-password',[ForgetPasswordManager::class, 'forgetPasswordPost'])->name('forget.password.post');

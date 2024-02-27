@@ -90,13 +90,13 @@
                     </li> 
                     @endcan
 
-                    @can('rule')
+                    {{-- @can('rule') --}}
                     <li><a href="/rules"><i class="fa fa-balance-scale" aria-hidden="true"></i>Cooperative Rules </a></li>
-                    @endcan
+                    {{-- @endcan --}}
 
-                    @can('penalties')
+                    {{-- @can('penalties') --}}
                     <li><a href="/penalties"><i class="fa fa-gavel" aria-hidden="true"></i>Penalties </a></li>
-                    @endcan
+                    {{-- @endcan --}}
                     
                     <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> My Account <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
@@ -393,7 +393,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/logout">
+                                                <a href="{{ route('logout') }}">
                                                     <i class="ti-power-off"></i>
                                                     <span>Logout</span>
                                                 </a>

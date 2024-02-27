@@ -41,7 +41,7 @@ class LoanPaymentController extends Controller
 
         // Update the loan balance
         $loan = Loan::find($request->input('loan_id'));
-        $loan->total_amount -= $request->input('amount_paid');
+        $loan->paid_amount += $request->input('amount_paid');
         $loan->save();
 
         return redirect()->back()->with('success', 'Payment recorded successfully');

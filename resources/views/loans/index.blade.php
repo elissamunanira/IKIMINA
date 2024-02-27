@@ -43,6 +43,7 @@
                                             <th>Date Requested</th>
                                             <th>Amount requested</th>
                                             <th>Total Amount to be paid</th>
+                                            <th>Remaining amount</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -57,20 +58,11 @@
                                                 <td>{{ $loan->created_at }}</td>
                                                 <td>{{ $loan->loan_amount }} RWF</td>
                                                 <td>{{ $loan->total_amount }} RWF</td>
+                                                <td>{{ $loan->total_amount-$loan->paid_amount }} RWF</td>
                                                 <td>
-                                                    {{-- @if($loan->status == 'pending')
-                                                        <span class="badge rounded-pill bg-warning">pending</span>
-                                                    @elseif($loan->status == 'approved')
-                                                        <span class="badge rounded-pill bg-success">approved</span>
-                                                    @elseif($loan->status == 'rejected')
-                                                        <span class="badge rounded-pill bg-danger">rejected</span>
-                                                    @elseif($loan->status == 'rejected')
-                                                        <span class="badge rounded-pill bg-danger">rejected</span>
+                                                    @if ($loan->paid_amount == $loan->total_amount) 
+                                                    <span class="badge rounded-pill bg-success">PAID</span>
                                                     @else
-                                                        <span class="badge rounded-pill bg-info">paid</span>
-                                                    @endif --}}
-                                                    
-
                                                     <form method="POST" action="{{ route('loan.update', ['id' => $loan->id]) }}">
                                                         @csrf
                                                         @method('PUT')
@@ -113,7 +105,8 @@
                                                                 });
                                                             </script>
                                                     </form>
-
+                                                    
+                                                    @endif
 
                                                 </td>
                                                 <td> 
