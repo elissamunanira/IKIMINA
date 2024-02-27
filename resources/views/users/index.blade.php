@@ -83,7 +83,7 @@
                                                         <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
                                                                 <a class="dropdown-item" href="{{ route('users.show',$user->id) }}">Show</a>
                                                                 <a class="dropdown-item" href="{{ url('savings',$user->id) }}">Saving</a>
-                                                                <a class="dropdown-item" href="{{ url('loan.details',$user->id) }}/details">Saving</a>
+                                                                <a class="dropdown-item" href="{{ url('loans',$user->id) }}/details">Saving</a>
                                                                 {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
                                                                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                                                                 {!! Form::close() !!}
