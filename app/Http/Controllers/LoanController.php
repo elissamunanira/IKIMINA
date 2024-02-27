@@ -156,11 +156,11 @@ class LoanController extends Controller
         return $monthlyPayment;
     }
 
-    public function details(Request $id){
+    public function details(User $user){
         {
             $i = 0;
             // $user = User::all();
-            $loans = Loan::find($id);
+            $loans = Loan::where('user_id',$user->id)->get();
             return view('loans.details', compact('loans','i'));
             
         }
