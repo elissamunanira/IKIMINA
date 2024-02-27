@@ -160,7 +160,7 @@ class LoanController extends Controller
         {
             $i = 0;
             // $user = User::all();
-            $loans = Loan::with('user')->orderBy('created_at', 'desc')->get();
+            $loans = Loan::find($id);
             return view('loans.details', compact('loans','i'));
             
         }

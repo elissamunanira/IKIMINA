@@ -119,11 +119,12 @@ Route::get('/my-mituelles', [MyAccountController::class, 'myMituelle'])->name('m
 Route::get('/loan-request', [LoanController::class, 'create'])->name('loans.create');
 Route::post('/loan-request', [LoanController::class, 'store'])->name('loan.store');
 Route::get('/loan-decision/{id}', [LoanController::class, 'show'])->name('loans.show');
-Route::get('/loans' , [LoanController::class, 'index']);
+Route::get('/loans' , [LoanController::class, 'index'])->name('loans.index');
 Route::put('/loan/{id}', [LoanController::class, 'loanStatus'])->name('loan.loanStatus');
 Route::put('/loan/{id}', [LoanController::class, 'update'])->name('loan.update');
 Route::get('/loan/{id}/edit', [LoanController::class, 'edit'])->name('loan.edit');
-Route::get('/loan/{id}/details', [LoanController::class, 'details'])->name('loan.details');
+Route::get('/loan/{user}/details', [LoanController::class, 'details'])->name('loan.details');
+Route::get('/loan/{id}/payment', [LoanController::class, 'details'])->name('loan.details');
 
 
 Route::get('/loan-categories', [LoanCategoryController::class, 'index']);
@@ -136,7 +137,7 @@ Route::put('/loan-categories/{id}', [LoanCategoryController::class, 'update']);
 //loan payment
 
 // Define a route to display the payment recording form
-Route::get('/record-loan-payment', [LoanPaymentController::class, 'showPaymentForm'])->name('payments.record_form');
+Route::get('/record-loan-payment/{user}/{id}', [LoanPaymentController::class, 'showPaymentForm'])->name('loan-payment');
 
 // Define a route to process payment recording
 Route::post('/record-payment', [LoanPaymentController::class, 'recordPayment'])->name('payments.record');
