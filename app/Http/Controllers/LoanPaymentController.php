@@ -18,7 +18,7 @@ class LoanPaymentController extends Controller
         return view('loan_payments.index', compact('payments','i'));
         
     }
-    public function showPaymentForm(){
+    public function showPaymentForm($loan){
         $users = User::all();
         $loans = Loan::all();
         return view('loan_payments.create',compact('users', 'loans'));

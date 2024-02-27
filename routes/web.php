@@ -137,7 +137,7 @@ Route::put('/loan-categories/{id}', [LoanCategoryController::class, 'update']);
 //loan payment
 
 // Define a route to display the payment recording form
-Route::get('/record-loan-payment/{user}/{id}', [LoanPaymentController::class, 'showPaymentForm'])->name('loan-payment');
+Route::get('/record-loan-payment/{loan}', [LoanPaymentController::class, 'showPaymentForm'])->name('loan-payment');
 
 // Define a route to process payment recording
 Route::post('/record-payment', [LoanPaymentController::class, 'recordPayment'])->name('payments.record');

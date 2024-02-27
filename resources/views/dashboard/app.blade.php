@@ -89,6 +89,14 @@
                         </ul>
                     </li> 
                     @endcan
+                    @if (Auth()->user()->roles)
+                    @foreach ( Auth()->user()->roles as $role )
+                        @if ($role->name == 'Admin')
+                            <li><a href="/loan-payment-records"><i class="fa fa-balance-scale" aria-hidden="true"></i>Payments </a></li>
+                        @endif
+                    @endforeach
+                        
+                    @endif
 
                     {{-- @can('rule') --}}
                     <li><a href="/rules"><i class="fa fa-balance-scale" aria-hidden="true"></i>Cooperative Rules </a></li>

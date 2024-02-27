@@ -45,31 +45,19 @@
                                         @endif
                                         <form method="POST" action="{{ route('payments.record') }}">
                                             @csrf
-                                            <div class="form-group col-lg-8">
-                                                <label for="user_id">Member<span class="text-danger">*</span></label>
-                                                <select name="user_id" class="form-control">
-                                                    <option value="">--- Select Member ---</option>
-                                                    @foreach ($users as $user)
-                                                        <option value="{{ $user->id }}">{{ $user->firstname }} {{ $user->lastname }} </option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                            
-
-                                            
-
+                                            <input type="hidden" name="loan_id" id="loan_id_input" value="">
                                             <div class="form-group col-lg-8">
                                                 <label for="amount">Paid Amount<span class="text-danger">*</span></label>
                                                 <input type="number" name="amount_paid" class="form-control" required>
                                             </div>
                                             <div class="form-group col-lg-8">
                                                 <label for="user_id">Member<span class="text-danger">*</span></label>
-                                                <select name="loan_id" class="form-control">
+                                                {{-- <select name="loan_id" class="form-control">
                                                     <option value="">--- Select Loan to pay ---</option>
                                                     @foreach ($loans as $loan)
                                                         <option value="{{ $loan->id }}">{{ $loan->loan_category }} = {{ $loan->loan_amount }}RWF  </option>
                                                     @endforeach
-                                                </select>
+                                                </select> --}}
                                             </div>
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </form>
